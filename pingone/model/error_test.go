@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/patrickcping/pingone-go-sdk-v2/management"
+	"github.com/pingidentity/pingone-go-sdk-v2/management"
 )
 
 func TestRemarshalGenericOpenAPIErrorObj_Success(t *testing.T) {

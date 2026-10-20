@@ -21,7 +21,7 @@ go get golang.org/x/net/context
 Put the package under your project folder and add the following in import:
 
 ```golang
-import verify "github.com/patrickcping/pingone-go-sdk-v2/verify"
+import verify "github.com/pingidentity/pingone-go-sdk-v2/verify"
 ```
 
 To use a proxy, set the environment variable `HTTP_PROXY`:

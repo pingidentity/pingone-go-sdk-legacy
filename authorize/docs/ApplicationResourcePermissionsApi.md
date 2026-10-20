@@ -27,7 +27,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/patrickcping/pingone-go-sdk-v2/authorize"
+    openapiclient "github.com/pingidentity/pingone-go-sdk-v2/authorize"
 )
 
 func main() {
@@ -104,7 +104,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/patrickcping/pingone-go-sdk-v2/authorize"
+    openapiclient "github.com/pingidentity/pingone-go-sdk-v2/authorize"
 )
 
 func main() {
@@ -180,7 +180,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/patrickcping/pingone-go-sdk-v2/authorize"
+    openapiclient "github.com/pingidentity/pingone-go-sdk-v2/authorize"
 )
 
 func main() {
@@ -255,7 +255,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/patrickcping/pingone-go-sdk-v2/authorize"
+    openapiclient "github.com/pingidentity/pingone-go-sdk-v2/authorize"
 )
 
 func main() {
@@ -333,7 +333,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/patrickcping/pingone-go-sdk-v2/authorize"
+    openapiclient "github.com/pingidentity/pingone-go-sdk-v2/authorize"
 )
 
 func main() {

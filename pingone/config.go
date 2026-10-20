@@ -8,8 +8,8 @@ import (
 	"slices"
 	"strings"
 
-	"github.com/patrickcping/pingone-go-sdk-v2/management"
-	"github.com/patrickcping/pingone-go-sdk-v2/pingone/model"
+	"github.com/pingidentity/pingone-go-sdk-v2/management"
+	"github.com/pingidentity/pingone-go-sdk-v2/pingone/model"
 	"golang.org/x/oauth2"
 )
 
