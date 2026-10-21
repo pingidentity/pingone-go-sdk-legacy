@@ -1,6 +1,6 @@
 # v0.14.0 (2026-10-21)
 
-* **Breaking change** Module moved to `github.com/pingidentity/pingone-go-sdk-v2`; update import paths accordingly.
+* **Breaking change** Module moved to `github.com/pingidentity/pingone-go-sdk-v2/credentials`; update import paths accordingly.
 
 # v0.13.0 (2026-09-11)
 
