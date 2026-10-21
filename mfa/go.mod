@@ -1,3 +1,3 @@
-module github.com/patrickcping/pingone-go-sdk-v2/mfa
+module github.com/pingidentity/pingone-go-sdk-v2/mfa
 
 go 1.25.6

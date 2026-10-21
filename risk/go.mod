@@ -1,3 +1,3 @@
-module github.com/patrickcping/pingone-go-sdk-v2/risk
+module github.com/pingidentity/pingone-go-sdk-v2/risk
 
 go 1.25.6

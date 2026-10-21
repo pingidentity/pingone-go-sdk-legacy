@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/patrickcping/pingone-go-sdk-v2/management"
-	"github.com/patrickcping/pingone-go-sdk-v2/pingone"
+	"github.com/pingidentity/pingone-go-sdk-v2/management"
+	"github.com/pingidentity/pingone-go-sdk-v2/pingone"
 )
 
 func TestClient(ctx context.Context) (*pingone.Client, error) {

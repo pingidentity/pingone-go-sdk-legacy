@@ -8,8 +8,8 @@ import (
 	"slices"
 	"testing"
 
-	"github.com/patrickcping/pingone-go-sdk-v2/acctest"
-	"github.com/patrickcping/pingone-go-sdk-v2/management"
+	"github.com/pingidentity/pingone-go-sdk-v2/acctest"
+	"github.com/pingidentity/pingone-go-sdk-v2/management"
 )
 
 func TestAccPopulationsAPI_PagedResults(t *testing.T) {

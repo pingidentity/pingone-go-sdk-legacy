@@ -1,6 +1,6 @@
 
 TEST?=$$(go list ./...)
-OWNER=patrickcping
+OWNER=pingidentity
 REPO=pingone-go-sdk-v2
 VERSION=0.15.0
 

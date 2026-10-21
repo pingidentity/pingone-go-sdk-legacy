@@ -21,7 +21,7 @@ go get golang.org/x/net/context
 Put the package under your project folder and add the following in import:
 
 ```golang
-import risk "github.com/patrickcping/pingone-go-sdk-v2/risk"
+import risk "github.com/pingidentity/pingone-go-sdk-v2/risk"
 ```
 
 To use a proxy, set the environment variable `HTTP_PROXY`:

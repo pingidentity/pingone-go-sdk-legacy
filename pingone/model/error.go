@@ -4,12 +4,12 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/patrickcping/pingone-go-sdk-v2/authorize"
-	"github.com/patrickcping/pingone-go-sdk-v2/credentials"
-	"github.com/patrickcping/pingone-go-sdk-v2/management"
-	"github.com/patrickcping/pingone-go-sdk-v2/mfa"
-	"github.com/patrickcping/pingone-go-sdk-v2/risk"
-	"github.com/patrickcping/pingone-go-sdk-v2/verify"
+	"github.com/pingidentity/pingone-go-sdk-v2/authorize"
+	"github.com/pingidentity/pingone-go-sdk-v2/credentials"
+	"github.com/pingidentity/pingone-go-sdk-v2/management"
+	"github.com/pingidentity/pingone-go-sdk-v2/mfa"
+	"github.com/pingidentity/pingone-go-sdk-v2/risk"
+	"github.com/pingidentity/pingone-go-sdk-v2/verify"
 )
 
 // GenericOpenAPIError Provides access to the body, error and model on returned errors.
