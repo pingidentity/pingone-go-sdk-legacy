@@ -1,6 +1,6 @@
 # v0.9.0 (2026-10-21)
 
-* **Note** Module bumped to new version for move to new pingidentity-owned GitHub repository.
+* **Breaking change** Module moved to `github.com/pingidentity/pingone-go-sdk-v2`; update import paths accordingly.
 
 # v0.8.3 (2026-03-09)
 
