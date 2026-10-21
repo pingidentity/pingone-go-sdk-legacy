@@ -1,6 +1,6 @@
 # v0.9.0 (2026-10-21)
 
-* **Breaking change** Module moved to `github.com/pingidentity/pingone-go-sdk-v2/authorize`; update import paths accordingly.
+* **Breaking change** Module moved to `github.com/pingidentity/pingone-go-sdk-v2/authorize`. Any future releases for this module will be under this new module path.
 
 # v0.8.3 (2026-03-09)
 
