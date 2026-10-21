@@ -1,3 +1,7 @@
+# v0.23.0 (2026-10-21)
+
+* **Note** Module bumped to new version for move to new pingidentity-owned GitHub repository.
+
 # v0.22.0 (2026-06-18)
 
 * **Breaking Change** `NewRiskPolicyResult()` no longer requires `level` argument — mitigation results omit level.

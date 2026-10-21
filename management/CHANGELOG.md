@@ -1,3 +1,7 @@
+# v0.78.0 (2026-10-21)
+
+* **Note** Module bumped to new version for move to new pingidentity-owned GitHub repository.
+
 # v0.77.0 (Unreleased)
 
 * **Enhancement** Added `OAUTH2` and `CUSTOM_HEADER` to the `EnumNotificationsSettingsEmailDeliverySettingsCustomAuthenticationMethod` data type, and added the `authUrl`, `grantType`, `assertion`, `clientId`, `clientSecret`, `scopes`, `headerName`, `headerValue`, and `clientAuthenticationMethod` properties to the email delivery settings custom provider authentication data model to align with the API.

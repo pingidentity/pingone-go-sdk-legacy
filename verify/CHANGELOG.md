@@ -1,3 +1,7 @@
+# v0.12.0 (2026-10-21)
+
+* **Note** Module bumped to new version for move to new pingidentity-owned GitHub repository.
+
 # v0.11.2 (2026-03-09)
 
 * **Note** Upgraded go version to 1.25 to align with the go [release policy](https://go.dev/doc/devel/release#policy). [#515](https://github.com/pingidentity/pingone-go-sdk-v2/pull/515)
