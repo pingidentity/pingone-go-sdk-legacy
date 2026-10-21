@@ -1,3 +1,7 @@
+# v0.12.0 (2026-10-21)
+
+* **Breaking change** Module moved to `github.com/pingidentity/pingone-go-sdk-v2/verify`. Any future releases for this module will be under this new module path.
+
 # v0.11.2 (2026-03-09)
 
 * **Note** Upgraded go version to 1.25 to align with the go [release policy](https://go.dev/doc/devel/release#policy). [#515](https://github.com/pingidentity/pingone-go-sdk-v2/pull/515)

@@ -75,23 +75,23 @@ type ServerConfigurations []ServerConfiguration
 
 // Configuration stores the configuration of the API client
 type Configuration struct {
-	Host             string            `json:"host,omitempty"`
-	Scheme           string            `json:"scheme,omitempty"`
-	DefaultHeader    map[string]string `json:"defaultHeader,omitempty"`
-	UserAgent        string            `json:"userAgent,omitempty"`
-	Debug            bool              `json:"debug,omitempty"`
-	DefaultServerIndex int             `json:"defaultServerIndex,omitempty"`
-	ProxyURL         *string           `json:"proxyURL,omitempty"`
-	Servers          ServerConfigurations
-	OperationServers map[string]ServerConfigurations
-	HTTPClient       *http.Client
+	Host               string            `json:"host,omitempty"`
+	Scheme             string            `json:"scheme,omitempty"`
+	DefaultHeader      map[string]string `json:"defaultHeader,omitempty"`
+	UserAgent          string            `json:"userAgent,omitempty"`
+	Debug              bool              `json:"debug,omitempty"`
+	DefaultServerIndex int               `json:"defaultServerIndex,omitempty"`
+	ProxyURL           *string           `json:"proxyURL,omitempty"`
+	Servers            ServerConfigurations
+	OperationServers   map[string]ServerConfigurations
+	HTTPClient         *http.Client
 }
 
 // NewConfiguration returns a new Configuration object
 func NewConfiguration() *Configuration {
 	cfg := &Configuration{
 		DefaultHeader: make(map[string]string),
-		UserAgent:     "pingtools PingOne-GOLANG-SDK-verify/0.11.2",
+		UserAgent:     "pingtools PingOne-GOLANG-SDK-verify/0.12.0",
 		Debug:         false,
 		Servers: ServerConfigurations{
 			{

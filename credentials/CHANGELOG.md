@@ -1,3 +1,7 @@
+# v0.14.0 (2026-10-21)
+
+* **Breaking change** Module moved to `github.com/pingidentity/pingone-go-sdk-v2/credentials`. Any future releases for this module will be under this new module path.
+
 # v0.13.0 (2026-09-11)
 
 * **Enhancement** The `CredentialTypeVersion` data model now matches the response shape of the [Read All Credential Type Versions](https://developer.pingidentity.com/pingone-api/credentials/credential-types/read-all-credential-types-versions.html) and [Read One Credential Type Version](https://developer.pingidentity.com/pingone-api/credentials/credential-types/read-one-credential-type-version.html) APIs, adding `Links`, `Version` (version number), `Snapshot`, `CreatedAt`, `Environment` and `CredentialType` fields. Previously only `Id` was populated when unmarshaling real API responses. [CDI-1484](https://pingidentity.atlassian.net/browse/CDI-1484)

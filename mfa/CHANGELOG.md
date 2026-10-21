@@ -1,3 +1,7 @@
+# v0.27.0 (2026-10-21)
+
+* **Breaking change** Module moved to `github.com/pingidentity/pingone-go-sdk-v2/mfa`. Any future releases for this module will be under this new module path.
+
 # v0.26.0 (2026-09-30)
 
 * **Enhancement** Added `blockDisabledUsers` and `blockUsersWithDisabledMfa` to the device authentication policy data models.

@@ -1,3 +1,7 @@
+# v0.23.0 (2026-10-21)
+
+* **Breaking change** Module moved to `github.com/pingidentity/pingone-go-sdk-v2/risk`. Any future releases for this module will be under this new module path.
+
 # v0.22.0 (2026-06-18)
 
 * **Breaking Change** `NewRiskPolicyResult()` no longer requires `level` argument — mitigation results omit level.
