@@ -13,6 +13,8 @@ import (
 )
 
 func TestAccPopulationsAPI_PagedResults(t *testing.T) {
+	t.Skip("Skipped because it makes real PingOne API requests")
+
 	t.Parallel()
 
 	ctx := context.Background()

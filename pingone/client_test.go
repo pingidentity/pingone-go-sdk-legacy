@@ -10,6 +10,8 @@ import (
 )
 
 func TestAccAPIClient_Deprecated_Success(t *testing.T) {
+	t.Skip("Skipped because it makes real PingOne API requests")
+
 	t.Parallel()
 
 	var ctx = context.Background()
@@ -74,6 +76,8 @@ func TestAccAPIClient_Deprecated_Success(t *testing.T) {
 }
 
 func TestAccAPIClient_Success(t *testing.T) {
+	t.Skip("Skipped because it makes real PingOne API requests")
+
 	t.Parallel()
 
 	var ctx = context.Background()
@@ -233,6 +237,8 @@ func TestAccAPIClient_MissingClientRegion(t *testing.T) {
 }
 
 func TestAccAPIClient_FailedAuth(t *testing.T) {
+	t.Skip("Skipped because it makes real PingOne API requests")
+
 	t.Parallel()
 
 	var ctx = context.Background()
@@ -257,6 +263,8 @@ func TestAccAPIClient_FailedAuth(t *testing.T) {
 }
 
 func TestAccAPIClient_BadRegion(t *testing.T) {
+	t.Skip("Skipped because it makes real PingOne API requests")
+
 	t.Parallel()
 
 	var ctx = context.Background()
@@ -281,6 +289,8 @@ func TestAccAPIClient_BadRegion(t *testing.T) {
 }
 
 func TestAccAPIClient_Deprecated_BadRegion(t *testing.T) {
+	t.Skip("Skipped because it makes real PingOne API requests")
+
 	t.Parallel()
 
 	var ctx = context.Background()
