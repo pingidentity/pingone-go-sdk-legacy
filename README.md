@@ -1,8 +1,8 @@
 # PingOne Administration GO SDK
 
-The PingOne GO SDK provides a set of functions and stucts that help with interacting with the PingOne public cloud API.
+> This client is considered a sample. The official Go SDK for PingOne is https://github.com/pingidentity/pingone-go-client , and endpoints will be migrated to that client over time.
 
-The code is intended to be delivered as a sample, until an official GO SDK is released from Ping Identity.  As such, the code is highly likely to change significantly between releases. 
+The PingOne GO SDK provides a set of functions and stucts that help with interacting with the PingOne public cloud API.
 
 Code for each service is generated with the help of the [OpenAPI Generator](https://openapi-generator.tech/).
 
