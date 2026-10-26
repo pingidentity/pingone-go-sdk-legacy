@@ -68,7 +68,7 @@ func (a *NotificationsSettingsSMTPApiService) DeleteEmailDeliverySettingsExecute
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalDeleteEmailDeliverySettingsExecute(r)
@@ -289,11 +289,11 @@ func (a *NotificationsSettingsSMTPApiService) ReadEmailNotificationsSettings(ctx
 //	@return NotificationsSettingsEmailDeliverySettings
 func (a *NotificationsSettingsSMTPApiService) ReadEmailNotificationsSettingsExecute(r ApiReadEmailNotificationsSettingsRequest) (*NotificationsSettingsEmailDeliverySettings, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *NotificationsSettingsEmailDeliverySettings
+		err                 error
+		response            *http.Response
+		localVarReturnValue *NotificationsSettingsEmailDeliverySettings
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadEmailNotificationsSettingsExecute(r)
@@ -529,11 +529,11 @@ func (a *NotificationsSettingsSMTPApiService) UpdateEmailNotificationsSettings(c
 //	@return NotificationsSettingsEmailDeliverySettings
 func (a *NotificationsSettingsSMTPApiService) UpdateEmailNotificationsSettingsExecute(r ApiUpdateEmailNotificationsSettingsRequest) (*NotificationsSettingsEmailDeliverySettings, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *NotificationsSettingsEmailDeliverySettings
+		err                 error
+		response            *http.Response
+		localVarReturnValue *NotificationsSettingsEmailDeliverySettings
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalUpdateEmailNotificationsSettingsExecute(r)

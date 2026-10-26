@@ -76,11 +76,11 @@ func (a *ApplicationRolePermissionsApiService) CreateApplicationRolePermission(c
 //	@return ApplicationRolePermission
 func (a *ApplicationRolePermissionsApiService) CreateApplicationRolePermissionExecute(r ApiCreateApplicationRolePermissionRequest) (*ApplicationRolePermission, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *ApplicationRolePermission
+		err                 error
+		response            *http.Response
+		localVarReturnValue *ApplicationRolePermission
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalCreateApplicationRolePermissionExecute(r)
@@ -331,7 +331,7 @@ func (a *ApplicationRolePermissionsApiService) DeleteApplicationRolePermissionEx
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalDeleteApplicationRolePermissionExecute(r)
@@ -560,16 +560,16 @@ func (a *ApplicationRolePermissionsApiService) ReadApplicationRolePermissions(ct
 //
 //	@return EntityArray
 func (a *ApplicationRolePermissionsApiService) ReadApplicationRolePermissionsExecute(r ApiReadApplicationRolePermissionsRequest) EntityArrayPagedIterator {
-  return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
+	return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
 }
 
 func (a *ApplicationRolePermissionsApiService) ReadApplicationRolePermissionsExecuteInitialPage(r ApiReadApplicationRolePermissionsRequest) (*EntityArray, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *EntityArray
+		err                 error
+		response            *http.Response
+		localVarReturnValue *EntityArray
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadApplicationRolePermissionsExecute(r)

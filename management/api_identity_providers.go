@@ -74,11 +74,11 @@ func (a *IdentityProvidersApiService) CreateIdentityProvider(ctx context.Context
 //	@return IdentityProvider
 func (a *IdentityProvidersApiService) CreateIdentityProviderExecute(r ApiCreateIdentityProviderRequest) (*IdentityProvider, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *IdentityProvider
+		err                 error
+		response            *http.Response
+		localVarReturnValue *IdentityProvider
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalCreateIdentityProviderExecute(r)
@@ -351,7 +351,7 @@ func (a *IdentityProvidersApiService) DeleteIdentityProviderExecute(r ApiDeleteI
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalDeleteIdentityProviderExecute(r)
@@ -576,16 +576,16 @@ func (a *IdentityProvidersApiService) ReadAllIdentityProviders(ctx context.Conte
 //
 //	@return EntityArray
 func (a *IdentityProvidersApiService) ReadAllIdentityProvidersExecute(r ApiReadAllIdentityProvidersRequest) EntityArrayPagedIterator {
-  return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
+	return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
 }
 
 func (a *IdentityProvidersApiService) ReadAllIdentityProvidersExecuteInitialPage(r ApiReadAllIdentityProvidersRequest) (*EntityArray, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *EntityArray
+		err                 error
+		response            *http.Response
+		localVarReturnValue *EntityArray
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadAllIdentityProvidersExecute(r)
@@ -818,11 +818,11 @@ func (a *IdentityProvidersApiService) ReadOneIdentityProvider(ctx context.Contex
 //	@return IdentityProvider
 func (a *IdentityProvidersApiService) ReadOneIdentityProviderExecute(r ApiReadOneIdentityProviderRequest) (*IdentityProvider, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *IdentityProvider
+		err                 error
+		response            *http.Response
+		localVarReturnValue *IdentityProvider
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadOneIdentityProviderExecute(r)
@@ -1062,11 +1062,11 @@ func (a *IdentityProvidersApiService) UpdateIdentityProvider(ctx context.Context
 //	@return IdentityProvider
 func (a *IdentityProvidersApiService) UpdateIdentityProviderExecute(r ApiUpdateIdentityProviderRequest) (*IdentityProvider, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *IdentityProvider
+		err                 error
+		response            *http.Response
+		localVarReturnValue *IdentityProvider
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalUpdateIdentityProviderExecute(r)

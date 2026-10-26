@@ -70,16 +70,16 @@ func (a *ApplicationResourcesApiService) ReadApplicationResources(ctx context.Co
 //
 //	@return EntityArray
 func (a *ApplicationResourcesApiService) ReadApplicationResourcesExecute(r ApiReadApplicationResourcesRequest) EntityArrayPagedIterator {
-  return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
+	return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
 }
 
 func (a *ApplicationResourcesApiService) ReadApplicationResourcesExecuteInitialPage(r ApiReadApplicationResourcesRequest) (*EntityArray, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *EntityArray
+		err                 error
+		response            *http.Response
+		localVarReturnValue *EntityArray
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadApplicationResourcesExecute(r)
@@ -312,11 +312,11 @@ func (a *ApplicationResourcesApiService) ReadOneApplicationResource(ctx context.
 //	@return ApplicationResource
 func (a *ApplicationResourcesApiService) ReadOneApplicationResourceExecute(r ApiReadOneApplicationResourceRequest) (*ApplicationResource, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *ApplicationResource
+		err                 error
+		response            *http.Response
+		localVarReturnValue *ApplicationResource
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadOneApplicationResourceExecute(r)

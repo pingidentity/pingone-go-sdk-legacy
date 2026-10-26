@@ -796,8 +796,6 @@ docs/UserPopulation.md
 docs/UserPopulationsApi.md
 docs/UserRoleAssignmentsApi.md
 docs/UsersApi.md
-go.mod
-go.sum
 model_administrator_security.go
 model_administrator_security_allowed_methods.go
 model_administrator_security_provider.go

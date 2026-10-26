@@ -76,16 +76,16 @@ func (a *FlowPoliciesApiService) ReadAllFlowPolicies(ctx context.Context, enviro
 //
 //	@return EntityArray
 func (a *FlowPoliciesApiService) ReadAllFlowPoliciesExecute(r ApiReadAllFlowPoliciesRequest) EntityArrayPagedIterator {
-  return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
+	return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
 }
 
 func (a *FlowPoliciesApiService) ReadAllFlowPoliciesExecuteInitialPage(r ApiReadAllFlowPoliciesRequest) (*EntityArray, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *EntityArray
+		err                 error
+		response            *http.Response
+		localVarReturnValue *EntityArray
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadAllFlowPoliciesExecute(r)
@@ -321,11 +321,11 @@ func (a *FlowPoliciesApiService) ReadOneFlowPolicy(ctx context.Context, environm
 //	@return FlowPolicy
 func (a *FlowPoliciesApiService) ReadOneFlowPolicyExecute(r ApiReadOneFlowPolicyRequest) (*FlowPolicy, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *FlowPolicy
+		err                 error
+		response            *http.Response
+		localVarReturnValue *FlowPolicy
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadOneFlowPolicyExecute(r)

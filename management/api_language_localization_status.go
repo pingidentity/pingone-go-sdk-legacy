@@ -76,11 +76,11 @@ func (a *LanguageLocalizationStatusApiService) CreateLanguageLocalizationStatus(
 //	@return LanguageLocalizationStatus
 func (a *LanguageLocalizationStatusApiService) CreateLanguageLocalizationStatusExecute(r ApiCreateLanguageLocalizationStatusRequest) (*LanguageLocalizationStatus, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *LanguageLocalizationStatus
+		err                 error
+		response            *http.Response
+		localVarReturnValue *LanguageLocalizationStatus
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalCreateLanguageLocalizationStatusExecute(r)
@@ -331,7 +331,7 @@ func (a *LanguageLocalizationStatusApiService) DeleteLanguageLocalizationStatusE
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalDeleteLanguageLocalizationStatusExecute(r)
@@ -557,11 +557,11 @@ func (a *LanguageLocalizationStatusApiService) ReadLanguageLocalizationStatus(ct
 //	@return LanguageLocalizationStatus
 func (a *LanguageLocalizationStatusApiService) ReadLanguageLocalizationStatusExecute(r ApiReadLanguageLocalizationStatusRequest) (*LanguageLocalizationStatus, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *LanguageLocalizationStatus
+		err                 error
+		response            *http.Response
+		localVarReturnValue *LanguageLocalizationStatus
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadLanguageLocalizationStatusExecute(r)
@@ -798,11 +798,11 @@ func (a *LanguageLocalizationStatusApiService) ReadOneLanguageLocalizationStatus
 //	@return LanguageLocalizationStatus
 func (a *LanguageLocalizationStatusApiService) ReadOneLanguageLocalizationStatusExecute(r ApiReadOneLanguageLocalizationStatusRequest) (*LanguageLocalizationStatus, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *LanguageLocalizationStatus
+		err                 error
+		response            *http.Response
+		localVarReturnValue *LanguageLocalizationStatus
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadOneLanguageLocalizationStatusExecute(r)
@@ -1046,11 +1046,11 @@ func (a *LanguageLocalizationStatusApiService) UpdateLanguageLocalizationStatus(
 //	@return LanguageLocalizationStatus
 func (a *LanguageLocalizationStatusApiService) UpdateLanguageLocalizationStatusExecute(r ApiUpdateLanguageLocalizationStatusRequest) (*LanguageLocalizationStatus, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *LanguageLocalizationStatus
+		err                 error
+		response            *http.Response
+		localVarReturnValue *LanguageLocalizationStatus
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalUpdateLanguageLocalizationStatusExecute(r)

@@ -74,11 +74,11 @@ func (a *DigitalWalletAppsApiService) CreateDigitalWalletApp(ctx context.Context
 //	@return DigitalWalletApplication
 func (a *DigitalWalletAppsApiService) CreateDigitalWalletAppExecute(r ApiCreateDigitalWalletAppRequest) (*DigitalWalletApplication, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *DigitalWalletApplication
+		err                 error
+		response            *http.Response
+		localVarReturnValue *DigitalWalletApplication
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalCreateDigitalWalletAppExecute(r)
@@ -340,7 +340,7 @@ func (a *DigitalWalletAppsApiService) DeleteDigitalWalletAppExecute(r ApiDeleteD
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalDeleteDigitalWalletAppExecute(r)
@@ -565,16 +565,16 @@ func (a *DigitalWalletAppsApiService) ReadAllDigitalWalletApps(ctx context.Conte
 //
 //	@return EntityArray
 func (a *DigitalWalletAppsApiService) ReadAllDigitalWalletAppsExecute(r ApiReadAllDigitalWalletAppsRequest) EntityArrayPagedIterator {
-  return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
+	return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
 }
 
 func (a *DigitalWalletAppsApiService) ReadAllDigitalWalletAppsExecuteInitialPage(r ApiReadAllDigitalWalletAppsRequest) (*EntityArray, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *EntityArray
+		err                 error
+		response            *http.Response
+		localVarReturnValue *EntityArray
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadAllDigitalWalletAppsExecute(r)
@@ -807,11 +807,11 @@ func (a *DigitalWalletAppsApiService) ReadOneDigitalWalletApp(ctx context.Contex
 //	@return DigitalWalletApplication
 func (a *DigitalWalletAppsApiService) ReadOneDigitalWalletAppExecute(r ApiReadOneDigitalWalletAppRequest) (*DigitalWalletApplication, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *DigitalWalletApplication
+		err                 error
+		response            *http.Response
+		localVarReturnValue *DigitalWalletApplication
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadOneDigitalWalletAppExecute(r)
@@ -1051,11 +1051,11 @@ func (a *DigitalWalletAppsApiService) UpdateDigitalWalletApp(ctx context.Context
 //	@return DigitalWalletApplication
 func (a *DigitalWalletAppsApiService) UpdateDigitalWalletAppExecute(r ApiUpdateDigitalWalletAppRequest) (*DigitalWalletApplication, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *DigitalWalletApplication
+		err                 error
+		response            *http.Response
+		localVarReturnValue *DigitalWalletApplication
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalUpdateDigitalWalletAppExecute(r)

@@ -80,7 +80,7 @@ func (dst *EntityArrayEmbeddedRolesInner) UnmarshalJSON(data []byte) error {
 		if string(jsonUserApplicationRoleAssignment) == "{}" { // empty struct
 			dst.UserApplicationRoleAssignment = nil
 		} else {
-				return nil // data stored in dst.UserApplicationRoleAssignment, return on the first match
+			return nil // data stored in dst.UserApplicationRoleAssignment, return on the first match
 		}
 	} else {
 		dst.UserApplicationRoleAssignment = nil

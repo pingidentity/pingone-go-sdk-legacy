@@ -76,11 +76,11 @@ func (a *AgreementLanguagesResourcesApiService) CreateAgreementLanguage(ctx cont
 //	@return AgreementLanguage
 func (a *AgreementLanguagesResourcesApiService) CreateAgreementLanguageExecute(r ApiCreateAgreementLanguageRequest) (*AgreementLanguage, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *AgreementLanguage
+		err                 error
+		response            *http.Response
+		localVarReturnValue *AgreementLanguage
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalCreateAgreementLanguageExecute(r)
@@ -331,7 +331,7 @@ func (a *AgreementLanguagesResourcesApiService) DeleteAgreementLanguageExecute(r
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalDeleteAgreementLanguageExecute(r)
@@ -560,16 +560,16 @@ func (a *AgreementLanguagesResourcesApiService) ReadAllAgreementLanguages(ctx co
 //
 //	@return EntityArray
 func (a *AgreementLanguagesResourcesApiService) ReadAllAgreementLanguagesExecute(r ApiReadAllAgreementLanguagesRequest) EntityArrayPagedIterator {
-  return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
+	return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
 }
 
 func (a *AgreementLanguagesResourcesApiService) ReadAllAgreementLanguagesExecuteInitialPage(r ApiReadAllAgreementLanguagesRequest) (*EntityArray, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *EntityArray
+		err                 error
+		response            *http.Response
+		localVarReturnValue *EntityArray
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadAllAgreementLanguagesExecute(r)
@@ -806,11 +806,11 @@ func (a *AgreementLanguagesResourcesApiService) ReadOneAgreementLanguage(ctx con
 //	@return AgreementLanguage
 func (a *AgreementLanguagesResourcesApiService) ReadOneAgreementLanguageExecute(r ApiReadOneAgreementLanguageRequest) (*AgreementLanguage, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *AgreementLanguage
+		err                 error
+		response            *http.Response
+		localVarReturnValue *AgreementLanguage
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadOneAgreementLanguageExecute(r)
@@ -1054,11 +1054,11 @@ func (a *AgreementLanguagesResourcesApiService) UpdateAgreementLanguage(ctx cont
 //	@return AgreementLanguage
 func (a *AgreementLanguagesResourcesApiService) UpdateAgreementLanguageExecute(r ApiUpdateAgreementLanguageRequest) (*AgreementLanguage, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *AgreementLanguage
+		err                 error
+		response            *http.Response
+		localVarReturnValue *AgreementLanguage
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalUpdateAgreementLanguageExecute(r)

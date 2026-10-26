@@ -74,7 +74,7 @@ func (a *PropagationRevisionsApiService) EnvironmentsEnvironmentIDPropagationRev
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalEnvironmentsEnvironmentIDPropagationRevisionsIdlatestGetExecute(r)
@@ -299,7 +299,7 @@ func (a *PropagationRevisionsApiService) EnvironmentsEnvironmentIDPropagationRev
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalEnvironmentsEnvironmentIDPropagationRevisionsPostExecute(r)
@@ -541,7 +541,7 @@ func (a *PropagationRevisionsApiService) EnvironmentsEnvironmentIDPropagationRev
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalEnvironmentsEnvironmentIDPropagationRevisionsPreviousRevisionIDGetExecute(r)

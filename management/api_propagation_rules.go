@@ -83,7 +83,7 @@ func (a *PropagationRulesApiService) EnvironmentsEnvironmentIDPropagationPlansPl
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalEnvironmentsEnvironmentIDPropagationPlansPlanIDRulesGetExecute(r)
@@ -324,7 +324,7 @@ func (a *PropagationRulesApiService) EnvironmentsEnvironmentIDPropagationRulesGe
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalEnvironmentsEnvironmentIDPropagationRulesGetExecute(r)
@@ -558,7 +558,7 @@ func (a *PropagationRulesApiService) EnvironmentsEnvironmentIDPropagationRulesPo
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalEnvironmentsEnvironmentIDPropagationRulesPostExecute(r)
@@ -802,7 +802,7 @@ func (a *PropagationRulesApiService) EnvironmentsEnvironmentIDPropagationRulesRu
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalEnvironmentsEnvironmentIDPropagationRulesRuleIDDeleteExecute(r)
@@ -1037,7 +1037,7 @@ func (a *PropagationRulesApiService) EnvironmentsEnvironmentIDPropagationRulesRu
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalEnvironmentsEnvironmentIDPropagationRulesRuleIDGetExecute(r)
@@ -1272,7 +1272,7 @@ func (a *PropagationRulesApiService) EnvironmentsEnvironmentIDPropagationRulesSt
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalEnvironmentsEnvironmentIDPropagationRulesStoreIDPutExecute(r)

@@ -77,11 +77,11 @@ func (a *SchemasApiService) CreateAttribute(ctx context.Context, environmentID s
 //	@return SchemaAttribute
 func (a *SchemasApiService) CreateAttributeExecute(r ApiCreateAttributeRequest) (*SchemaAttribute, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *SchemaAttribute
+		err                 error
+		response            *http.Response
+		localVarReturnValue *SchemaAttribute
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalCreateAttributeExecute(r)
@@ -332,7 +332,7 @@ func (a *SchemasApiService) DeleteAttributeExecute(r ApiDeleteAttributeRequest) 
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalDeleteAttributeExecute(r)
@@ -561,16 +561,16 @@ func (a *SchemasApiService) ReadAllSchemaAttributes(ctx context.Context, environ
 //
 //	@return EntityArray
 func (a *SchemasApiService) ReadAllSchemaAttributesExecute(r ApiReadAllSchemaAttributesRequest) EntityArrayPagedIterator {
-  return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
+	return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
 }
 
 func (a *SchemasApiService) ReadAllSchemaAttributesExecuteInitialPage(r ApiReadAllSchemaAttributesRequest) (*EntityArray, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *EntityArray
+		err                 error
+		response            *http.Response
+		localVarReturnValue *EntityArray
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadAllSchemaAttributesExecute(r)
@@ -804,16 +804,16 @@ func (a *SchemasApiService) ReadAllSchemas(ctx context.Context, environmentID st
 //
 //	@return EntityArray
 func (a *SchemasApiService) ReadAllSchemasExecute(r ApiReadAllSchemasRequest) EntityArrayPagedIterator {
-  return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
+	return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
 }
 
 func (a *SchemasApiService) ReadAllSchemasExecuteInitialPage(r ApiReadAllSchemasRequest) (*EntityArray, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *EntityArray
+		err                 error
+		response            *http.Response
+		localVarReturnValue *EntityArray
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadAllSchemasExecute(r)
@@ -1075,11 +1075,11 @@ func (a *SchemasApiService) ReadOneAttribute(ctx context.Context, environmentID 
 //	@return SchemaAttribute
 func (a *SchemasApiService) ReadOneAttributeExecute(r ApiReadOneAttributeRequest) (*SchemaAttribute, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *SchemaAttribute
+		err                 error
+		response            *http.Response
+		localVarReturnValue *SchemaAttribute
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadOneAttributeExecute(r)
@@ -1314,11 +1314,11 @@ func (a *SchemasApiService) ReadOneSchema(ctx context.Context, environmentID str
 //	@return Schema
 func (a *SchemasApiService) ReadOneSchemaExecute(r ApiReadOneSchemaRequest) (*Schema, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *Schema
+		err                 error
+		response            *http.Response
+		localVarReturnValue *Schema
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadOneSchemaExecute(r)
@@ -1561,11 +1561,11 @@ func (a *SchemasApiService) UpdateAttributePatch(ctx context.Context, environmen
 //	@return SchemaAttribute
 func (a *SchemasApiService) UpdateAttributePatchExecute(r ApiUpdateAttributePatchRequest) (*SchemaAttribute, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *SchemaAttribute
+		err                 error
+		response            *http.Response
+		localVarReturnValue *SchemaAttribute
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalUpdateAttributePatchExecute(r)
@@ -1811,11 +1811,11 @@ func (a *SchemasApiService) UpdateAttributePut(ctx context.Context, environmentI
 //	@return SchemaAttribute
 func (a *SchemasApiService) UpdateAttributePutExecute(r ApiUpdateAttributePutRequest) (*SchemaAttribute, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *SchemaAttribute
+		err                 error
+		response            *http.Response
+		localVarReturnValue *SchemaAttribute
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalUpdateAttributePutExecute(r)

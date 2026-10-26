@@ -76,11 +76,11 @@ func (a *ApplicationResourcesApiService) CreateApplicationResource(ctx context.C
 //	@return ResourceApplicationResource
 func (a *ApplicationResourcesApiService) CreateApplicationResourceExecute(r ApiCreateApplicationResourceRequest) (*ResourceApplicationResource, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *ResourceApplicationResource
+		err                 error
+		response            *http.Response
+		localVarReturnValue *ResourceApplicationResource
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalCreateApplicationResourceExecute(r)
@@ -331,7 +331,7 @@ func (a *ApplicationResourcesApiService) DeleteApplicationResourceExecute(r ApiD
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalDeleteApplicationResourceExecute(r)
@@ -560,16 +560,16 @@ func (a *ApplicationResourcesApiService) ReadAllApplicationResources(ctx context
 //
 //	@return EntityArray
 func (a *ApplicationResourcesApiService) ReadAllApplicationResourcesExecute(r ApiReadAllApplicationResourcesRequest) EntityArrayPagedIterator {
-  return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
+	return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
 }
 
 func (a *ApplicationResourcesApiService) ReadAllApplicationResourcesExecuteInitialPage(r ApiReadAllApplicationResourcesRequest) (*EntityArray, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *EntityArray
+		err                 error
+		response            *http.Response
+		localVarReturnValue *EntityArray
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadAllApplicationResourcesExecute(r)
@@ -806,11 +806,11 @@ func (a *ApplicationResourcesApiService) ReadOneApplicationResource(ctx context.
 //	@return ResourceApplicationResource
 func (a *ApplicationResourcesApiService) ReadOneApplicationResourceExecute(r ApiReadOneApplicationResourceRequest) (*ResourceApplicationResource, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *ResourceApplicationResource
+		err                 error
+		response            *http.Response
+		localVarReturnValue *ResourceApplicationResource
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadOneApplicationResourceExecute(r)
@@ -1054,11 +1054,11 @@ func (a *ApplicationResourcesApiService) UpdateApplicationResource(ctx context.C
 //	@return ResourceApplicationResource
 func (a *ApplicationResourcesApiService) UpdateApplicationResourceExecute(r ApiUpdateApplicationResourceRequest) (*ResourceApplicationResource, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *ResourceApplicationResource
+		err                 error
+		response            *http.Response
+		localVarReturnValue *ResourceApplicationResource
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalUpdateApplicationResourceExecute(r)

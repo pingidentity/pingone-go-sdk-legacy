@@ -74,11 +74,11 @@ func (a *CustomAdminRolesApiService) CreateCustomAdminRole(ctx context.Context, 
 //	@return CustomAdminRole
 func (a *CustomAdminRolesApiService) CreateCustomAdminRoleExecute(r ApiCreateCustomAdminRoleRequest) (*CustomAdminRole, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *CustomAdminRole
+		err                 error
+		response            *http.Response
+		localVarReturnValue *CustomAdminRole
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalCreateCustomAdminRoleExecute(r)
@@ -351,7 +351,7 @@ func (a *CustomAdminRolesApiService) DeleteCustomAdminRoleExecute(r ApiDeleteCus
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalDeleteCustomAdminRoleExecute(r)
@@ -582,16 +582,16 @@ func (a *CustomAdminRolesApiService) ReadAllCustomAdminRoles(ctx context.Context
 //
 //	@return EntityArray
 func (a *CustomAdminRolesApiService) ReadAllCustomAdminRolesExecute(r ApiReadAllCustomAdminRolesRequest) EntityArrayPagedIterator {
-  return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
+	return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
 }
 
 func (a *CustomAdminRolesApiService) ReadAllCustomAdminRolesExecuteInitialPage(r ApiReadAllCustomAdminRolesRequest) (*EntityArray, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *EntityArray
+		err                 error
+		response            *http.Response
+		localVarReturnValue *EntityArray
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadAllCustomAdminRolesExecute(r)
@@ -853,11 +853,11 @@ func (a *CustomAdminRolesApiService) ReadOneCustomAdminRole(ctx context.Context,
 //	@return CustomAdminRole
 func (a *CustomAdminRolesApiService) ReadOneCustomAdminRoleExecute(r ApiReadOneCustomAdminRoleRequest) (*CustomAdminRole, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *CustomAdminRole
+		err                 error
+		response            *http.Response
+		localVarReturnValue *CustomAdminRole
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadOneCustomAdminRoleExecute(r)
@@ -1097,11 +1097,11 @@ func (a *CustomAdminRolesApiService) UpdateCustomAdminRole(ctx context.Context, 
 //	@return CustomAdminRole
 func (a *CustomAdminRolesApiService) UpdateCustomAdminRoleExecute(r ApiUpdateCustomAdminRoleRequest) (*CustomAdminRole, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *CustomAdminRole
+		err                 error
+		response            *http.Response
+		localVarReturnValue *CustomAdminRole
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalUpdateCustomAdminRoleExecute(r)

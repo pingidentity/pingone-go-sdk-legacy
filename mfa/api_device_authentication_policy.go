@@ -80,11 +80,11 @@ func (a *DeviceAuthenticationPolicyApiService) CreateDeviceAuthenticationPolicie
 //	@return DeviceAuthenticationPolicyPostResponse
 func (a *DeviceAuthenticationPolicyApiService) CreateDeviceAuthenticationPoliciesExecute(r ApiCreateDeviceAuthenticationPoliciesRequest) (*DeviceAuthenticationPolicyPostResponse, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *DeviceAuthenticationPolicyPostResponse
+		err                 error
+		response            *http.Response
+		localVarReturnValue *DeviceAuthenticationPolicyPostResponse
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalCreateDeviceAuthenticationPoliciesExecute(r)
@@ -360,7 +360,7 @@ func (a *DeviceAuthenticationPolicyApiService) DeleteDeviceAuthenticationPolicyE
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalDeleteDeviceAuthenticationPolicyExecute(r)
@@ -585,16 +585,16 @@ func (a *DeviceAuthenticationPolicyApiService) ReadDeviceAuthenticationPolicies(
 //
 //	@return EntityArray
 func (a *DeviceAuthenticationPolicyApiService) ReadDeviceAuthenticationPoliciesExecute(r ApiReadDeviceAuthenticationPoliciesRequest) EntityArrayPagedIterator {
-  return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
+	return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
 }
 
 func (a *DeviceAuthenticationPolicyApiService) ReadDeviceAuthenticationPoliciesExecuteInitialPage(r ApiReadDeviceAuthenticationPoliciesRequest) (*EntityArray, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *EntityArray
+		err                 error
+		response            *http.Response
+		localVarReturnValue *EntityArray
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadDeviceAuthenticationPoliciesExecute(r)
@@ -827,11 +827,11 @@ func (a *DeviceAuthenticationPolicyApiService) ReadOneDeviceAuthenticationPolicy
 //	@return DeviceAuthenticationPolicy
 func (a *DeviceAuthenticationPolicyApiService) ReadOneDeviceAuthenticationPolicyExecute(r ApiReadOneDeviceAuthenticationPolicyRequest) (*DeviceAuthenticationPolicy, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *DeviceAuthenticationPolicy
+		err                 error
+		response            *http.Response
+		localVarReturnValue *DeviceAuthenticationPolicy
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadOneDeviceAuthenticationPolicyExecute(r)
@@ -1071,11 +1071,11 @@ func (a *DeviceAuthenticationPolicyApiService) UpdateDeviceAuthenticationPolicy(
 //	@return DeviceAuthenticationPolicy
 func (a *DeviceAuthenticationPolicyApiService) UpdateDeviceAuthenticationPolicyExecute(r ApiUpdateDeviceAuthenticationPolicyRequest) (*DeviceAuthenticationPolicy, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *DeviceAuthenticationPolicy
+		err                 error
+		response            *http.Response
+		localVarReturnValue *DeviceAuthenticationPolicy
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalUpdateDeviceAuthenticationPolicyExecute(r)

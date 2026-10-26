@@ -70,11 +70,11 @@ func (a *UserPopulationsApiService) ReadUserPopulation(ctx context.Context, envi
 //	@return UserPopulation
 func (a *UserPopulationsApiService) ReadUserPopulationExecute(r ApiReadUserPopulationRequest) (*UserPopulation, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *UserPopulation
+		err                 error
+		response            *http.Response
+		localVarReturnValue *UserPopulation
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadUserPopulationExecute(r)
@@ -314,11 +314,11 @@ func (a *UserPopulationsApiService) UpdateUserPopulation(ctx context.Context, en
 //	@return UserPopulation
 func (a *UserPopulationsApiService) UpdateUserPopulationExecute(r ApiUpdateUserPopulationRequest) (*UserPopulation, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *UserPopulation
+		err                 error
+		response            *http.Response
+		localVarReturnValue *UserPopulation
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalUpdateUserPopulationExecute(r)

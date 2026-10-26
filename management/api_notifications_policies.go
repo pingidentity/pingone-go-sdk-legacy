@@ -73,11 +73,11 @@ func (a *NotificationsPoliciesApiService) CreateNotificationsPolicy(ctx context.
 //	@return NotificationsPolicy
 func (a *NotificationsPoliciesApiService) CreateNotificationsPolicyExecute(r ApiCreateNotificationsPolicyRequest) (*NotificationsPolicy, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *NotificationsPolicy
+		err                 error
+		response            *http.Response
+		localVarReturnValue *NotificationsPolicy
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalCreateNotificationsPolicyExecute(r)
@@ -313,7 +313,7 @@ func (a *NotificationsPoliciesApiService) DeleteNotificationsPolicyExecute(r Api
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalDeleteNotificationsPolicyExecute(r)
@@ -538,16 +538,16 @@ func (a *NotificationsPoliciesApiService) ReadAllNotificationsPolicies(ctx conte
 //
 //	@return EntityArray
 func (a *NotificationsPoliciesApiService) ReadAllNotificationsPoliciesExecute(r ApiReadAllNotificationsPoliciesRequest) EntityArrayPagedIterator {
-  return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
+	return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
 }
 
 func (a *NotificationsPoliciesApiService) ReadAllNotificationsPoliciesExecuteInitialPage(r ApiReadAllNotificationsPoliciesRequest) (*EntityArray, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *EntityArray
+		err                 error
+		response            *http.Response
+		localVarReturnValue *EntityArray
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadAllNotificationsPoliciesExecute(r)
@@ -780,11 +780,11 @@ func (a *NotificationsPoliciesApiService) ReadOneNotificationsPolicy(ctx context
 //	@return NotificationsPolicy
 func (a *NotificationsPoliciesApiService) ReadOneNotificationsPolicyExecute(r ApiReadOneNotificationsPolicyRequest) (*NotificationsPolicy, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *NotificationsPolicy
+		err                 error
+		response            *http.Response
+		localVarReturnValue *NotificationsPolicy
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadOneNotificationsPolicyExecute(r)
@@ -1024,11 +1024,11 @@ func (a *NotificationsPoliciesApiService) UpdateNotificationsPolicy(ctx context.
 //	@return NotificationsPolicy
 func (a *NotificationsPoliciesApiService) UpdateNotificationsPolicyExecute(r ApiUpdateNotificationsPolicyRequest) (*NotificationsPolicy, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *NotificationsPolicy
+		err                 error
+		response            *http.Response
+		localVarReturnValue *NotificationsPolicy
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalUpdateNotificationsPolicyExecute(r)

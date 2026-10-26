@@ -76,11 +76,11 @@ func (a *ApplicationResourceGrantsApiService) CreateApplicationGrant(ctx context
 //	@return ApplicationResourceGrant
 func (a *ApplicationResourceGrantsApiService) CreateApplicationGrantExecute(r ApiCreateApplicationGrantRequest) (*ApplicationResourceGrant, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *ApplicationResourceGrant
+		err                 error
+		response            *http.Response
+		localVarReturnValue *ApplicationResourceGrant
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalCreateApplicationGrantExecute(r)
@@ -331,7 +331,7 @@ func (a *ApplicationResourceGrantsApiService) DeleteApplicationGrantExecute(r Ap
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalDeleteApplicationGrantExecute(r)
@@ -560,16 +560,16 @@ func (a *ApplicationResourceGrantsApiService) ReadAllApplicationGrants(ctx conte
 //
 //	@return EntityArray
 func (a *ApplicationResourceGrantsApiService) ReadAllApplicationGrantsExecute(r ApiReadAllApplicationGrantsRequest) EntityArrayPagedIterator {
-  return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
+	return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
 }
 
 func (a *ApplicationResourceGrantsApiService) ReadAllApplicationGrantsExecuteInitialPage(r ApiReadAllApplicationGrantsRequest) (*EntityArray, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *EntityArray
+		err                 error
+		response            *http.Response
+		localVarReturnValue *EntityArray
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadAllApplicationGrantsExecute(r)
@@ -806,11 +806,11 @@ func (a *ApplicationResourceGrantsApiService) ReadOneApplicationGrant(ctx contex
 //	@return ApplicationResourceGrant
 func (a *ApplicationResourceGrantsApiService) ReadOneApplicationGrantExecute(r ApiReadOneApplicationGrantRequest) (*ApplicationResourceGrant, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *ApplicationResourceGrant
+		err                 error
+		response            *http.Response
+		localVarReturnValue *ApplicationResourceGrant
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadOneApplicationGrantExecute(r)
@@ -1054,11 +1054,11 @@ func (a *ApplicationResourceGrantsApiService) UpdateApplicationGrant(ctx context
 //	@return ApplicationResourceGrant
 func (a *ApplicationResourceGrantsApiService) UpdateApplicationGrantExecute(r ApiUpdateApplicationGrantRequest) (*ApplicationResourceGrant, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *ApplicationResourceGrant
+		err                 error
+		response            *http.Response
+		localVarReturnValue *ApplicationResourceGrant
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalUpdateApplicationGrantExecute(r)

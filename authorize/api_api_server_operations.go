@@ -76,11 +76,11 @@ func (a *APIServerOperationsApiService) CreateAPIServerOperation(ctx context.Con
 //	@return APIServerOperation
 func (a *APIServerOperationsApiService) CreateAPIServerOperationExecute(r ApiCreateAPIServerOperationRequest) (*APIServerOperation, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *APIServerOperation
+		err                 error
+		response            *http.Response
+		localVarReturnValue *APIServerOperation
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalCreateAPIServerOperationExecute(r)
@@ -331,7 +331,7 @@ func (a *APIServerOperationsApiService) DeleteAPIServerOperationExecute(r ApiDel
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalDeleteAPIServerOperationExecute(r)
@@ -560,16 +560,16 @@ func (a *APIServerOperationsApiService) ReadAllAPIServerOperations(ctx context.C
 //
 //	@return EntityArray
 func (a *APIServerOperationsApiService) ReadAllAPIServerOperationsExecute(r ApiReadAllAPIServerOperationsRequest) EntityArrayPagedIterator {
-  return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
+	return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
 }
 
 func (a *APIServerOperationsApiService) ReadAllAPIServerOperationsExecuteInitialPage(r ApiReadAllAPIServerOperationsRequest) (*EntityArray, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *EntityArray
+		err                 error
+		response            *http.Response
+		localVarReturnValue *EntityArray
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadAllAPIServerOperationsExecute(r)
@@ -806,11 +806,11 @@ func (a *APIServerOperationsApiService) ReadOneAPIServerOperation(ctx context.Co
 //	@return APIServerOperation
 func (a *APIServerOperationsApiService) ReadOneAPIServerOperationExecute(r ApiReadOneAPIServerOperationRequest) (*APIServerOperation, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *APIServerOperation
+		err                 error
+		response            *http.Response
+		localVarReturnValue *APIServerOperation
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadOneAPIServerOperationExecute(r)
@@ -1054,11 +1054,11 @@ func (a *APIServerOperationsApiService) UpdateAPIServerOperation(ctx context.Con
 //	@return APIServerOperation
 func (a *APIServerOperationsApiService) UpdateAPIServerOperationExecute(r ApiUpdateAPIServerOperationRequest) (*APIServerOperation, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *APIServerOperation
+		err                 error
+		response            *http.Response
+		localVarReturnValue *APIServerOperation
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalUpdateAPIServerOperationExecute(r)

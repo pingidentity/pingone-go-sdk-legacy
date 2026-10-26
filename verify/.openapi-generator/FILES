@@ -55,8 +55,6 @@ docs/VoicePhraseContents.md
 docs/VoicePhraseContentsApi.md
 docs/VoicePhraseContentsVoicePhrase.md
 docs/VoicePhrasesApi.md
-go.mod
-go.sum
 model_entity_array.go
 model_entity_array__embedded.go
 model_enum_inspection_type.go

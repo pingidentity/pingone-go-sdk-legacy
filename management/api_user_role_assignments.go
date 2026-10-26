@@ -76,11 +76,11 @@ func (a *UserRoleAssignmentsApiService) CreateUserRoleAssignment(ctx context.Con
 //	@return RoleAssignment
 func (a *UserRoleAssignmentsApiService) CreateUserRoleAssignmentExecute(r ApiCreateUserRoleAssignmentRequest) (*RoleAssignment, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *RoleAssignment
+		err                 error
+		response            *http.Response
+		localVarReturnValue *RoleAssignment
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalCreateUserRoleAssignmentExecute(r)
@@ -331,7 +331,7 @@ func (a *UserRoleAssignmentsApiService) DeleteUserRoleAssignmentExecute(r ApiDel
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalDeleteUserRoleAssignmentExecute(r)
@@ -560,11 +560,11 @@ func (a *UserRoleAssignmentsApiService) ReadOneUserRoleAssignment(ctx context.Co
 //	@return RoleAssignment
 func (a *UserRoleAssignmentsApiService) ReadOneUserRoleAssignmentExecute(r ApiReadOneUserRoleAssignmentRequest) (*RoleAssignment, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *RoleAssignment
+		err                 error
+		response            *http.Response
+		localVarReturnValue *RoleAssignment
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadOneUserRoleAssignmentExecute(r)
@@ -802,16 +802,16 @@ func (a *UserRoleAssignmentsApiService) ReadUserRoleAssignments(ctx context.Cont
 //
 //	@return EntityArray
 func (a *UserRoleAssignmentsApiService) ReadUserRoleAssignmentsExecute(r ApiReadUserRoleAssignmentsRequest) EntityArrayPagedIterator {
-  return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
+	return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
 }
 
 func (a *UserRoleAssignmentsApiService) ReadUserRoleAssignmentsExecuteInitialPage(r ApiReadUserRoleAssignmentsRequest) (*EntityArray, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *EntityArray
+		err                 error
+		response            *http.Response
+		localVarReturnValue *EntityArray
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadUserRoleAssignmentsExecute(r)

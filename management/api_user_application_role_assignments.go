@@ -76,11 +76,11 @@ func (a *UserApplicationRoleAssignmentsApiService) CreateUserApplicationRoleAssi
 //	@return UserApplicationRoleAssignment
 func (a *UserApplicationRoleAssignmentsApiService) CreateUserApplicationRoleAssignmentExecute(r ApiCreateUserApplicationRoleAssignmentRequest) (*UserApplicationRoleAssignment, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *UserApplicationRoleAssignment
+		err                 error
+		response            *http.Response
+		localVarReturnValue *UserApplicationRoleAssignment
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalCreateUserApplicationRoleAssignmentExecute(r)
@@ -331,7 +331,7 @@ func (a *UserApplicationRoleAssignmentsApiService) DeleteUserApplicationRoleAssi
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalDeleteUserApplicationRoleAssignmentExecute(r)
@@ -560,16 +560,16 @@ func (a *UserApplicationRoleAssignmentsApiService) ReadUserApplicationRoleAssign
 //
 //	@return EntityArray
 func (a *UserApplicationRoleAssignmentsApiService) ReadUserApplicationRoleAssignmentsExecute(r ApiReadUserApplicationRoleAssignmentsRequest) EntityArrayPagedIterator {
-  return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
+	return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
 }
 
 func (a *UserApplicationRoleAssignmentsApiService) ReadUserApplicationRoleAssignmentsExecuteInitialPage(r ApiReadUserApplicationRoleAssignmentsRequest) (*EntityArray, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *EntityArray
+		err                 error
+		response            *http.Response
+		localVarReturnValue *EntityArray
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadUserApplicationRoleAssignmentsExecute(r)

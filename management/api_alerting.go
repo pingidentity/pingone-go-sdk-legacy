@@ -74,11 +74,11 @@ func (a *AlertingApiService) CreateAlertChannel(ctx context.Context, environment
 //	@return AlertChannel
 func (a *AlertingApiService) CreateAlertChannelExecute(r ApiCreateAlertChannelRequest) (*AlertChannel, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *AlertChannel
+		err                 error
+		response            *http.Response
+		localVarReturnValue *AlertChannel
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalCreateAlertChannelExecute(r)
@@ -351,7 +351,7 @@ func (a *AlertingApiService) DeleteAlertChannelExecute(r ApiDeleteAlertChannelRe
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalDeleteAlertChannelExecute(r)
@@ -576,16 +576,16 @@ func (a *AlertingApiService) ReadAllAlertChannels(ctx context.Context, environme
 //
 //	@return EntityArray
 func (a *AlertingApiService) ReadAllAlertChannelsExecute(r ApiReadAllAlertChannelsRequest) EntityArrayPagedIterator {
-  return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
+	return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
 }
 
 func (a *AlertingApiService) ReadAllAlertChannelsExecuteInitialPage(r ApiReadAllAlertChannelsRequest) (*EntityArray, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *EntityArray
+		err                 error
+		response            *http.Response
+		localVarReturnValue *EntityArray
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadAllAlertChannelsExecute(r)
@@ -824,11 +824,11 @@ func (a *AlertingApiService) UpdateAlertChannel(ctx context.Context, environment
 //	@return AlertChannel
 func (a *AlertingApiService) UpdateAlertChannelExecute(r ApiUpdateAlertChannelRequest) (*AlertChannel, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *AlertChannel
+		err                 error
+		response            *http.Response
+		localVarReturnValue *AlertChannel
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalUpdateAlertChannelExecute(r)

@@ -74,11 +74,11 @@ func (a *RiskPoliciesApiService) CreateRiskPolicySet(ctx context.Context, enviro
 //	@return RiskPolicySet
 func (a *RiskPoliciesApiService) CreateRiskPolicySetExecute(r ApiCreateRiskPolicySetRequest) (*RiskPolicySet, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *RiskPolicySet
+		err                 error
+		response            *http.Response
+		localVarReturnValue *RiskPolicySet
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalCreateRiskPolicySetExecute(r)
@@ -351,7 +351,7 @@ func (a *RiskPoliciesApiService) DeleteRiskPolicySetExecute(r ApiDeleteRiskPolic
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalDeleteRiskPolicySetExecute(r)
@@ -576,11 +576,11 @@ func (a *RiskPoliciesApiService) ReadOneRiskPolicySet(ctx context.Context, envir
 //	@return RiskPolicySet
 func (a *RiskPoliciesApiService) ReadOneRiskPolicySetExecute(r ApiReadOneRiskPolicySetRequest) (*RiskPolicySet, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *RiskPolicySet
+		err                 error
+		response            *http.Response
+		localVarReturnValue *RiskPolicySet
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadOneRiskPolicySetExecute(r)
@@ -814,16 +814,16 @@ func (a *RiskPoliciesApiService) ReadRiskPolicySets(ctx context.Context, environ
 //
 //	@return EntityArray
 func (a *RiskPoliciesApiService) ReadRiskPolicySetsExecute(r ApiReadRiskPolicySetsRequest) EntityArrayPagedIterator {
-  return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
+	return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
 }
 
 func (a *RiskPoliciesApiService) ReadRiskPolicySetsExecuteInitialPage(r ApiReadRiskPolicySetsRequest) (*EntityArray, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *EntityArray
+		err                 error
+		response            *http.Response
+		localVarReturnValue *EntityArray
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadRiskPolicySetsExecute(r)
@@ -1062,11 +1062,11 @@ func (a *RiskPoliciesApiService) UpdateRiskPolicySet(ctx context.Context, enviro
 //	@return RiskPolicySet
 func (a *RiskPoliciesApiService) UpdateRiskPolicySetExecute(r ApiUpdateRiskPolicySetRequest) (*RiskPolicySet, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *RiskPolicySet
+		err                 error
+		response            *http.Response
+		localVarReturnValue *RiskPolicySet
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalUpdateRiskPolicySetExecute(r)
