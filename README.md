@@ -70,18 +70,3 @@ if err != nil {
 }
 ...
 ```
-
-## Contributing
-
-Each package is generated from an underlying OpenAPI 3 specification.  Currently the OpenAPI 3 specification is stored in the `./<<module>>/generate/pingone-<<module>>.yml` file, although this will be subject to change in the future.
-
-* [**authorize** OpenAPI 3 Specification file](./authorize/generate/pingone-authorize.yml)
-* [**credentials** OpenAPI 3 Specification file](./credentials/generate/pingone-credentials.yml)
-* [**management** OpenAPI 3 Specification file](./management/generate/pingone-management.yml)
-* [**mfa** OpenAPI 3 Specification file](./mfa/generate/pingone-mfa.yml)
-* [**risk** OpenAPI 3 Specification file](./risk/generate/pingone-risk.yml)
-* [**verify** OpenAPI 3 Specification file](./verify/generate/pingone-verify.yml)
-
-Once this file has been updated, from the module directory itself run `make generate`.  This will generate the required `api_*.go` files, `model_*.go` files and associated documentation.
-
-Before raising a Pull request, the resulting code can be checked using the `make devcheck` command.  This will build, lint and verify the code.
