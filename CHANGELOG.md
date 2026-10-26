@@ -1,3 +1,14 @@
+# Release (2026-10-26)
+
+* `github.com/pingidentity/pingone-go-sdk-legacy` : v0.17.0
+  * **Note** bump `github.com/pingidentity/pingone-go-sdk-legacy/authorize` v0.9.0 => [v0.10.0](./authorize/CHANGELOG.md)
+  * **Note** bump `github.com/pingidentity/pingone-go-sdk-legacy/credentials` v0.14.0 => [v0.15.0](./credentials/CHANGELOG.md)
+  * **Note** bump `github.com/pingidentity/pingone-go-sdk-legacy/management` v0.78.0 => [v0.79.0](./management/CHANGELOG.md)
+  * **Note** bump `github.com/pingidentity/pingone-go-sdk-legacy/mfa` v0.27.0 => [v0.28.0](./mfa/CHANGELOG.md)
+  * **Note** bump `github.com/pingidentity/pingone-go-sdk-legacy/risk` v0.23.0 => [v0.24.0](./risk/CHANGELOG.md)
+  * **Note** bump `github.com/pingidentity/pingone-go-sdk-legacy/verify` v0.12.0 => [v0.13.0](./verify/CHANGELOG.md)
+  * **Breaking change** Module moved to `github.com/pingidentity/pingone-go-sdk-legacy`. Any future releases for this module will be under this new module path.
+
 # Release (2026-10-21)
 
 * `github.com/pingidentity/pingone-go-sdk-v2` : v0.16.0
