@@ -1,5 +1,11 @@
 # Release (2026-10-26)
 
+* `github.com/pingidentity/pingone-go-sdk-legacy` : v0.18.0
+  * **Note** bump `github.com/pingidentity/pingone-go-sdk-legacy/management` v0.79.0 => [v0.80.0](./management/CHANGELOG.md)
+  * **Enhancement** Added `Recognize` to the product mapping list to support the `PING_ONE_RECOGNIZE` API product code.
+
+# Release (2026-10-26)
+
 * `github.com/pingidentity/pingone-go-sdk-legacy` : v0.17.0
   * **Note** bump `github.com/pingidentity/pingone-go-sdk-legacy/authorize` v0.9.0 => [v0.10.0](./authorize/CHANGELOG.md)
   * **Note** bump `github.com/pingidentity/pingone-go-sdk-legacy/credentials` v0.14.0 => [v0.15.0](./credentials/CHANGELOG.md)
