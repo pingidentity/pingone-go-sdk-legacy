@@ -68,11 +68,11 @@ func (a *NotificationsSettingsApiService) DeleteNotificationsSettings(ctx contex
 //	@return NotificationsSettings
 func (a *NotificationsSettingsApiService) DeleteNotificationsSettingsExecute(r ApiDeleteNotificationsSettingsRequest) (*NotificationsSettings, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *NotificationsSettings
+		err                 error
+		response            *http.Response
+		localVarReturnValue *NotificationsSettings
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalDeleteNotificationsSettingsExecute(r)
@@ -302,11 +302,11 @@ func (a *NotificationsSettingsApiService) ReadNotificationsSettings(ctx context.
 //	@return NotificationsSettings
 func (a *NotificationsSettingsApiService) ReadNotificationsSettingsExecute(r ApiReadNotificationsSettingsRequest) (*NotificationsSettings, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *NotificationsSettings
+		err                 error
+		response            *http.Response
+		localVarReturnValue *NotificationsSettings
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadNotificationsSettingsExecute(r)
@@ -542,11 +542,11 @@ func (a *NotificationsSettingsApiService) UpdateNotificationsSettings(ctx contex
 //	@return NotificationsSettings
 func (a *NotificationsSettingsApiService) UpdateNotificationsSettingsExecute(r ApiUpdateNotificationsSettingsRequest) (*NotificationsSettings, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *NotificationsSettings
+		err                 error
+		response            *http.Response
+		localVarReturnValue *NotificationsSettings
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalUpdateNotificationsSettingsExecute(r)

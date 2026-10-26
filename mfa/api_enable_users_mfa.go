@@ -70,11 +70,11 @@ func (a *EnableUsersMFAApiService) ReadUserMFAEnabled(ctx context.Context, envir
 //	@return UserMFAEnabled
 func (a *EnableUsersMFAApiService) ReadUserMFAEnabledExecute(r ApiReadUserMFAEnabledRequest) (*UserMFAEnabled, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *UserMFAEnabled
+		err                 error
+		response            *http.Response
+		localVarReturnValue *UserMFAEnabled
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadUserMFAEnabledExecute(r)
@@ -314,11 +314,11 @@ func (a *EnableUsersMFAApiService) UpdateUserMFAEnabled(ctx context.Context, env
 //	@return UserMFAEnabled
 func (a *EnableUsersMFAApiService) UpdateUserMFAEnabledExecute(r ApiUpdateUserMFAEnabledRequest) (*UserMFAEnabled, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *UserMFAEnabled
+		err                 error
+		response            *http.Response
+		localVarReturnValue *UserMFAEnabled
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalUpdateUserMFAEnabledExecute(r)

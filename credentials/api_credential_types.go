@@ -74,11 +74,11 @@ func (a *CredentialTypesApiService) CreateCredentialType(ctx context.Context, en
 //	@return CredentialType
 func (a *CredentialTypesApiService) CreateCredentialTypeExecute(r ApiCreateCredentialTypeRequest) (*CredentialType, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *CredentialType
+		err                 error
+		response            *http.Response
+		localVarReturnValue *CredentialType
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalCreateCredentialTypeExecute(r)
@@ -340,7 +340,7 @@ func (a *CredentialTypesApiService) DeleteCredentialTypeExecute(r ApiDeleteCrede
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalDeleteCredentialTypeExecute(r)
@@ -574,16 +574,16 @@ func (a *CredentialTypesApiService) ReadAllCredentialTypeVersions(ctx context.Co
 //
 //	@return EntityArray
 func (a *CredentialTypesApiService) ReadAllCredentialTypeVersionsExecute(r ApiReadAllCredentialTypeVersionsRequest) EntityArrayPagedIterator {
-  return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
+	return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
 }
 
 func (a *CredentialTypesApiService) ReadAllCredentialTypeVersionsExecuteInitialPage(r ApiReadAllCredentialTypeVersionsRequest) (*EntityArray, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *EntityArray
+		err                 error
+		response            *http.Response
+		localVarReturnValue *EntityArray
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadAllCredentialTypeVersionsExecute(r)
@@ -820,16 +820,16 @@ func (a *CredentialTypesApiService) ReadAllCredentialTypes(ctx context.Context, 
 //
 //	@return EntityArray
 func (a *CredentialTypesApiService) ReadAllCredentialTypesExecute(r ApiReadAllCredentialTypesRequest) EntityArrayPagedIterator {
-  return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
+	return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
 }
 
 func (a *CredentialTypesApiService) ReadAllCredentialTypesExecuteInitialPage(r ApiReadAllCredentialTypesRequest) (*EntityArray, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *EntityArray
+		err                 error
+		response            *http.Response
+		localVarReturnValue *EntityArray
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadAllCredentialTypesExecute(r)
@@ -1062,11 +1062,11 @@ func (a *CredentialTypesApiService) ReadOneCredentialType(ctx context.Context, e
 //	@return CredentialType
 func (a *CredentialTypesApiService) ReadOneCredentialTypeExecute(r ApiReadOneCredentialTypeRequest) (*CredentialType, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *CredentialType
+		err                 error
+		response            *http.Response
+		localVarReturnValue *CredentialType
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadOneCredentialTypeExecute(r)
@@ -1303,11 +1303,11 @@ func (a *CredentialTypesApiService) ReadOneCredentialTypeVersion(ctx context.Con
 //	@return CredentialTypeVersion
 func (a *CredentialTypesApiService) ReadOneCredentialTypeVersionExecute(r ApiReadOneCredentialTypeVersionRequest) (*CredentialTypeVersion, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *CredentialTypeVersion
+		err                 error
+		response            *http.Response
+		localVarReturnValue *CredentialTypeVersion
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadOneCredentialTypeVersionExecute(r)
@@ -1548,11 +1548,11 @@ func (a *CredentialTypesApiService) UpdateCredentialType(ctx context.Context, en
 //	@return CredentialType
 func (a *CredentialTypesApiService) UpdateCredentialTypeExecute(r ApiUpdateCredentialTypeRequest) (*CredentialType, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *CredentialType
+		err                 error
+		response            *http.Response
+		localVarReturnValue *CredentialType
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalUpdateCredentialTypeExecute(r)

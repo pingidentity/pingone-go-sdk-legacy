@@ -68,11 +68,11 @@ func (a *BillOfMaterialsBOMApiService) ReadOneBillOfMaterials(ctx context.Contex
 //	@return BillOfMaterials
 func (a *BillOfMaterialsBOMApiService) ReadOneBillOfMaterialsExecute(r ApiReadOneBillOfMaterialsRequest) (*BillOfMaterials, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *BillOfMaterials
+		err                 error
+		response            *http.Response
+		localVarReturnValue *BillOfMaterials
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadOneBillOfMaterialsExecute(r)
@@ -308,11 +308,11 @@ func (a *BillOfMaterialsBOMApiService) UpdateBillOfMaterials(ctx context.Context
 //	@return BillOfMaterials
 func (a *BillOfMaterialsBOMApiService) UpdateBillOfMaterialsExecute(r ApiUpdateBillOfMaterialsRequest) (*BillOfMaterials, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *BillOfMaterials
+		err                 error
+		response            *http.Response
+		localVarReturnValue *BillOfMaterials
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalUpdateBillOfMaterialsExecute(r)

@@ -74,11 +74,11 @@ func (a *RiskEvaluationsApiService) CreateRiskEvaluation(ctx context.Context, en
 //	@return RiskEvaluation
 func (a *RiskEvaluationsApiService) CreateRiskEvaluationExecute(r ApiCreateRiskEvaluationRequest) (*RiskEvaluation, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *RiskEvaluation
+		err                 error
+		response            *http.Response
+		localVarReturnValue *RiskEvaluation
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalCreateRiskEvaluationExecute(r)
@@ -350,11 +350,11 @@ func (a *RiskEvaluationsApiService) ReadOneRiskEvaluation(ctx context.Context, e
 //	@return RiskEvaluation
 func (a *RiskEvaluationsApiService) ReadOneRiskEvaluationExecute(r ApiReadOneRiskEvaluationRequest) (*RiskEvaluation, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *RiskEvaluation
+		err                 error
+		response            *http.Response
+		localVarReturnValue *RiskEvaluation
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadOneRiskEvaluationExecute(r)
@@ -594,11 +594,11 @@ func (a *RiskEvaluationsApiService) UpdateRiskEvaluation(ctx context.Context, en
 //	@return RiskEvaluation
 func (a *RiskEvaluationsApiService) UpdateRiskEvaluationExecute(r ApiUpdateRiskEvaluationRequest) (*RiskEvaluation, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *RiskEvaluation
+		err                 error
+		response            *http.Response
+		localVarReturnValue *RiskEvaluation
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalUpdateRiskEvaluationExecute(r)

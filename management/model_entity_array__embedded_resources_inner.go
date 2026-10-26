@@ -63,7 +63,7 @@ func (dst *EntityArrayEmbeddedResourcesInner) UnmarshalJSON(data []byte) error {
 		if string(jsonResourceApplicationResource) == "{}" { // empty struct
 			dst.ResourceApplicationResource = nil
 		} else {
-				return nil // data stored in dst.ResourceApplicationResource, return on the first match
+			return nil // data stored in dst.ResourceApplicationResource, return on the first match
 		}
 	} else {
 		dst.ResourceApplicationResource = nil

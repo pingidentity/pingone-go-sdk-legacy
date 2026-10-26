@@ -71,7 +71,7 @@ func (a *AuditActivitiesApiService) EnvironmentsEnvironmentIDActivitiesActivityI
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalEnvironmentsEnvironmentIDActivitiesActivityIDGetExecute(r)
@@ -307,7 +307,7 @@ func (a *AuditActivitiesApiService) EnvironmentsEnvironmentIDActivitiesGetExecut
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalEnvironmentsEnvironmentIDActivitiesGetExecute(r)
@@ -541,7 +541,7 @@ func (a *AuditActivitiesApiService) EnvironmentsEnvironmentIDActivitiesPostExecu
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalEnvironmentsEnvironmentIDActivitiesPostExecute(r)

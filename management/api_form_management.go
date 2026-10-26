@@ -74,11 +74,11 @@ func (a *FormManagementApiService) CreateForm(ctx context.Context, environmentID
 //	@return Form
 func (a *FormManagementApiService) CreateFormExecute(r ApiCreateFormRequest) (*Form, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *Form
+		err                 error
+		response            *http.Response
+		localVarReturnValue *Form
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalCreateFormExecute(r)
@@ -351,7 +351,7 @@ func (a *FormManagementApiService) DeleteFormExecute(r ApiDeleteFormRequest) (*h
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalDeleteFormExecute(r)
@@ -576,16 +576,16 @@ func (a *FormManagementApiService) ReadAllForms(ctx context.Context, environment
 //
 //	@return EntityArray
 func (a *FormManagementApiService) ReadAllFormsExecute(r ApiReadAllFormsRequest) EntityArrayPagedIterator {
-  return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
+	return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
 }
 
 func (a *FormManagementApiService) ReadAllFormsExecuteInitialPage(r ApiReadAllFormsRequest) (*EntityArray, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *EntityArray
+		err                 error
+		response            *http.Response
+		localVarReturnValue *EntityArray
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadAllFormsExecute(r)
@@ -824,11 +824,11 @@ func (a *FormManagementApiService) ReadForm(ctx context.Context, environmentID s
 //	@return Form
 func (a *FormManagementApiService) ReadFormExecute(r ApiReadFormRequest) (*Form, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *Form
+		err                 error
+		response            *http.Response
+		localVarReturnValue *Form
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadFormExecute(r)
@@ -1071,11 +1071,11 @@ func (a *FormManagementApiService) UpdateForm(ctx context.Context, environmentID
 //	@return Form
 func (a *FormManagementApiService) UpdateFormExecute(r ApiUpdateFormRequest) (*Form, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *Form
+		err                 error
+		response            *http.Response
+		localVarReturnValue *Form
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalUpdateFormExecute(r)

@@ -76,11 +76,11 @@ func (a *TrustedEmailAddressesApiService) CreateTrustedEmailAddress(ctx context.
 //	@return EmailDomainTrustedEmail
 func (a *TrustedEmailAddressesApiService) CreateTrustedEmailAddressExecute(r ApiCreateTrustedEmailAddressRequest) (*EmailDomainTrustedEmail, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *EmailDomainTrustedEmail
+		err                 error
+		response            *http.Response
+		localVarReturnValue *EmailDomainTrustedEmail
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalCreateTrustedEmailAddressExecute(r)
@@ -331,7 +331,7 @@ func (a *TrustedEmailAddressesApiService) DeleteTrustedEmailAddressExecute(r Api
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalDeleteTrustedEmailAddressExecute(r)
@@ -560,16 +560,16 @@ func (a *TrustedEmailAddressesApiService) ReadAllTrustedEmailAddresses(ctx conte
 //
 //	@return EntityArray
 func (a *TrustedEmailAddressesApiService) ReadAllTrustedEmailAddressesExecute(r ApiReadAllTrustedEmailAddressesRequest) EntityArrayPagedIterator {
-  return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
+	return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
 }
 
 func (a *TrustedEmailAddressesApiService) ReadAllTrustedEmailAddressesExecuteInitialPage(r ApiReadAllTrustedEmailAddressesRequest) (*EntityArray, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *EntityArray
+		err                 error
+		response            *http.Response
+		localVarReturnValue *EntityArray
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadAllTrustedEmailAddressesExecute(r)
@@ -806,11 +806,11 @@ func (a *TrustedEmailAddressesApiService) ReadOneTrustedEmailAddress(ctx context
 //	@return EmailDomainTrustedEmail
 func (a *TrustedEmailAddressesApiService) ReadOneTrustedEmailAddressExecute(r ApiReadOneTrustedEmailAddressRequest) (*EmailDomainTrustedEmail, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *EmailDomainTrustedEmail
+		err                 error
+		response            *http.Response
+		localVarReturnValue *EmailDomainTrustedEmail
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadOneTrustedEmailAddressExecute(r)
@@ -1054,11 +1054,11 @@ func (a *TrustedEmailAddressesApiService) ResendVerificationCodeToEmail(ctx cont
 //	@return EmailDomainTrustedEmail
 func (a *TrustedEmailAddressesApiService) ResendVerificationCodeToEmailExecute(r ApiResendVerificationCodeToEmailRequest) (*EmailDomainTrustedEmail, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *EmailDomainTrustedEmail
+		err                 error
+		response            *http.Response
+		localVarReturnValue *EmailDomainTrustedEmail
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalResendVerificationCodeToEmailExecute(r)

@@ -44,7 +44,7 @@ const (
 	ENUMPRODUCTTYPE_INTELLIGENCE       EnumProductType = "PING_INTELLIGENCE"
 	ENUMPRODUCTTYPE_CENTRAL            EnumProductType = "PING_CENTRAL"
 	ENUMPRODUCTTYPE_ONE_PAM            EnumProductType = "PING_ONE_PAM"
-	ENUMPRODUCTTYPE_IDENTITY_CLOUD          EnumProductType = "IDENTITY_CLOUD"
+	ENUMPRODUCTTYPE_IDENTITY_CLOUD     EnumProductType = "IDENTITY_CLOUD"
 )
 
 // All allowed values of EnumProductType enum

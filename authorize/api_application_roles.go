@@ -74,11 +74,11 @@ func (a *ApplicationRolesApiService) CreateApplicationRoles(ctx context.Context,
 //	@return ApplicationRole
 func (a *ApplicationRolesApiService) CreateApplicationRolesExecute(r ApiCreateApplicationRolesRequest) (*ApplicationRole, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *ApplicationRole
+		err                 error
+		response            *http.Response
+		localVarReturnValue *ApplicationRole
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalCreateApplicationRolesExecute(r)
@@ -351,7 +351,7 @@ func (a *ApplicationRolesApiService) DeleteApplicationRoleExecute(r ApiDeleteApp
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalDeleteApplicationRoleExecute(r)
@@ -576,16 +576,16 @@ func (a *ApplicationRolesApiService) ReadApplicationRoles(ctx context.Context, e
 //
 //	@return EntityArray
 func (a *ApplicationRolesApiService) ReadApplicationRolesExecute(r ApiReadApplicationRolesRequest) EntityArrayPagedIterator {
-  return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
+	return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
 }
 
 func (a *ApplicationRolesApiService) ReadApplicationRolesExecuteInitialPage(r ApiReadApplicationRolesRequest) (*EntityArray, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *EntityArray
+		err                 error
+		response            *http.Response
+		localVarReturnValue *EntityArray
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadApplicationRolesExecute(r)
@@ -818,11 +818,11 @@ func (a *ApplicationRolesApiService) ReadOneApplicationRole(ctx context.Context,
 //	@return ApplicationRole
 func (a *ApplicationRolesApiService) ReadOneApplicationRoleExecute(r ApiReadOneApplicationRoleRequest) (*ApplicationRole, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *ApplicationRole
+		err                 error
+		response            *http.Response
+		localVarReturnValue *ApplicationRole
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadOneApplicationRoleExecute(r)
@@ -1062,11 +1062,11 @@ func (a *ApplicationRolesApiService) UpdateApplicationRole(ctx context.Context, 
 //	@return ApplicationRole
 func (a *ApplicationRolesApiService) UpdateApplicationRoleExecute(r ApiUpdateApplicationRoleRequest) (*ApplicationRole, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *ApplicationRole
+		err                 error
+		response            *http.Response
+		localVarReturnValue *ApplicationRole
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalUpdateApplicationRoleExecute(r)

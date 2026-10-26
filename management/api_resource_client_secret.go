@@ -71,7 +71,7 @@ func (a *ResourceClientSecretApiService) DeletePreviousResourceSecretExecute(r A
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalDeletePreviousResourceSecretExecute(r)
@@ -296,11 +296,11 @@ func (a *ResourceClientSecretApiService) ReadResourceSecret(ctx context.Context,
 //	@return ResourceSecret
 func (a *ResourceClientSecretApiService) ReadResourceSecretExecute(r ApiReadResourceSecretRequest) (*ResourceSecret, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *ResourceSecret
+		err                 error
+		response            *http.Response
+		localVarReturnValue *ResourceSecret
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadResourceSecretExecute(r)
@@ -540,11 +540,11 @@ func (a *ResourceClientSecretApiService) UpdateResourceSecret(ctx context.Contex
 //	@return ResourceSecret
 func (a *ResourceClientSecretApiService) UpdateResourceSecretExecute(r ApiUpdateResourceSecretRequest) (*ResourceSecret, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *ResourceSecret
+		err                 error
+		response            *http.Response
+		localVarReturnValue *ResourceSecret
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalUpdateResourceSecretExecute(r)

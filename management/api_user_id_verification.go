@@ -71,7 +71,7 @@ func (a *UserIDVerificationApiService) EnvironmentsEnvironmentIDUsersUserIDVerif
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalEnvironmentsEnvironmentIDUsersUserIDVerifyTransactionsGetExecute(r)
@@ -297,7 +297,7 @@ func (a *UserIDVerificationApiService) EnvironmentsEnvironmentIDUsersUserIDVerif
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalEnvironmentsEnvironmentIDUsersUserIDVerifyTransactionsPostExecute(r)
@@ -537,7 +537,7 @@ func (a *UserIDVerificationApiService) EnvironmentsEnvironmentIDUsersUserIDVerif
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalEnvironmentsEnvironmentIDUsersUserIDVerifyTransactionsTransactionIDDeleteExecute(r)
@@ -767,7 +767,7 @@ func (a *UserIDVerificationApiService) EnvironmentsEnvironmentIDUsersUserIDVerif
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalEnvironmentsEnvironmentIDUsersUserIDVerifyTransactionsTransactionIDGetExecute(r)
@@ -1003,7 +1003,7 @@ func (a *UserIDVerificationApiService) EnvironmentsEnvironmentIDUsersUserIDVerif
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalEnvironmentsEnvironmentIDUsersUserIDVerifyTransactionsTransactionIDPutExecute(r)

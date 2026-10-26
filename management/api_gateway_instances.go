@@ -73,16 +73,16 @@ func (a *GatewayInstancesApiService) ReadAllGatewayInstances(ctx context.Context
 //
 //	@return EntityArray
 func (a *GatewayInstancesApiService) ReadAllGatewayInstancesExecute(r ApiReadAllGatewayInstancesRequest) EntityArrayPagedIterator {
-  return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
+	return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
 }
 
 func (a *GatewayInstancesApiService) ReadAllGatewayInstancesExecuteInitialPage(r ApiReadAllGatewayInstancesRequest) (*EntityArray, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *EntityArray
+		err                 error
+		response            *http.Response
+		localVarReturnValue *EntityArray
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadAllGatewayInstancesExecute(r)
@@ -319,11 +319,11 @@ func (a *GatewayInstancesApiService) ReadOneGatewayInstance(ctx context.Context,
 //	@return GatewayInstance
 func (a *GatewayInstancesApiService) ReadOneGatewayInstanceExecute(r ApiReadOneGatewayInstanceRequest) (*GatewayInstance, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *GatewayInstance
+		err                 error
+		response            *http.Response
+		localVarReturnValue *GatewayInstance
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadOneGatewayInstanceExecute(r)

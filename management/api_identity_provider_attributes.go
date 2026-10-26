@@ -76,11 +76,11 @@ func (a *IdentityProviderAttributesApiService) CreateIdentityProviderAttribute(c
 //	@return IdentityProviderAttribute
 func (a *IdentityProviderAttributesApiService) CreateIdentityProviderAttributeExecute(r ApiCreateIdentityProviderAttributeRequest) (*IdentityProviderAttribute, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *IdentityProviderAttribute
+		err                 error
+		response            *http.Response
+		localVarReturnValue *IdentityProviderAttribute
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalCreateIdentityProviderAttributeExecute(r)
@@ -331,7 +331,7 @@ func (a *IdentityProviderAttributesApiService) DeleteIdentityProviderAttributeEx
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalDeleteIdentityProviderAttributeExecute(r)
@@ -560,16 +560,16 @@ func (a *IdentityProviderAttributesApiService) ReadAllIdentityProviderAttributes
 //
 //	@return EntityArray
 func (a *IdentityProviderAttributesApiService) ReadAllIdentityProviderAttributesExecute(r ApiReadAllIdentityProviderAttributesRequest) EntityArrayPagedIterator {
-  return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
+	return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
 }
 
 func (a *IdentityProviderAttributesApiService) ReadAllIdentityProviderAttributesExecuteInitialPage(r ApiReadAllIdentityProviderAttributesRequest) (*EntityArray, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *EntityArray
+		err                 error
+		response            *http.Response
+		localVarReturnValue *EntityArray
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadAllIdentityProviderAttributesExecute(r)
@@ -806,11 +806,11 @@ func (a *IdentityProviderAttributesApiService) ReadOneIdentityProviderAttribute(
 //	@return IdentityProviderAttribute
 func (a *IdentityProviderAttributesApiService) ReadOneIdentityProviderAttributeExecute(r ApiReadOneIdentityProviderAttributeRequest) (*IdentityProviderAttribute, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *IdentityProviderAttribute
+		err                 error
+		response            *http.Response
+		localVarReturnValue *IdentityProviderAttribute
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadOneIdentityProviderAttributeExecute(r)
@@ -1054,11 +1054,11 @@ func (a *IdentityProviderAttributesApiService) UpdateIdentityProviderAttribute(c
 //	@return IdentityProviderAttribute
 func (a *IdentityProviderAttributesApiService) UpdateIdentityProviderAttributeExecute(r ApiUpdateIdentityProviderAttributeRequest) (*IdentityProviderAttribute, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *IdentityProviderAttribute
+		err                 error
+		response            *http.Response
+		localVarReturnValue *IdentityProviderAttribute
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalUpdateIdentityProviderAttributeExecute(r)

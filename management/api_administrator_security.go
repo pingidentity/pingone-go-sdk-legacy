@@ -68,11 +68,11 @@ func (a *AdministratorSecurityApiService) ReadAdministratorSecurity(ctx context.
 //	@return AdministratorSecurity
 func (a *AdministratorSecurityApiService) ReadAdministratorSecurityExecute(r ApiReadAdministratorSecurityRequest) (*AdministratorSecurity, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *AdministratorSecurity
+		err                 error
+		response            *http.Response
+		localVarReturnValue *AdministratorSecurity
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadAdministratorSecurityExecute(r)
@@ -308,11 +308,11 @@ func (a *AdministratorSecurityApiService) UpdateAdministratorSecurity(ctx contex
 //	@return AdministratorSecurity
 func (a *AdministratorSecurityApiService) UpdateAdministratorSecurityExecute(r ApiUpdateAdministratorSecurityRequest) (*AdministratorSecurity, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *AdministratorSecurity
+		err                 error
+		response            *http.Response
+		localVarReturnValue *AdministratorSecurity
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalUpdateAdministratorSecurityExecute(r)

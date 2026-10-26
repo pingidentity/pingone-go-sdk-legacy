@@ -76,11 +76,11 @@ func (a *DigitalWalletsApiService) CreateDigitalWallet(ctx context.Context, envi
 //	@return CredentialDigitalWallet
 func (a *DigitalWalletsApiService) CreateDigitalWalletExecute(r ApiCreateDigitalWalletRequest) (*CredentialDigitalWallet, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *CredentialDigitalWallet
+		err                 error
+		response            *http.Response
+		localVarReturnValue *CredentialDigitalWallet
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalCreateDigitalWalletExecute(r)
@@ -320,7 +320,7 @@ func (a *DigitalWalletsApiService) DeleteDigitalWalletExecute(r ApiDeleteDigital
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalDeleteDigitalWalletExecute(r)
@@ -549,16 +549,16 @@ func (a *DigitalWalletsApiService) ReadAllDigitalWallets(ctx context.Context, en
 //
 //	@return EntityArray
 func (a *DigitalWalletsApiService) ReadAllDigitalWalletsExecute(r ApiReadAllDigitalWalletsRequest) EntityArrayPagedIterator {
-  return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
+	return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
 }
 
 func (a *DigitalWalletsApiService) ReadAllDigitalWalletsExecuteInitialPage(r ApiReadAllDigitalWalletsRequest) (*EntityArray, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *EntityArray
+		err                 error
+		response            *http.Response
+		localVarReturnValue *EntityArray
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadAllDigitalWalletsExecute(r)
@@ -795,11 +795,11 @@ func (a *DigitalWalletsApiService) ReadOneDigitalWallet(ctx context.Context, env
 //	@return CredentialDigitalWallet
 func (a *DigitalWalletsApiService) ReadOneDigitalWalletExecute(r ApiReadOneDigitalWalletRequest) (*CredentialDigitalWallet, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *CredentialDigitalWallet
+		err                 error
+		response            *http.Response
+		localVarReturnValue *CredentialDigitalWallet
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadOneDigitalWalletExecute(r)
@@ -1040,16 +1040,16 @@ func (a *DigitalWalletsApiService) ReadOneDigitalWalletCredential(ctx context.Co
 //
 //	@return EntityArray
 func (a *DigitalWalletsApiService) ReadOneDigitalWalletCredentialExecute(r ApiReadOneDigitalWalletCredentialRequest) EntityArrayPagedIterator {
-  return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
+	return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
 }
 
 func (a *DigitalWalletsApiService) ReadOneDigitalWalletCredentialExecuteInitialPage(r ApiReadOneDigitalWalletCredentialRequest) (*EntityArray, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *EntityArray
+		err                 error
+		response            *http.Response
+		localVarReturnValue *EntityArray
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadOneDigitalWalletCredentialExecute(r)
@@ -1293,11 +1293,11 @@ func (a *DigitalWalletsApiService) UpdateDigitalWallet(ctx context.Context, envi
 //	@return CredentialDigitalWallet
 func (a *DigitalWalletsApiService) UpdateDigitalWalletExecute(r ApiUpdateDigitalWalletRequest) (*CredentialDigitalWallet, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *CredentialDigitalWallet
+		err                 error
+		response            *http.Response
+		localVarReturnValue *CredentialDigitalWallet
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalUpdateDigitalWalletExecute(r)

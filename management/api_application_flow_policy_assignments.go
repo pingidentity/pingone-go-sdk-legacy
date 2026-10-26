@@ -76,11 +76,11 @@ func (a *ApplicationFlowPolicyAssignmentsApiService) CreateFlowPolicyAssignment(
 //	@return FlowPolicyAssignment
 func (a *ApplicationFlowPolicyAssignmentsApiService) CreateFlowPolicyAssignmentExecute(r ApiCreateFlowPolicyAssignmentRequest) (*FlowPolicyAssignment, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *FlowPolicyAssignment
+		err                 error
+		response            *http.Response
+		localVarReturnValue *FlowPolicyAssignment
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalCreateFlowPolicyAssignmentExecute(r)
@@ -331,7 +331,7 @@ func (a *ApplicationFlowPolicyAssignmentsApiService) DeleteFlowPolicyAssignmentE
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalDeleteFlowPolicyAssignmentExecute(r)
@@ -560,16 +560,16 @@ func (a *ApplicationFlowPolicyAssignmentsApiService) ReadAllFlowPolicyAssignment
 //
 //	@return EntityArray
 func (a *ApplicationFlowPolicyAssignmentsApiService) ReadAllFlowPolicyAssignmentsExecute(r ApiReadAllFlowPolicyAssignmentsRequest) EntityArrayPagedIterator {
-  return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
+	return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
 }
 
 func (a *ApplicationFlowPolicyAssignmentsApiService) ReadAllFlowPolicyAssignmentsExecuteInitialPage(r ApiReadAllFlowPolicyAssignmentsRequest) (*EntityArray, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *EntityArray
+		err                 error
+		response            *http.Response
+		localVarReturnValue *EntityArray
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadAllFlowPolicyAssignmentsExecute(r)
@@ -806,11 +806,11 @@ func (a *ApplicationFlowPolicyAssignmentsApiService) ReadOneFlowPolicyAssignment
 //	@return FlowPolicyAssignment
 func (a *ApplicationFlowPolicyAssignmentsApiService) ReadOneFlowPolicyAssignmentExecute(r ApiReadOneFlowPolicyAssignmentRequest) (*FlowPolicyAssignment, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *FlowPolicyAssignment
+		err                 error
+		response            *http.Response
+		localVarReturnValue *FlowPolicyAssignment
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadOneFlowPolicyAssignmentExecute(r)
@@ -1054,11 +1054,11 @@ func (a *ApplicationFlowPolicyAssignmentsApiService) UpdateFlowPolicyAssignment(
 //	@return FlowPolicyAssignment
 func (a *ApplicationFlowPolicyAssignmentsApiService) UpdateFlowPolicyAssignmentExecute(r ApiUpdateFlowPolicyAssignmentRequest) (*FlowPolicyAssignment, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *FlowPolicyAssignment
+		err                 error
+		response            *http.Response
+		localVarReturnValue *FlowPolicyAssignment
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalUpdateFlowPolicyAssignmentExecute(r)

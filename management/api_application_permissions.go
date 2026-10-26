@@ -73,16 +73,16 @@ func (a *ApplicationPermissionsApiService) ReadAllApplicationPermissions(ctx con
 //
 //	@return EntityArray
 func (a *ApplicationPermissionsApiService) ReadAllApplicationPermissionsExecute(r ApiReadAllApplicationPermissionsRequest) EntityArrayPagedIterator {
-  return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
+	return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
 }
 
 func (a *ApplicationPermissionsApiService) ReadAllApplicationPermissionsExecuteInitialPage(r ApiReadAllApplicationPermissionsRequest) (*EntityArray, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *EntityArray
+		err                 error
+		response            *http.Response
+		localVarReturnValue *EntityArray
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadAllApplicationPermissionsExecute(r)

@@ -74,11 +74,11 @@ func (a *CustomDomainsApiService) CreateDomain(ctx context.Context, environmentI
 //	@return CustomDomain
 func (a *CustomDomainsApiService) CreateDomainExecute(r ApiCreateDomainRequest) (*CustomDomain, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *CustomDomain
+		err                 error
+		response            *http.Response
+		localVarReturnValue *CustomDomain
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalCreateDomainExecute(r)
@@ -351,7 +351,7 @@ func (a *CustomDomainsApiService) DeleteDomainExecute(r ApiDeleteDomainRequest) 
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalDeleteDomainExecute(r)
@@ -576,16 +576,16 @@ func (a *CustomDomainsApiService) ReadAllDomains(ctx context.Context, environmen
 //
 //	@return EntityArray
 func (a *CustomDomainsApiService) ReadAllDomainsExecute(r ApiReadAllDomainsRequest) EntityArrayPagedIterator {
-  return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
+	return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
 }
 
 func (a *CustomDomainsApiService) ReadAllDomainsExecuteInitialPage(r ApiReadAllDomainsRequest) (*EntityArray, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *EntityArray
+		err                 error
+		response            *http.Response
+		localVarReturnValue *EntityArray
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadAllDomainsExecute(r)
@@ -818,11 +818,11 @@ func (a *CustomDomainsApiService) ReadOneDomain(ctx context.Context, environment
 //	@return CustomDomain
 func (a *CustomDomainsApiService) ReadOneDomainExecute(r ApiReadOneDomainRequest) (*CustomDomain, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *CustomDomain
+		err                 error
+		response            *http.Response
+		localVarReturnValue *CustomDomain
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadOneDomainExecute(r)
@@ -1068,11 +1068,11 @@ func (a *CustomDomainsApiService) UpdateDomain(ctx context.Context, environmentI
 //	@return CustomDomain
 func (a *CustomDomainsApiService) UpdateDomainExecute(r ApiUpdateDomainRequest) (*CustomDomain, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *CustomDomain
+		err                 error
+		response            *http.Response
+		localVarReturnValue *CustomDomain
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalUpdateDomainExecute(r)

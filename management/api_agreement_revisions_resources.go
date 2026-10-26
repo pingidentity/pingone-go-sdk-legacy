@@ -79,11 +79,11 @@ func (a *AgreementRevisionsResourcesApiService) CreateAgreementLanguageRevision(
 //	@return AgreementLanguageRevision
 func (a *AgreementRevisionsResourcesApiService) CreateAgreementLanguageRevisionExecute(r ApiCreateAgreementLanguageRevisionRequest) (*AgreementLanguageRevision, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *AgreementLanguageRevision
+		err                 error
+		response            *http.Response
+		localVarReturnValue *AgreementLanguageRevision
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalCreateAgreementLanguageRevisionExecute(r)
@@ -338,7 +338,7 @@ func (a *AgreementRevisionsResourcesApiService) DeleteAgreementLanguageRevisionE
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalDeleteAgreementLanguageRevisionExecute(r)
@@ -571,16 +571,16 @@ func (a *AgreementRevisionsResourcesApiService) ReadAllAgreementLanguageRevision
 //
 //	@return EntityArray
 func (a *AgreementRevisionsResourcesApiService) ReadAllAgreementLanguageRevisionsExecute(r ApiReadAllAgreementLanguageRevisionsRequest) EntityArrayPagedIterator {
-  return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
+	return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
 }
 
 func (a *AgreementRevisionsResourcesApiService) ReadAllAgreementLanguageRevisionsExecuteInitialPage(r ApiReadAllAgreementLanguageRevisionsRequest) (*EntityArray, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *EntityArray
+		err                 error
+		response            *http.Response
+		localVarReturnValue *EntityArray
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadAllAgreementLanguageRevisionsExecute(r)
@@ -821,11 +821,11 @@ func (a *AgreementRevisionsResourcesApiService) ReadOneAgreementLanguageRevision
 //	@return AgreementLanguageRevision
 func (a *AgreementRevisionsResourcesApiService) ReadOneAgreementLanguageRevisionExecute(r ApiReadOneAgreementLanguageRevisionRequest) (*AgreementLanguageRevision, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *AgreementLanguageRevision
+		err                 error
+		response            *http.Response
+		localVarReturnValue *AgreementLanguageRevision
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadOneAgreementLanguageRevisionExecute(r)

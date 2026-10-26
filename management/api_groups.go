@@ -74,11 +74,11 @@ func (a *GroupsApiService) CreateGroup(ctx context.Context, environmentID string
 //	@return Group
 func (a *GroupsApiService) CreateGroupExecute(r ApiCreateGroupRequest) (*Group, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *Group
+		err                 error
+		response            *http.Response
+		localVarReturnValue *Group
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalCreateGroupExecute(r)
@@ -356,11 +356,11 @@ func (a *GroupsApiService) CreateGroupNesting(ctx context.Context, environmentID
 //	@return GroupNesting
 func (a *GroupsApiService) CreateGroupNestingExecute(r ApiCreateGroupNestingRequest) (*GroupNesting, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *GroupNesting
+		err                 error
+		response            *http.Response
+		localVarReturnValue *GroupNesting
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalCreateGroupNestingExecute(r)
@@ -608,7 +608,7 @@ func (a *GroupsApiService) DeleteGroupExecute(r ApiDeleteGroupRequest) (*http.Re
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalDeleteGroupExecute(r)
@@ -837,7 +837,7 @@ func (a *GroupsApiService) DeleteGroupNestingExecute(r ApiDeleteGroupNestingRequ
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalDeleteGroupNestingExecute(r)
@@ -1083,16 +1083,16 @@ func (a *GroupsApiService) ReadAllGroups(ctx context.Context, environmentID stri
 //
 //	@return EntityArray
 func (a *GroupsApiService) ReadAllGroupsExecute(r ApiReadAllGroupsRequest) EntityArrayPagedIterator {
-  return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
+	return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
 }
 
 func (a *GroupsApiService) ReadAllGroupsExecuteInitialPage(r ApiReadAllGroupsRequest) (*EntityArray, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *EntityArray
+		err                 error
+		response            *http.Response
+		localVarReturnValue *EntityArray
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadAllGroupsExecute(r)
@@ -1363,16 +1363,16 @@ func (a *GroupsApiService) ReadGroupNesting(ctx context.Context, environmentID s
 //
 //	@return EntityArray
 func (a *GroupsApiService) ReadGroupNestingExecute(r ApiReadGroupNestingRequest) EntityArrayPagedIterator {
-  return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
+	return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
 }
 
 func (a *GroupsApiService) ReadGroupNestingExecuteInitialPage(r ApiReadGroupNestingRequest) (*EntityArray, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *EntityArray
+		err                 error
+		response            *http.Response
+		localVarReturnValue *EntityArray
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadGroupNestingExecute(r)
@@ -1612,11 +1612,11 @@ func (a *GroupsApiService) ReadOneGroup(ctx context.Context, environmentID strin
 //	@return Group
 func (a *GroupsApiService) ReadOneGroupExecute(r ApiReadOneGroupRequest) (*Group, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *Group
+		err                 error
+		response            *http.Response
+		localVarReturnValue *Group
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadOneGroupExecute(r)
@@ -1856,11 +1856,11 @@ func (a *GroupsApiService) ReadOneGroupNesting(ctx context.Context, environmentI
 //	@return GroupNesting
 func (a *GroupsApiService) ReadOneGroupNestingExecute(r ApiReadOneGroupNestingRequest) (*GroupNesting, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *GroupNesting
+		err                 error
+		response            *http.Response
+		localVarReturnValue *GroupNesting
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadOneGroupNestingExecute(r)
@@ -2101,11 +2101,11 @@ func (a *GroupsApiService) UpdateGroup(ctx context.Context, environmentID string
 //	@return Group
 func (a *GroupsApiService) UpdateGroupExecute(r ApiUpdateGroupRequest) (*Group, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *Group
+		err                 error
+		response            *http.Response
+		localVarReturnValue *Group
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalUpdateGroupExecute(r)

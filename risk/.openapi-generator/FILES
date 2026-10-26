@@ -122,8 +122,6 @@ docs/RiskPredictorVelocityAllOfFallback.md
 docs/RiskPredictorVelocityAllOfMaxDelay.md
 docs/RiskPredictorVelocityAllOfSlidingWindow.md
 docs/RiskPredictorVelocityAllOfUse.md
-go.mod
-go.sum
 model_entity_array.go
 model_entity_array__embedded.go
 model_enum_completion_status.go

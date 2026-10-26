@@ -69,7 +69,7 @@ func (a *RecaptchaConfigurationApiService) DeleteRecaptchaConfigurationExecute(r
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalDeleteRecaptchaConfigurationExecute(r)
@@ -290,11 +290,11 @@ func (a *RecaptchaConfigurationApiService) ReadRecaptchaConfiguration(ctx contex
 //	@return RecaptchaConfiguration
 func (a *RecaptchaConfigurationApiService) ReadRecaptchaConfigurationExecute(r ApiReadRecaptchaConfigurationRequest) (*RecaptchaConfiguration, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *RecaptchaConfiguration
+		err                 error
+		response            *http.Response
+		localVarReturnValue *RecaptchaConfiguration
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadRecaptchaConfigurationExecute(r)
@@ -530,11 +530,11 @@ func (a *RecaptchaConfigurationApiService) UpdateRecaptchaConfiguration(ctx cont
 //	@return RecaptchaConfiguration
 func (a *RecaptchaConfigurationApiService) UpdateRecaptchaConfigurationExecute(r ApiUpdateRecaptchaConfigurationRequest) (*RecaptchaConfiguration, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *RecaptchaConfiguration
+		err                 error
+		response            *http.Response
+		localVarReturnValue *RecaptchaConfiguration
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalUpdateRecaptchaConfigurationExecute(r)

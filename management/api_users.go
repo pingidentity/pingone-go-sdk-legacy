@@ -80,11 +80,11 @@ func (a *UsersApiService) CreateUser(ctx context.Context, environmentID string) 
 //	@return User
 func (a *UsersApiService) CreateUserExecute(r ApiCreateUserRequest) (*User, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *User
+		err                 error
+		response            *http.Response
+		localVarReturnValue *User
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalCreateUserExecute(r)
@@ -360,7 +360,7 @@ func (a *UsersApiService) DeleteUserExecute(r ApiDeleteUserRequest) (*http.Respo
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalDeleteUserExecute(r)
@@ -586,7 +586,7 @@ func (a *UsersApiService) EnvironmentsEnvironmentIDUsersUserIDIdentityProviderGe
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalEnvironmentsEnvironmentIDUsersUserIDIdentityProviderGetExecute(r)
@@ -818,7 +818,7 @@ func (a *UsersApiService) EnvironmentsEnvironmentIDUsersUserIDIdentityProviderPu
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalEnvironmentsEnvironmentIDUsersUserIDIdentityProviderPutExecute(r)
@@ -1046,7 +1046,7 @@ func (a *UsersApiService) EnvironmentsEnvironmentIDUsersUserIDVerifyStatusGetExe
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalEnvironmentsEnvironmentIDUsersUserIDVerifyStatusGetExecute(r)
@@ -1278,7 +1278,7 @@ func (a *UsersApiService) EnvironmentsEnvironmentIDUsersUserIDVerifyStatusPutExe
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalEnvironmentsEnvironmentIDUsersUserIDVerifyStatusPutExecute(r)
@@ -1525,16 +1525,16 @@ func (a *UsersApiService) ReadAllUsers(ctx context.Context, environmentID string
 //
 //	@return EntityArray
 func (a *UsersApiService) ReadAllUsersExecute(r ApiReadAllUsersRequest) EntityArrayPagedIterator {
-  return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
+	return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
 }
 
 func (a *UsersApiService) ReadAllUsersExecuteInitialPage(r ApiReadAllUsersRequest) (*EntityArray, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *EntityArray
+		err                 error
+		response            *http.Response
+		localVarReturnValue *EntityArray
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadAllUsersExecute(r)
@@ -1782,11 +1782,11 @@ func (a *UsersApiService) ReadUser(ctx context.Context, environmentID string, us
 //	@return User
 func (a *UsersApiService) ReadUserExecute(r ApiReadUserRequest) (*User, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *User
+		err                 error
+		response            *http.Response
+		localVarReturnValue *User
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadUserExecute(r)
@@ -2029,11 +2029,11 @@ func (a *UsersApiService) UpdateUserPatch(ctx context.Context, environmentID str
 //	@return User
 func (a *UsersApiService) UpdateUserPatchExecute(r ApiUpdateUserPatchRequest) (*User, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *User
+		err                 error
+		response            *http.Response
+		localVarReturnValue *User
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalUpdateUserPatchExecute(r)
@@ -2275,11 +2275,11 @@ func (a *UsersApiService) UpdateUserPut(ctx context.Context, environmentID strin
 //	@return User
 func (a *UsersApiService) UpdateUserPutExecute(r ApiUpdateUserPutRequest) (*User, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *User
+		err                 error
+		response            *http.Response
+		localVarReturnValue *User
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalUpdateUserPutExecute(r)

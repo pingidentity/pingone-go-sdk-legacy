@@ -74,11 +74,11 @@ func (a *ApplicationsApiService) CreateApplication(ctx context.Context, environm
 //	@return CreateApplication201Response
 func (a *ApplicationsApiService) CreateApplicationExecute(r ApiCreateApplicationRequest) (*CreateApplication201Response, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *CreateApplication201Response
+		err                 error
+		response            *http.Response
+		localVarReturnValue *CreateApplication201Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalCreateApplicationExecute(r)
@@ -351,7 +351,7 @@ func (a *ApplicationsApiService) DeleteApplicationExecute(r ApiDeleteApplication
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalDeleteApplicationExecute(r)
@@ -576,16 +576,16 @@ func (a *ApplicationsApiService) ReadAllApplications(ctx context.Context, enviro
 //
 //	@return EntityArray
 func (a *ApplicationsApiService) ReadAllApplicationsExecute(r ApiReadAllApplicationsRequest) EntityArrayPagedIterator {
-  return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
+	return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
 }
 
 func (a *ApplicationsApiService) ReadAllApplicationsExecuteInitialPage(r ApiReadAllApplicationsRequest) (*EntityArray, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *EntityArray
+		err                 error
+		response            *http.Response
+		localVarReturnValue *EntityArray
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadAllApplicationsExecute(r)
@@ -844,11 +844,11 @@ func (a *ApplicationsApiService) ReadOneApplication(ctx context.Context, environ
 //	@return ReadOneApplication200Response
 func (a *ApplicationsApiService) ReadOneApplicationExecute(r ApiReadOneApplicationRequest) (*ReadOneApplication200Response, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *ReadOneApplication200Response
+		err                 error
+		response            *http.Response
+		localVarReturnValue *ReadOneApplication200Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadOneApplicationExecute(r)
@@ -1088,11 +1088,11 @@ func (a *ApplicationsApiService) UpdateApplication(ctx context.Context, environm
 //	@return ReadOneApplication200Response
 func (a *ApplicationsApiService) UpdateApplicationExecute(r ApiUpdateApplicationRequest) (*ReadOneApplication200Response, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *ReadOneApplication200Response
+		err                 error
+		response            *http.Response
+		localVarReturnValue *ReadOneApplication200Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalUpdateApplicationExecute(r)

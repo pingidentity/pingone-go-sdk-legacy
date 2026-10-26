@@ -68,7 +68,7 @@ func (a *CapabilitiesApiService) EnvironmentsEnvironmentIDCapabilitiesGetExecute
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalEnvironmentsEnvironmentIDCapabilitiesGetExecute(r)
@@ -290,7 +290,7 @@ func (a *CapabilitiesApiService) OrganizationsOrganizationIDCapabilitiesGetExecu
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalOrganizationsOrganizationIDCapabilitiesGetExecute(r)
