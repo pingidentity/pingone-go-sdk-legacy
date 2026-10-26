@@ -53,6 +53,8 @@
 
 * `IDENTITY_CLOUD` (value: `"IDENTITY_CLOUD"`)
 
+* `PING_ONE_RECOGNIZE` (value: `"PING_ONE_RECOGNIZE"`)
+
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
