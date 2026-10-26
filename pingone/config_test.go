@@ -5,7 +5,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/pingidentity/pingone-go-sdk-v2/management"
+	"github.com/pingidentity/pingone-go-sdk-legacy/management"
 )
 
 func TestValidateAccessToken_ConfigSuccess(t *testing.T) {

@@ -5,7 +5,7 @@ import (
 	"slices"
 	"sort"
 
-	"github.com/pingidentity/pingone-go-sdk-v2/management"
+	"github.com/pingidentity/pingone-go-sdk-legacy/management"
 )
 
 type ProductMapping struct {

@@ -10,12 +10,12 @@ Code for each service is generated with the help of the [OpenAPI Generator](http
 
 The SDK provides a core package, and a package per PingOne service, each with their own directory off the root of the project:
 
-* **authorize** - [Documentation](https://pkg.go.dev/github.com/pingidentity/pingone-go-sdk-v2/authorize) - for the PingOne Authorize service
-* **credentials** - [Documentation](https://pkg.go.dev/github.com/pingidentity/pingone-go-sdk-v2/credentials) - for the PingOne Credentials service, part of PingOne Neo
-* **management** - [Documentation](https://pkg.go.dev/github.com/pingidentity/pingone-go-sdk-v2/management) - for the PingOne platform common and SSO services
-* **mfa** - [Documentation](https://pkg.go.dev/github.com/pingidentity/pingone-go-sdk-v2/mfa) - for the PingOne MFA service
-* **risk** - [Documentation](https://pkg.go.dev/github.com/pingidentity/pingone-go-sdk-v2/risk) - for the PingOne Protect service
-* **verify** - [Documentation](https://pkg.go.dev/github.com/pingidentity/pingone-go-sdk-v2/verify) - for the PingOne Verify service, part of PingOne Neo
+* **authorize** - [Documentation](https://pkg.go.dev/github.com/pingidentity/pingone-go-sdk-legacy/authorize) - for the PingOne Authorize service
+* **credentials** - [Documentation](https://pkg.go.dev/github.com/pingidentity/pingone-go-sdk-legacy/credentials) - for the PingOne Credentials service, part of PingOne Neo
+* **management** - [Documentation](https://pkg.go.dev/github.com/pingidentity/pingone-go-sdk-legacy/management) - for the PingOne platform common and SSO services
+* **mfa** - [Documentation](https://pkg.go.dev/github.com/pingidentity/pingone-go-sdk-legacy/mfa) - for the PingOne MFA service
+* **risk** - [Documentation](https://pkg.go.dev/github.com/pingidentity/pingone-go-sdk-legacy/risk) - for the PingOne Protect service
+* **verify** - [Documentation](https://pkg.go.dev/github.com/pingidentity/pingone-go-sdk-legacy/verify) - for the PingOne Verify service, part of PingOne Neo
 
 ## Getting Started
 
@@ -28,7 +28,7 @@ The client can be invoked using the following syntax:
 import (
 	"context"
 
-	"github.com/pingidentity/pingone-go-sdk-v2/pingone"
+	"github.com/pingidentity/pingone-go-sdk-legacy/pingone"
 )
 
 ...

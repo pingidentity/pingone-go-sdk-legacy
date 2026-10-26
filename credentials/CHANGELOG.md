@@ -1,3 +1,7 @@
+# v0.15.0 (2026-10-26)
+
+* **Breaking change** Module moved to `github.com/pingidentity/pingone-go-sdk-legacy/credentials`. Any future releases for this module will be under this new module path.
+
 # v0.14.0 (2026-10-21)
 
 * **Breaking change** Module moved to `github.com/pingidentity/pingone-go-sdk-v2/credentials`. Any future releases for this module will be under this new module path.
