@@ -77,6 +77,11 @@ func TestFindProductByAPICode_Success(t *testing.T) {
 			ProductCode: "DaVinci",
 			Selectable:  true,
 		},
+		management.ENUMPRODUCTTYPE_ONE_RECOGNIZE: {
+			APICode:     management.ENUMPRODUCTTYPE_ONE_RECOGNIZE,
+			ProductCode: "Recognize",
+			Selectable:  true,
+		},
 	}
 
 	for productCode, productMap := range codeTests {
@@ -96,7 +101,7 @@ func TestFindProductByAPICode_Success(t *testing.T) {
 
 func TestProductsSelectableList(t *testing.T) {
 
-	expectedList := []string{"APIIntelligence", "AdvancedIdentityCloud", "Authorize", "Credentials", "DaVinci", "MFA", "PingAccess", "PingAuthorize", "PingCentral", "PingDirectory", "PingFederate", "PingID", "PingID-v2", "Privilege", "Risk", "SSO", "Verify"}
+	expectedList := []string{"APIIntelligence", "AdvancedIdentityCloud", "Authorize", "Credentials", "DaVinci", "MFA", "PingAccess", "PingAuthorize", "PingCentral", "PingDirectory", "PingFederate", "PingID", "PingID-v2", "Privilege", "Recognize", "Risk", "SSO", "Verify"}
 
 	v := ProductsSelectableList()
 	if !reflect.DeepEqual(v, expectedList) {

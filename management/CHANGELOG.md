@@ -1,3 +1,7 @@
+# v0.80.0 (2026-10-26)
+
+* **Enhancement** Added `PING_ONE_RECOGNIZE` to `EnumProductType` to align with the API.
+
 # v0.79.0 (2026-10-26)
 
 * **Breaking change** Module moved to `github.com/pingidentity/pingone-go-sdk-legacy/management`. Any future releases for this module will be under this new module path.
