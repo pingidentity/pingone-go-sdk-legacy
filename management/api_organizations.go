@@ -74,16 +74,16 @@ func (a *OrganizationsApiService) ReadAllOrganizations(ctx context.Context) ApiR
 //
 //	@return EntityArray
 func (a *OrganizationsApiService) ReadAllOrganizationsExecute(r ApiReadAllOrganizationsRequest) EntityArrayPagedIterator {
-  return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
+	return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
 }
 
 func (a *OrganizationsApiService) ReadAllOrganizationsExecuteInitialPage(r ApiReadAllOrganizationsRequest) (*EntityArray, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *EntityArray
+		err                 error
+		response            *http.Response
+		localVarReturnValue *EntityArray
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadAllOrganizationsExecute(r)
@@ -315,11 +315,11 @@ func (a *OrganizationsApiService) ReadOneOrganization(ctx context.Context, organ
 //	@return Organization
 func (a *OrganizationsApiService) ReadOneOrganizationExecute(r ApiReadOneOrganizationRequest) (*Organization, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *Organization
+		err                 error
+		response            *http.Response
+		localVarReturnValue *Organization
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadOneOrganizationExecute(r)

@@ -74,11 +74,11 @@ func (a *RateLimitingApiService) CreateRateLimitConfiguration(ctx context.Contex
 //	@return RateLimitConfiguration
 func (a *RateLimitingApiService) CreateRateLimitConfigurationExecute(r ApiCreateRateLimitConfigurationRequest) (*RateLimitConfiguration, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *RateLimitConfiguration
+		err                 error
+		response            *http.Response
+		localVarReturnValue *RateLimitConfiguration
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalCreateRateLimitConfigurationExecute(r)
@@ -351,7 +351,7 @@ func (a *RateLimitingApiService) DeleteRateLimitConfigurationExecute(r ApiDelete
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalDeleteRateLimitConfigurationExecute(r)
@@ -576,16 +576,16 @@ func (a *RateLimitingApiService) ReadAllRateLimitConfigurations(ctx context.Cont
 //
 //	@return EntityArray
 func (a *RateLimitingApiService) ReadAllRateLimitConfigurationsExecute(r ApiReadAllRateLimitConfigurationsRequest) EntityArrayPagedIterator {
-  return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
+	return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
 }
 
 func (a *RateLimitingApiService) ReadAllRateLimitConfigurationsExecuteInitialPage(r ApiReadAllRateLimitConfigurationsRequest) (*EntityArray, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *EntityArray
+		err                 error
+		response            *http.Response
+		localVarReturnValue *EntityArray
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadAllRateLimitConfigurationsExecute(r)
@@ -844,11 +844,11 @@ func (a *RateLimitingApiService) ReadOneRateLimitConfiguration(ctx context.Conte
 //	@return RateLimitConfiguration
 func (a *RateLimitingApiService) ReadOneRateLimitConfigurationExecute(r ApiReadOneRateLimitConfigurationRequest) (*RateLimitConfiguration, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *RateLimitConfiguration
+		err                 error
+		response            *http.Response
+		localVarReturnValue *RateLimitConfiguration
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadOneRateLimitConfigurationExecute(r)

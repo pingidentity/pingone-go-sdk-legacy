@@ -76,11 +76,11 @@ func (a *GroupMembershipApiService) AddUserToGroup(ctx context.Context, environm
 //	@return GroupMembership
 func (a *GroupMembershipApiService) AddUserToGroupExecute(r ApiAddUserToGroupRequest) (*GroupMembership, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *GroupMembership
+		err                 error
+		response            *http.Response
+		localVarReturnValue *GroupMembership
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalAddUserToGroupExecute(r)
@@ -355,16 +355,16 @@ func (a *GroupMembershipApiService) ReadAllGroupMembershipsForUser(ctx context.C
 //
 //	@return EntityArray
 func (a *GroupMembershipApiService) ReadAllGroupMembershipsForUserExecute(r ApiReadAllGroupMembershipsForUserRequest) EntityArrayPagedIterator {
-  return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
+	return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
 }
 
 func (a *GroupMembershipApiService) ReadAllGroupMembershipsForUserExecuteInitialPage(r ApiReadAllGroupMembershipsForUserRequest) (*EntityArray, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *EntityArray
+		err                 error
+		response            *http.Response
+		localVarReturnValue *EntityArray
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadAllGroupMembershipsForUserExecute(r)
@@ -619,11 +619,11 @@ func (a *GroupMembershipApiService) ReadOneGroupMembershipForUser(ctx context.Co
 //	@return GroupMembership
 func (a *GroupMembershipApiService) ReadOneGroupMembershipForUserExecute(r ApiReadOneGroupMembershipForUserRequest) (*GroupMembership, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *GroupMembership
+		err                 error
+		response            *http.Response
+		localVarReturnValue *GroupMembership
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadOneGroupMembershipForUserExecute(r)
@@ -865,7 +865,7 @@ func (a *GroupMembershipApiService) RemoveUserFromGroupExecute(r ApiRemoveUserFr
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalRemoveUserFromGroupExecute(r)

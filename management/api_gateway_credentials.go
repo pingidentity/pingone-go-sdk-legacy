@@ -70,11 +70,11 @@ func (a *GatewayCredentialsApiService) CreateGatewayCredential(ctx context.Conte
 //	@return GatewayCredential
 func (a *GatewayCredentialsApiService) CreateGatewayCredentialExecute(r ApiCreateGatewayCredentialRequest) (*GatewayCredential, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *GatewayCredential
+		err                 error
+		response            *http.Response
+		localVarReturnValue *GatewayCredential
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalCreateGatewayCredentialExecute(r)
@@ -323,7 +323,7 @@ func (a *GatewayCredentialsApiService) DeleteGatewayCredentialExecute(r ApiDelet
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalDeleteGatewayCredentialExecute(r)
@@ -552,16 +552,16 @@ func (a *GatewayCredentialsApiService) ReadAllGatewayCredentials(ctx context.Con
 //
 //	@return EntityArray
 func (a *GatewayCredentialsApiService) ReadAllGatewayCredentialsExecute(r ApiReadAllGatewayCredentialsRequest) EntityArrayPagedIterator {
-  return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
+	return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
 }
 
 func (a *GatewayCredentialsApiService) ReadAllGatewayCredentialsExecuteInitialPage(r ApiReadAllGatewayCredentialsRequest) (*EntityArray, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *EntityArray
+		err                 error
+		response            *http.Response
+		localVarReturnValue *EntityArray
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadAllGatewayCredentialsExecute(r)
@@ -798,11 +798,11 @@ func (a *GatewayCredentialsApiService) ReadOneGatewayCredential(ctx context.Cont
 //	@return GatewayCredential
 func (a *GatewayCredentialsApiService) ReadOneGatewayCredentialExecute(r ApiReadOneGatewayCredentialRequest) (*GatewayCredential, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *GatewayCredential
+		err                 error
+		response            *http.Response
+		localVarReturnValue *GatewayCredential
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadOneGatewayCredentialExecute(r)

@@ -70,11 +70,11 @@ func (a *ApplicationMetadataApiService) ReadApplicationMetadata(ctx context.Cont
 //	@return ApplicationMetadata
 func (a *ApplicationMetadataApiService) ReadApplicationMetadataExecute(r ApiReadApplicationMetadataRequest) (*ApplicationMetadata, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *ApplicationMetadata
+		err                 error
+		response            *http.Response
+		localVarReturnValue *ApplicationMetadata
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadApplicationMetadataExecute(r)
@@ -314,11 +314,11 @@ func (a *ApplicationMetadataApiService) UpdateApplicationMetadata(ctx context.Co
 //	@return ApplicationMetadata
 func (a *ApplicationMetadataApiService) UpdateApplicationMetadataExecute(r ApiUpdateApplicationMetadataRequest) (*ApplicationMetadata, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *ApplicationMetadata
+		err                 error
+		response            *http.Response
+		localVarReturnValue *ApplicationMetadata
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalUpdateApplicationMetadataExecute(r)

@@ -238,9 +238,9 @@ func (dst *FormField) UnmarshalJSON(data []byte) error {
 	dst.FormFieldSubmitButton = nil
 	dst.FormFieldText = nil
 	dst.FormFieldPolling = nil
-    dst.FormFieldFIDO2 = nil
-    dst.FormFieldSingleCheckbox = nil
-    dst.FormFieldFormAgreement = nil
+	dst.FormFieldFIDO2 = nil
+	dst.FormFieldSingleCheckbox = nil
+	dst.FormFieldFormAgreement = nil
 
 	objType := common.GetType()
 

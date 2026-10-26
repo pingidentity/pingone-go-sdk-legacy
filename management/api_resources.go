@@ -74,11 +74,11 @@ func (a *ResourcesApiService) CreateResource(ctx context.Context, environmentID 
 //	@return Resource
 func (a *ResourcesApiService) CreateResourceExecute(r ApiCreateResourceRequest) (*Resource, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *Resource
+		err                 error
+		response            *http.Response
+		localVarReturnValue *Resource
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalCreateResourceExecute(r)
@@ -351,7 +351,7 @@ func (a *ResourcesApiService) DeleteResourceExecute(r ApiDeleteResourceRequest) 
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalDeleteResourceExecute(r)
@@ -576,16 +576,16 @@ func (a *ResourcesApiService) ReadAllResources(ctx context.Context, environmentI
 //
 //	@return EntityArray
 func (a *ResourcesApiService) ReadAllResourcesExecute(r ApiReadAllResourcesRequest) EntityArrayPagedIterator {
-  return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
+	return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
 }
 
 func (a *ResourcesApiService) ReadAllResourcesExecuteInitialPage(r ApiReadAllResourcesRequest) (*EntityArray, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *EntityArray
+		err                 error
+		response            *http.Response
+		localVarReturnValue *EntityArray
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadAllResourcesExecute(r)
@@ -844,11 +844,11 @@ func (a *ResourcesApiService) ReadOneResource(ctx context.Context, environmentID
 //	@return Resource
 func (a *ResourcesApiService) ReadOneResourceExecute(r ApiReadOneResourceRequest) (*Resource, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *Resource
+		err                 error
+		response            *http.Response
+		localVarReturnValue *Resource
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadOneResourceExecute(r)
@@ -1088,11 +1088,11 @@ func (a *ResourcesApiService) UpdateResource(ctx context.Context, environmentID 
 //	@return Resource
 func (a *ResourcesApiService) UpdateResourceExecute(r ApiUpdateResourceRequest) (*Resource, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *Resource
+		err                 error
+		response            *http.Response
+		localVarReturnValue *Resource
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalUpdateResourceExecute(r)

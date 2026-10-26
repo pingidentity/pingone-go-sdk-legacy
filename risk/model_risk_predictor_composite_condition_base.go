@@ -45,7 +45,7 @@ func RiskPredictorCompositeOrAsRiskPredictorCompositeConditionBase(v *RiskPredic
 
 // Unmarshal JSON data into one of the pointers in the struct
 func (dst *RiskPredictorCompositeConditionBase) UnmarshalJSON(data []byte) error {
-	
+
 	match := 0
 	var common map[string]interface{}
 

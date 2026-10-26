@@ -68,11 +68,11 @@ func (a *MFASettingsApiService) ReadMFASettings(ctx context.Context, environment
 //	@return MFASettings
 func (a *MFASettingsApiService) ReadMFASettingsExecute(r ApiReadMFASettingsRequest) (*MFASettings, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *MFASettings
+		err                 error
+		response            *http.Response
+		localVarReturnValue *MFASettings
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadMFASettingsExecute(r)
@@ -302,11 +302,11 @@ func (a *MFASettingsApiService) ResetMFASettings(ctx context.Context, environmen
 //	@return MFASettings
 func (a *MFASettingsApiService) ResetMFASettingsExecute(r ApiResetMFASettingsRequest) (*MFASettings, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *MFASettings
+		err                 error
+		response            *http.Response
+		localVarReturnValue *MFASettings
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalResetMFASettingsExecute(r)
@@ -542,11 +542,11 @@ func (a *MFASettingsApiService) UpdateMFASettings(ctx context.Context, environme
 //	@return MFASettings
 func (a *MFASettingsApiService) UpdateMFASettingsExecute(r ApiUpdateMFASettingsRequest) (*MFASettings, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *MFASettings
+		err                 error
+		response            *http.Response
+		localVarReturnValue *MFASettings
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalUpdateMFASettingsExecute(r)

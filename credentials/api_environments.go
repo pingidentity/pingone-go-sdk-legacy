@@ -67,11 +67,11 @@ func (a *EnvironmentsApiService) ReadOneEnvironment(ctx context.Context, environ
 //	@return Environment
 func (a *EnvironmentsApiService) ReadOneEnvironmentExecute(r ApiReadOneEnvironmentRequest) (*Environment, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *Environment
+		err                 error
+		response            *http.Response
+		localVarReturnValue *Environment
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadOneEnvironmentExecute(r)

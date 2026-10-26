@@ -76,11 +76,11 @@ func (a *ApplicationRoleAssignmentsApiService) CreateApplicationRoleAssignment(c
 //	@return RoleAssignment
 func (a *ApplicationRoleAssignmentsApiService) CreateApplicationRoleAssignmentExecute(r ApiCreateApplicationRoleAssignmentRequest) (*RoleAssignment, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *RoleAssignment
+		err                 error
+		response            *http.Response
+		localVarReturnValue *RoleAssignment
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalCreateApplicationRoleAssignmentExecute(r)
@@ -331,7 +331,7 @@ func (a *ApplicationRoleAssignmentsApiService) DeleteApplicationRoleAssignmentEx
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalDeleteApplicationRoleAssignmentExecute(r)
@@ -560,16 +560,16 @@ func (a *ApplicationRoleAssignmentsApiService) ReadApplicationRoleAssignments(ct
 //
 //	@return EntityArray
 func (a *ApplicationRoleAssignmentsApiService) ReadApplicationRoleAssignmentsExecute(r ApiReadApplicationRoleAssignmentsRequest) EntityArrayPagedIterator {
-  return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
+	return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
 }
 
 func (a *ApplicationRoleAssignmentsApiService) ReadApplicationRoleAssignmentsExecuteInitialPage(r ApiReadApplicationRoleAssignmentsRequest) (*EntityArray, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *EntityArray
+		err                 error
+		response            *http.Response
+		localVarReturnValue *EntityArray
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadApplicationRoleAssignmentsExecute(r)
@@ -806,11 +806,11 @@ func (a *ApplicationRoleAssignmentsApiService) ReadOneApplicationRoleAssignment(
 //	@return RoleAssignment
 func (a *ApplicationRoleAssignmentsApiService) ReadOneApplicationRoleAssignmentExecute(r ApiReadOneApplicationRoleAssignmentRequest) (*RoleAssignment, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *RoleAssignment
+		err                 error
+		response            *http.Response
+		localVarReturnValue *RoleAssignment
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadOneApplicationRoleAssignmentExecute(r)

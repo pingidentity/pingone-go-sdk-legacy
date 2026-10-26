@@ -70,11 +70,11 @@ func (a *EnableUsersApiService) ReadUserEnabled(ctx context.Context, environment
 //	@return UserEnabled
 func (a *EnableUsersApiService) ReadUserEnabledExecute(r ApiReadUserEnabledRequest) (*UserEnabled, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *UserEnabled
+		err                 error
+		response            *http.Response
+		localVarReturnValue *UserEnabled
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadUserEnabledExecute(r)
@@ -314,11 +314,11 @@ func (a *EnableUsersApiService) UpdateUserEnabled(ctx context.Context, environme
 //	@return UserEnabled
 func (a *EnableUsersApiService) UpdateUserEnabledExecute(r ApiUpdateUserEnabledRequest) (*UserEnabled, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *UserEnabled
+		err                 error
+		response            *http.Response
+		localVarReturnValue *UserEnabled
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalUpdateUserEnabledExecute(r)

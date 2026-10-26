@@ -76,11 +76,11 @@ func (a *ApplicationResourcePermissionsApiService) CreateApplicationPermission(c
 //	@return ApplicationResourcePermission
 func (a *ApplicationResourcePermissionsApiService) CreateApplicationPermissionExecute(r ApiCreateApplicationPermissionRequest) (*ApplicationResourcePermission, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *ApplicationResourcePermission
+		err                 error
+		response            *http.Response
+		localVarReturnValue *ApplicationResourcePermission
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalCreateApplicationPermissionExecute(r)
@@ -331,7 +331,7 @@ func (a *ApplicationResourcePermissionsApiService) DeleteApplicationPermissionEx
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalDeleteApplicationPermissionExecute(r)
@@ -560,16 +560,16 @@ func (a *ApplicationResourcePermissionsApiService) ReadApplicationPermissions(ct
 //
 //	@return EntityArray
 func (a *ApplicationResourcePermissionsApiService) ReadApplicationPermissionsExecute(r ApiReadApplicationPermissionsRequest) EntityArrayPagedIterator {
-  return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
+	return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
 }
 
 func (a *ApplicationResourcePermissionsApiService) ReadApplicationPermissionsExecuteInitialPage(r ApiReadApplicationPermissionsRequest) (*EntityArray, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *EntityArray
+		err                 error
+		response            *http.Response
+		localVarReturnValue *EntityArray
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadApplicationPermissionsExecute(r)
@@ -806,11 +806,11 @@ func (a *ApplicationResourcePermissionsApiService) ReadOneApplicationPermission(
 //	@return ApplicationResourcePermission
 func (a *ApplicationResourcePermissionsApiService) ReadOneApplicationPermissionExecute(r ApiReadOneApplicationPermissionRequest) (*ApplicationResourcePermission, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *ApplicationResourcePermission
+		err                 error
+		response            *http.Response
+		localVarReturnValue *ApplicationResourcePermission
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadOneApplicationPermissionExecute(r)
@@ -1054,11 +1054,11 @@ func (a *ApplicationResourcePermissionsApiService) UpdateApplicationPermission(c
 //	@return ApplicationResourcePermission
 func (a *ApplicationResourcePermissionsApiService) UpdateApplicationPermissionExecute(r ApiUpdateApplicationPermissionRequest) (*ApplicationResourcePermission, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *ApplicationResourcePermission
+		err                 error
+		response            *http.Response
+		localVarReturnValue *ApplicationResourcePermission
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalUpdateApplicationPermissionExecute(r)

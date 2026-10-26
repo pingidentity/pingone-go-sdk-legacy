@@ -52,7 +52,7 @@ func (dst *EnvironmentRegion) UnmarshalJSON(data []byte) error {
 	} else {
 		dst.EnumRegionCode = nil
 	}
-	
+
 	if !match {
 		// try to unmarshal data into String
 		err = newStrictDecoder(data).Decode(&dst.String)
@@ -67,11 +67,11 @@ func (dst *EnvironmentRegion) UnmarshalJSON(data []byte) error {
 			dst.String = nil
 		}
 	}
-			
+
 	if !match { // no match
 		return fmt.Errorf("data failed to match schemas in oneOf(EnvironmentRegion)")
 	}
-			
+
 	return nil
 }
 

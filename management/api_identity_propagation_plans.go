@@ -73,11 +73,11 @@ func (a *IdentityPropagationPlansApiService) CreatePlan(ctx context.Context, env
 //	@return IdentityPropagationPlan
 func (a *IdentityPropagationPlansApiService) CreatePlanExecute(r ApiCreatePlanRequest) (*IdentityPropagationPlan, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *IdentityPropagationPlan
+		err                 error
+		response            *http.Response
+		localVarReturnValue *IdentityPropagationPlan
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalCreatePlanExecute(r)
@@ -330,7 +330,7 @@ func (a *IdentityPropagationPlansApiService) DeletePlanExecute(r ApiDeletePlanRe
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalDeletePlanExecute(r)
@@ -564,16 +564,16 @@ func (a *IdentityPropagationPlansApiService) ReadAllPlans(ctx context.Context, e
 //
 //	@return EntityArray
 func (a *IdentityPropagationPlansApiService) ReadAllPlansExecute(r ApiReadAllPlansRequest) EntityArrayPagedIterator {
-  return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
+	return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
 }
 
 func (a *IdentityPropagationPlansApiService) ReadAllPlansExecuteInitialPage(r ApiReadAllPlansRequest) (*EntityArray, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *EntityArray
+		err                 error
+		response            *http.Response
+		localVarReturnValue *EntityArray
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadAllPlansExecute(r)
@@ -815,11 +815,11 @@ func (a *IdentityPropagationPlansApiService) ReadOnePlan(ctx context.Context, en
 //	@return IdentityPropagationPlan
 func (a *IdentityPropagationPlansApiService) ReadOnePlanExecute(r ApiReadOnePlanRequest) (*IdentityPropagationPlan, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *IdentityPropagationPlan
+		err                 error
+		response            *http.Response
+		localVarReturnValue *IdentityPropagationPlan
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadOnePlanExecute(r)
@@ -1062,11 +1062,11 @@ func (a *IdentityPropagationPlansApiService) UpdatePlan(ctx context.Context, env
 //	@return IdentityPropagationPlan
 func (a *IdentityPropagationPlansApiService) UpdatePlanExecute(r ApiUpdatePlanRequest) (*IdentityPropagationPlan, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *IdentityPropagationPlan
+		err                 error
+		response            *http.Response
+		localVarReturnValue *IdentityPropagationPlan
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalUpdatePlanExecute(r)

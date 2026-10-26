@@ -74,7 +74,7 @@ func (a *MFAPairingKeysApiService) EnvironmentsEnvironmentIDUsersUserIDPairingKe
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalEnvironmentsEnvironmentIDUsersUserIDPairingKeysPairingKeyIDDeleteExecute(r)
@@ -304,7 +304,7 @@ func (a *MFAPairingKeysApiService) EnvironmentsEnvironmentIDUsersUserIDPairingKe
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalEnvironmentsEnvironmentIDUsersUserIDPairingKeysPairingKeyIDGetExecute(r)
@@ -537,7 +537,7 @@ func (a *MFAPairingKeysApiService) EnvironmentsEnvironmentIDUsersUserIDPairingKe
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalEnvironmentsEnvironmentIDUsersUserIDPairingKeysPostExecute(r)

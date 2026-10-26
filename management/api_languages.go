@@ -74,11 +74,11 @@ func (a *LanguagesApiService) CreateLanguage(ctx context.Context, environmentID 
 //	@return Language
 func (a *LanguagesApiService) CreateLanguageExecute(r ApiCreateLanguageRequest) (*Language, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *Language
+		err                 error
+		response            *http.Response
+		localVarReturnValue *Language
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalCreateLanguageExecute(r)
@@ -351,7 +351,7 @@ func (a *LanguagesApiService) DeleteLanguageExecute(r ApiDeleteLanguageRequest) 
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalDeleteLanguageExecute(r)
@@ -576,16 +576,16 @@ func (a *LanguagesApiService) ReadLanguages(ctx context.Context, environmentID s
 //
 //	@return EntityArray
 func (a *LanguagesApiService) ReadLanguagesExecute(r ApiReadLanguagesRequest) EntityArrayPagedIterator {
-  return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
+	return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
 }
 
 func (a *LanguagesApiService) ReadLanguagesExecuteInitialPage(r ApiReadLanguagesRequest) (*EntityArray, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *EntityArray
+		err                 error
+		response            *http.Response
+		localVarReturnValue *EntityArray
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadLanguagesExecute(r)
@@ -818,11 +818,11 @@ func (a *LanguagesApiService) ReadOneLanguage(ctx context.Context, environmentID
 //	@return Language
 func (a *LanguagesApiService) ReadOneLanguageExecute(r ApiReadOneLanguageRequest) (*Language, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *Language
+		err                 error
+		response            *http.Response
+		localVarReturnValue *Language
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadOneLanguageExecute(r)
@@ -1062,11 +1062,11 @@ func (a *LanguagesApiService) UpdateLanguage(ctx context.Context, environmentID 
 //	@return Language
 func (a *LanguagesApiService) UpdateLanguageExecute(r ApiUpdateLanguageRequest) (*Language, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *Language
+		err                 error
+		response            *http.Response
+		localVarReturnValue *Language
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalUpdateLanguageExecute(r)

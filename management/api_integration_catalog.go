@@ -73,11 +73,11 @@ func (a *IntegrationCatalogApiService) DownloadOneIntegrationVersionAsset(ctx co
 //	@return string
 func (a *IntegrationCatalogApiService) DownloadOneIntegrationVersionAssetExecute(r ApiDownloadOneIntegrationVersionAssetRequest) (string, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  string
+		err                 error
+		response            *http.Response
+		localVarReturnValue string
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalDownloadOneIntegrationVersionAssetExecute(r)
@@ -324,16 +324,16 @@ func (a *IntegrationCatalogApiService) ReadAllIntegrationMetadata(ctx context.Co
 //
 //	@return EntityArray
 func (a *IntegrationCatalogApiService) ReadAllIntegrationMetadataExecute(r ApiReadAllIntegrationMetadataRequest) EntityArrayPagedIterator {
-  return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
+	return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
 }
 
 func (a *IntegrationCatalogApiService) ReadAllIntegrationMetadataExecuteInitialPage(r ApiReadAllIntegrationMetadataRequest) (*EntityArray, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *EntityArray
+		err                 error
+		response            *http.Response
+		localVarReturnValue *EntityArray
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadAllIntegrationMetadataExecute(r)
@@ -578,16 +578,16 @@ func (a *IntegrationCatalogApiService) ReadAllIntegrationVersionAttributes(ctx c
 //
 //	@return EntityArray
 func (a *IntegrationCatalogApiService) ReadAllIntegrationVersionAttributesExecute(r ApiReadAllIntegrationVersionAttributesRequest) EntityArrayPagedIterator {
-  return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
+	return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
 }
 
 func (a *IntegrationCatalogApiService) ReadAllIntegrationVersionAttributesExecuteInitialPage(r ApiReadAllIntegrationVersionAttributesRequest) (*EntityArray, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *EntityArray
+		err                 error
+		response            *http.Response
+		localVarReturnValue *EntityArray
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadAllIntegrationVersionAttributesExecute(r)
@@ -825,16 +825,16 @@ func (a *IntegrationCatalogApiService) ReadIntegrationVersionMetadata(ctx contex
 //
 //	@return EntityArray
 func (a *IntegrationCatalogApiService) ReadIntegrationVersionMetadataExecute(r ApiReadIntegrationVersionMetadataRequest) EntityArrayPagedIterator {
-  return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
+	return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
 }
 
 func (a *IntegrationCatalogApiService) ReadIntegrationVersionMetadataExecuteInitialPage(r ApiReadIntegrationVersionMetadataRequest) (*EntityArray, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *EntityArray
+		err                 error
+		response            *http.Response
+		localVarReturnValue *EntityArray
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadIntegrationVersionMetadataExecute(r)
@@ -1068,11 +1068,11 @@ func (a *IntegrationCatalogApiService) ReadOneIntegrationMetadata(ctx context.Co
 //	@return Integration
 func (a *IntegrationCatalogApiService) ReadOneIntegrationMetadataExecute(r ApiReadOneIntegrationMetadataRequest) (*Integration, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *Integration
+		err                 error
+		response            *http.Response
+		localVarReturnValue *Integration
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadOneIntegrationMetadataExecute(r)
@@ -1312,11 +1312,11 @@ func (a *IntegrationCatalogApiService) ReadOneIntegrationVersionAttributes(ctx c
 //	@return IntegrationVersionAttribute
 func (a *IntegrationCatalogApiService) ReadOneIntegrationVersionAttributesExecute(r ApiReadOneIntegrationVersionAttributesRequest) (*IntegrationVersionAttribute, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *IntegrationVersionAttribute
+		err                 error
+		response            *http.Response
+		localVarReturnValue *IntegrationVersionAttribute
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadOneIntegrationVersionAttributesExecute(r)
@@ -1555,11 +1555,11 @@ func (a *IntegrationCatalogApiService) ReadOneIntegrationVersionMetadata(ctx con
 //	@return IntegrationVersion
 func (a *IntegrationCatalogApiService) ReadOneIntegrationVersionMetadataExecute(r ApiReadOneIntegrationVersionMetadataRequest) (*IntegrationVersion, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *IntegrationVersion
+		err                 error
+		response            *http.Response
+		localVarReturnValue *IntegrationVersion
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadOneIntegrationVersionMetadataExecute(r)

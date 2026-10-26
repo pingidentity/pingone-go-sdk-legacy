@@ -74,11 +74,11 @@ func (a *RiskAdvancedPredictorsApiService) CreateRiskPredictor(ctx context.Conte
 //	@return RiskPredictor
 func (a *RiskAdvancedPredictorsApiService) CreateRiskPredictorExecute(r ApiCreateRiskPredictorRequest) (*RiskPredictor, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *RiskPredictor
+		err                 error
+		response            *http.Response
+		localVarReturnValue *RiskPredictor
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalCreateRiskPredictorExecute(r)
@@ -351,7 +351,7 @@ func (a *RiskAdvancedPredictorsApiService) DeleteRiskAdvancedPredictorExecute(r 
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalDeleteRiskAdvancedPredictorExecute(r)
@@ -576,16 +576,16 @@ func (a *RiskAdvancedPredictorsApiService) ReadAllRiskPredictors(ctx context.Con
 //
 //	@return EntityArray
 func (a *RiskAdvancedPredictorsApiService) ReadAllRiskPredictorsExecute(r ApiReadAllRiskPredictorsRequest) EntityArrayPagedIterator {
-  return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
+	return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
 }
 
 func (a *RiskAdvancedPredictorsApiService) ReadAllRiskPredictorsExecuteInitialPage(r ApiReadAllRiskPredictorsRequest) (*EntityArray, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *EntityArray
+		err                 error
+		response            *http.Response
+		localVarReturnValue *EntityArray
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadAllRiskPredictorsExecute(r)
@@ -818,11 +818,11 @@ func (a *RiskAdvancedPredictorsApiService) ReadOneRiskPredictor(ctx context.Cont
 //	@return RiskPredictor
 func (a *RiskAdvancedPredictorsApiService) ReadOneRiskPredictorExecute(r ApiReadOneRiskPredictorRequest) (*RiskPredictor, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *RiskPredictor
+		err                 error
+		response            *http.Response
+		localVarReturnValue *RiskPredictor
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadOneRiskPredictorExecute(r)
@@ -1062,11 +1062,11 @@ func (a *RiskAdvancedPredictorsApiService) UpdateRiskPredictor(ctx context.Conte
 //	@return RiskPredictor
 func (a *RiskAdvancedPredictorsApiService) UpdateRiskPredictorExecute(r ApiUpdateRiskPredictorRequest) (*RiskPredictor, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *RiskPredictor
+		err                 error
+		response            *http.Response
+		localVarReturnValue *RiskPredictor
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalUpdateRiskPredictorExecute(r)

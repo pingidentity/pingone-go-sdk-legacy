@@ -76,11 +76,11 @@ func (a *NotificationsTemplatesApiService) CreateContent(ctx context.Context, en
 //	@return TemplateContent
 func (a *NotificationsTemplatesApiService) CreateContentExecute(r ApiCreateContentRequest) (*TemplateContent, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *TemplateContent
+		err                 error
+		response            *http.Response
+		localVarReturnValue *TemplateContent
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalCreateContentExecute(r)
@@ -334,7 +334,7 @@ func (a *NotificationsTemplatesApiService) DeleteBulkVariantContentsExecute(r Ap
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalDeleteBulkVariantContentsExecute(r)
@@ -566,7 +566,7 @@ func (a *NotificationsTemplatesApiService) DeleteContentExecute(r ApiDeleteConte
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalDeleteContentExecute(r)
@@ -807,16 +807,16 @@ func (a *NotificationsTemplatesApiService) PatchBulkVariantContents(ctx context.
 //
 //	@return EntityArray
 func (a *NotificationsTemplatesApiService) PatchBulkVariantContentsExecute(r ApiPatchBulkVariantContentsRequest) EntityArrayPagedIterator {
-  return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
+	return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
 }
 
 func (a *NotificationsTemplatesApiService) PatchBulkVariantContentsExecuteInitialPage(r ApiPatchBulkVariantContentsRequest) (*EntityArray, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *EntityArray
+		err                 error
+		response            *http.Response
+		localVarReturnValue *EntityArray
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalPatchBulkVariantContentsExecute(r)
@@ -1065,16 +1065,16 @@ func (a *NotificationsTemplatesApiService) ReadAllTemplateContents(ctx context.C
 //
 //	@return EntityArray
 func (a *NotificationsTemplatesApiService) ReadAllTemplateContentsExecute(r ApiReadAllTemplateContentsRequest) EntityArrayPagedIterator {
-  return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
+	return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
 }
 
 func (a *NotificationsTemplatesApiService) ReadAllTemplateContentsExecuteInitialPage(r ApiReadAllTemplateContentsRequest) (*EntityArray, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *EntityArray
+		err                 error
+		response            *http.Response
+		localVarReturnValue *EntityArray
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadAllTemplateContentsExecute(r)
@@ -1330,16 +1330,16 @@ func (a *NotificationsTemplatesApiService) ReadAllTemplates(ctx context.Context,
 //
 //	@return EntityArray
 func (a *NotificationsTemplatesApiService) ReadAllTemplatesExecute(r ApiReadAllTemplatesRequest) EntityArrayPagedIterator {
-  return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
+	return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
 }
 
 func (a *NotificationsTemplatesApiService) ReadAllTemplatesExecuteInitialPage(r ApiReadAllTemplatesRequest) (*EntityArray, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *EntityArray
+		err                 error
+		response            *http.Response
+		localVarReturnValue *EntityArray
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadAllTemplatesExecute(r)
@@ -1584,11 +1584,11 @@ func (a *NotificationsTemplatesApiService) ReadOneContent(ctx context.Context, e
 //	@return TemplateContent
 func (a *NotificationsTemplatesApiService) ReadOneContentExecute(r ApiReadOneContentRequest) (*TemplateContent, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *TemplateContent
+		err                 error
+		response            *http.Response
+		localVarReturnValue *TemplateContent
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadOneContentExecute(r)
@@ -1823,11 +1823,11 @@ func (a *NotificationsTemplatesApiService) ReadOneTemplate(ctx context.Context, 
 //	@return Template
 func (a *NotificationsTemplatesApiService) ReadOneTemplateExecute(r ApiReadOneTemplateRequest) (*Template, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *Template
+		err                 error
+		response            *http.Response
+		localVarReturnValue *Template
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadOneTemplateExecute(r)
@@ -2070,11 +2070,11 @@ func (a *NotificationsTemplatesApiService) UpdateContent(ctx context.Context, en
 //	@return TemplateContent
 func (a *NotificationsTemplatesApiService) UpdateContentExecute(r ApiUpdateContentRequest) (*TemplateContent, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *TemplateContent
+		err                 error
+		response            *http.Response
+		localVarReturnValue *TemplateContent
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalUpdateContentExecute(r)

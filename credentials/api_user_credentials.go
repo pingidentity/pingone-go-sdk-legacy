@@ -76,11 +76,11 @@ func (a *UserCredentialsApiService) CreateAUserCredential(ctx context.Context, e
 //	@return UserCredential
 func (a *UserCredentialsApiService) CreateAUserCredentialExecute(r ApiCreateAUserCredentialRequest) (*UserCredential, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *UserCredential
+		err                 error
+		response            *http.Response
+		localVarReturnValue *UserCredential
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalCreateAUserCredentialExecute(r)
@@ -319,16 +319,16 @@ func (a *UserCredentialsApiService) ReadAllUserCredentials(ctx context.Context, 
 //
 //	@return EntityArray
 func (a *UserCredentialsApiService) ReadAllUserCredentialsExecute(r ApiReadAllUserCredentialsRequest) EntityArrayPagedIterator {
-  return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
+	return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
 }
 
 func (a *UserCredentialsApiService) ReadAllUserCredentialsExecuteInitialPage(r ApiReadAllUserCredentialsRequest) (*EntityArray, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *EntityArray
+		err                 error
+		response            *http.Response
+		localVarReturnValue *EntityArray
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadAllUserCredentialsExecute(r)
@@ -565,11 +565,11 @@ func (a *UserCredentialsApiService) ReadOneUserCredential(ctx context.Context, e
 //	@return UserCredential
 func (a *UserCredentialsApiService) ReadOneUserCredentialExecute(r ApiReadOneUserCredentialRequest) (*UserCredential, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *UserCredential
+		err                 error
+		response            *http.Response
+		localVarReturnValue *UserCredential
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadOneUserCredentialExecute(r)
@@ -810,16 +810,16 @@ func (a *UserCredentialsApiService) ReadOneUserCredentialWallet(ctx context.Cont
 //
 //	@return EntityArray
 func (a *UserCredentialsApiService) ReadOneUserCredentialWalletExecute(r ApiReadOneUserCredentialWalletRequest) EntityArrayPagedIterator {
-  return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
+	return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
 }
 
 func (a *UserCredentialsApiService) ReadOneUserCredentialWalletExecuteInitialPage(r ApiReadOneUserCredentialWalletRequest) (*EntityArray, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *EntityArray
+		err                 error
+		response            *http.Response
+		localVarReturnValue *EntityArray
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadOneUserCredentialWalletExecute(r)
@@ -1063,11 +1063,11 @@ func (a *UserCredentialsApiService) UpdateUserCredential(ctx context.Context, en
 //	@return UserCredential
 func (a *UserCredentialsApiService) UpdateUserCredentialExecute(r ApiUpdateUserCredentialRequest) (*UserCredential, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *UserCredential
+		err                 error
+		response            *http.Response
+		localVarReturnValue *UserCredential
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalUpdateUserCredentialExecute(r)

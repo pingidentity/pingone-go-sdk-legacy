@@ -74,11 +74,11 @@ func (a *CredentialIssuersApiService) CreateCredentialIssuerProfile(ctx context.
 //	@return CredentialIssuerProfile
 func (a *CredentialIssuersApiService) CreateCredentialIssuerProfileExecute(r ApiCreateCredentialIssuerProfileRequest) (*CredentialIssuerProfile, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *CredentialIssuerProfile
+		err                 error
+		response            *http.Response
+		localVarReturnValue *CredentialIssuerProfile
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalCreateCredentialIssuerProfileExecute(r)
@@ -336,11 +336,11 @@ func (a *CredentialIssuersApiService) ReadCredentialIssuerProfile(ctx context.Co
 //	@return CredentialIssuerProfile
 func (a *CredentialIssuersApiService) ReadCredentialIssuerProfileExecute(r ApiReadCredentialIssuerProfileRequest) (*CredentialIssuerProfile, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *CredentialIssuerProfile
+		err                 error
+		response            *http.Response
+		localVarReturnValue *CredentialIssuerProfile
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadCredentialIssuerProfileExecute(r)
@@ -576,11 +576,11 @@ func (a *CredentialIssuersApiService) UpdateCredentialIssuerProfile(ctx context.
 //	@return CredentialIssuerProfile
 func (a *CredentialIssuersApiService) UpdateCredentialIssuerProfileExecute(r ApiUpdateCredentialIssuerProfileRequest) (*CredentialIssuerProfile, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *CredentialIssuerProfile
+		err                 error
+		response            *http.Response
+		localVarReturnValue *CredentialIssuerProfile
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalUpdateCredentialIssuerProfileExecute(r)

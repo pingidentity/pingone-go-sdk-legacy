@@ -73,11 +73,11 @@ func (a *PhoneDeliverySettingsApiService) CreatePhoneDeliverySettings(ctx contex
 //	@return NotificationsSettingsPhoneDeliverySettings
 func (a *PhoneDeliverySettingsApiService) CreatePhoneDeliverySettingsExecute(r ApiCreatePhoneDeliverySettingsRequest) (*NotificationsSettingsPhoneDeliverySettings, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *NotificationsSettingsPhoneDeliverySettings
+		err                 error
+		response            *http.Response
+		localVarReturnValue *NotificationsSettingsPhoneDeliverySettings
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalCreatePhoneDeliverySettingsExecute(r)
@@ -324,7 +324,7 @@ func (a *PhoneDeliverySettingsApiService) DeletePhoneDeliverySettingsExecute(r A
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalDeletePhoneDeliverySettingsExecute(r)
@@ -549,16 +549,16 @@ func (a *PhoneDeliverySettingsApiService) ReadAllPhoneDeliverySettings(ctx conte
 //
 //	@return EntityArray
 func (a *PhoneDeliverySettingsApiService) ReadAllPhoneDeliverySettingsExecute(r ApiReadAllPhoneDeliverySettingsRequest) EntityArrayPagedIterator {
-  return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
+	return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
 }
 
 func (a *PhoneDeliverySettingsApiService) ReadAllPhoneDeliverySettingsExecuteInitialPage(r ApiReadAllPhoneDeliverySettingsRequest) (*EntityArray, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *EntityArray
+		err                 error
+		response            *http.Response
+		localVarReturnValue *EntityArray
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadAllPhoneDeliverySettingsExecute(r)
@@ -791,11 +791,11 @@ func (a *PhoneDeliverySettingsApiService) ReadOnePhoneDeliverySettings(ctx conte
 //	@return NotificationsSettingsPhoneDeliverySettings
 func (a *PhoneDeliverySettingsApiService) ReadOnePhoneDeliverySettingsExecute(r ApiReadOnePhoneDeliverySettingsRequest) (*NotificationsSettingsPhoneDeliverySettings, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *NotificationsSettingsPhoneDeliverySettings
+		err                 error
+		response            *http.Response
+		localVarReturnValue *NotificationsSettingsPhoneDeliverySettings
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadOnePhoneDeliverySettingsExecute(r)
@@ -1035,11 +1035,11 @@ func (a *PhoneDeliverySettingsApiService) UpdatePhoneDeliverySettings(ctx contex
 //	@return NotificationsSettingsPhoneDeliverySettings
 func (a *PhoneDeliverySettingsApiService) UpdatePhoneDeliverySettingsExecute(r ApiUpdatePhoneDeliverySettingsRequest) (*NotificationsSettingsPhoneDeliverySettings, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *NotificationsSettingsPhoneDeliverySettings
+		err                 error
+		response            *http.Response
+		localVarReturnValue *NotificationsSettingsPhoneDeliverySettings
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalUpdatePhoneDeliverySettingsExecute(r)

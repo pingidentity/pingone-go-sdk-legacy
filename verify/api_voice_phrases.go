@@ -74,11 +74,11 @@ func (a *VoicePhrasesApiService) CreateVoicePhrase(ctx context.Context, environm
 //	@return VoicePhrase
 func (a *VoicePhrasesApiService) CreateVoicePhraseExecute(r ApiCreateVoicePhraseRequest) (*VoicePhrase, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *VoicePhrase
+		err                 error
+		response            *http.Response
+		localVarReturnValue *VoicePhrase
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalCreateVoicePhraseExecute(r)
@@ -351,7 +351,7 @@ func (a *VoicePhrasesApiService) DeleteVoicePhraseExecute(r ApiDeleteVoicePhrase
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalDeleteVoicePhraseExecute(r)
@@ -576,16 +576,16 @@ func (a *VoicePhrasesApiService) ReadAllVoicePhrases(ctx context.Context, enviro
 //
 //	@return EntityArray
 func (a *VoicePhrasesApiService) ReadAllVoicePhrasesExecute(r ApiReadAllVoicePhrasesRequest) EntityArrayPagedIterator {
-  return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
+	return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
 }
 
 func (a *VoicePhrasesApiService) ReadAllVoicePhrasesExecuteInitialPage(r ApiReadAllVoicePhrasesRequest) (*EntityArray, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *EntityArray
+		err                 error
+		response            *http.Response
+		localVarReturnValue *EntityArray
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadAllVoicePhrasesExecute(r)
@@ -818,11 +818,11 @@ func (a *VoicePhrasesApiService) ReadOneVoicePhrase(ctx context.Context, environ
 //	@return VoicePhrase
 func (a *VoicePhrasesApiService) ReadOneVoicePhraseExecute(r ApiReadOneVoicePhraseRequest) (*VoicePhrase, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *VoicePhrase
+		err                 error
+		response            *http.Response
+		localVarReturnValue *VoicePhrase
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadOneVoicePhraseExecute(r)
@@ -1062,11 +1062,11 @@ func (a *VoicePhrasesApiService) UpdateVoicePhrase(ctx context.Context, environm
 //	@return VoicePhrase
 func (a *VoicePhrasesApiService) UpdateVoicePhraseExecute(r ApiUpdateVoicePhraseRequest) (*VoicePhrase, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *VoicePhrase
+		err                 error
+		response            *http.Response
+		localVarReturnValue *VoicePhrase
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalUpdateVoicePhraseExecute(r)

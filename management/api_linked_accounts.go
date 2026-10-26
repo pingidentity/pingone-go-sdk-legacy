@@ -71,7 +71,7 @@ func (a *LinkedAccountsApiService) EnvironmentsEnvironmentIDUsersUserIDLinkedAcc
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalEnvironmentsEnvironmentIDUsersUserIDLinkedAccountsGetExecute(r)
@@ -300,7 +300,7 @@ func (a *LinkedAccountsApiService) EnvironmentsEnvironmentIDUsersUserIDLinkedAcc
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalEnvironmentsEnvironmentIDUsersUserIDLinkedAccountsLinkedAccountIDDeleteExecute(r)
@@ -530,7 +530,7 @@ func (a *LinkedAccountsApiService) EnvironmentsEnvironmentIDUsersUserIDLinkedAcc
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalEnvironmentsEnvironmentIDUsersUserIDLinkedAccountsLinkedAccountIDGetExecute(r)

@@ -76,11 +76,11 @@ func (a *ApplicationSignOnPolicyAssignmentsApiService) CreateSignOnPolicyAssignm
 //	@return SignOnPolicyAssignment
 func (a *ApplicationSignOnPolicyAssignmentsApiService) CreateSignOnPolicyAssignmentExecute(r ApiCreateSignOnPolicyAssignmentRequest) (*SignOnPolicyAssignment, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *SignOnPolicyAssignment
+		err                 error
+		response            *http.Response
+		localVarReturnValue *SignOnPolicyAssignment
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalCreateSignOnPolicyAssignmentExecute(r)
@@ -331,7 +331,7 @@ func (a *ApplicationSignOnPolicyAssignmentsApiService) DeleteSignOnPolicyAssignm
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalDeleteSignOnPolicyAssignmentExecute(r)
@@ -560,16 +560,16 @@ func (a *ApplicationSignOnPolicyAssignmentsApiService) ReadAllSignOnPolicyAssign
 //
 //	@return EntityArray
 func (a *ApplicationSignOnPolicyAssignmentsApiService) ReadAllSignOnPolicyAssignmentsExecute(r ApiReadAllSignOnPolicyAssignmentsRequest) EntityArrayPagedIterator {
-  return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
+	return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
 }
 
 func (a *ApplicationSignOnPolicyAssignmentsApiService) ReadAllSignOnPolicyAssignmentsExecuteInitialPage(r ApiReadAllSignOnPolicyAssignmentsRequest) (*EntityArray, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *EntityArray
+		err                 error
+		response            *http.Response
+		localVarReturnValue *EntityArray
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadAllSignOnPolicyAssignmentsExecute(r)
@@ -806,11 +806,11 @@ func (a *ApplicationSignOnPolicyAssignmentsApiService) ReadOneSignOnPolicyAssign
 //	@return SignOnPolicyAssignment
 func (a *ApplicationSignOnPolicyAssignmentsApiService) ReadOneSignOnPolicyAssignmentExecute(r ApiReadOneSignOnPolicyAssignmentRequest) (*SignOnPolicyAssignment, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *SignOnPolicyAssignment
+		err                 error
+		response            *http.Response
+		localVarReturnValue *SignOnPolicyAssignment
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadOneSignOnPolicyAssignmentExecute(r)
@@ -1054,11 +1054,11 @@ func (a *ApplicationSignOnPolicyAssignmentsApiService) UpdateSignOnPolicyAssignm
 //	@return SignOnPolicyAssignment
 func (a *ApplicationSignOnPolicyAssignmentsApiService) UpdateSignOnPolicyAssignmentExecute(r ApiUpdateSignOnPolicyAssignmentRequest) (*SignOnPolicyAssignment, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *SignOnPolicyAssignment
+		err                 error
+		response            *http.Response
+		localVarReturnValue *SignOnPolicyAssignment
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalUpdateSignOnPolicyAssignmentExecute(r)

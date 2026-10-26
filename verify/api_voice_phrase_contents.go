@@ -76,11 +76,11 @@ func (a *VoicePhraseContentsApiService) CreateVoicePhraseContent(ctx context.Con
 //	@return VoicePhraseContents
 func (a *VoicePhraseContentsApiService) CreateVoicePhraseContentExecute(r ApiCreateVoicePhraseContentRequest) (*VoicePhraseContents, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *VoicePhraseContents
+		err                 error
+		response            *http.Response
+		localVarReturnValue *VoicePhraseContents
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalCreateVoicePhraseContentExecute(r)
@@ -331,7 +331,7 @@ func (a *VoicePhraseContentsApiService) DeleteVoicePhraseContentExecute(r ApiDel
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalDeleteVoicePhraseContentExecute(r)
@@ -560,16 +560,16 @@ func (a *VoicePhraseContentsApiService) ReadAllVoicePhraseContents(ctx context.C
 //
 //	@return EntityArray
 func (a *VoicePhraseContentsApiService) ReadAllVoicePhraseContentsExecute(r ApiReadAllVoicePhraseContentsRequest) EntityArrayPagedIterator {
-  return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
+	return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
 }
 
 func (a *VoicePhraseContentsApiService) ReadAllVoicePhraseContentsExecuteInitialPage(r ApiReadAllVoicePhraseContentsRequest) (*EntityArray, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *EntityArray
+		err                 error
+		response            *http.Response
+		localVarReturnValue *EntityArray
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadAllVoicePhraseContentsExecute(r)
@@ -806,11 +806,11 @@ func (a *VoicePhraseContentsApiService) ReadOneVoicePhraseContent(ctx context.Co
 //	@return VoicePhraseContents
 func (a *VoicePhraseContentsApiService) ReadOneVoicePhraseContentExecute(r ApiReadOneVoicePhraseContentRequest) (*VoicePhraseContents, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *VoicePhraseContents
+		err                 error
+		response            *http.Response
+		localVarReturnValue *VoicePhraseContents
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadOneVoicePhraseContentExecute(r)
@@ -1054,11 +1054,11 @@ func (a *VoicePhraseContentsApiService) UpdateVoicePhraseContent(ctx context.Con
 //	@return VoicePhraseContents
 func (a *VoicePhraseContentsApiService) UpdateVoicePhraseContentExecute(r ApiUpdateVoicePhraseContentRequest) (*VoicePhraseContents, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *VoicePhraseContents
+		err                 error
+		response            *http.Response
+		localVarReturnValue *VoicePhraseContents
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalUpdateVoicePhraseContentExecute(r)

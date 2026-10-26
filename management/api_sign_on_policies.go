@@ -74,11 +74,11 @@ func (a *SignOnPoliciesApiService) CreateSignOnPolicy(ctx context.Context, envir
 //	@return SignOnPolicy
 func (a *SignOnPoliciesApiService) CreateSignOnPolicyExecute(r ApiCreateSignOnPolicyRequest) (*SignOnPolicy, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *SignOnPolicy
+		err                 error
+		response            *http.Response
+		localVarReturnValue *SignOnPolicy
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalCreateSignOnPolicyExecute(r)
@@ -351,7 +351,7 @@ func (a *SignOnPoliciesApiService) DeleteSignOnPolicyExecute(r ApiDeleteSignOnPo
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalDeleteSignOnPolicyExecute(r)
@@ -576,16 +576,16 @@ func (a *SignOnPoliciesApiService) ReadAllSignOnPolicies(ctx context.Context, en
 //
 //	@return EntityArray
 func (a *SignOnPoliciesApiService) ReadAllSignOnPoliciesExecute(r ApiReadAllSignOnPoliciesRequest) EntityArrayPagedIterator {
-  return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
+	return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
 }
 
 func (a *SignOnPoliciesApiService) ReadAllSignOnPoliciesExecuteInitialPage(r ApiReadAllSignOnPoliciesRequest) (*EntityArray, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *EntityArray
+		err                 error
+		response            *http.Response
+		localVarReturnValue *EntityArray
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadAllSignOnPoliciesExecute(r)
@@ -818,11 +818,11 @@ func (a *SignOnPoliciesApiService) ReadOneSignOnPolicy(ctx context.Context, envi
 //	@return SignOnPolicy
 func (a *SignOnPoliciesApiService) ReadOneSignOnPolicyExecute(r ApiReadOneSignOnPolicyRequest) (*SignOnPolicy, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *SignOnPolicy
+		err                 error
+		response            *http.Response
+		localVarReturnValue *SignOnPolicy
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadOneSignOnPolicyExecute(r)
@@ -1062,11 +1062,11 @@ func (a *SignOnPoliciesApiService) UpdateSignOnPolicy(ctx context.Context, envir
 //	@return SignOnPolicy
 func (a *SignOnPoliciesApiService) UpdateSignOnPolicyExecute(r ApiUpdateSignOnPolicyRequest) (*SignOnPolicy, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *SignOnPolicy
+		err                 error
+		response            *http.Response
+		localVarReturnValue *SignOnPolicy
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalUpdateSignOnPolicyExecute(r)
