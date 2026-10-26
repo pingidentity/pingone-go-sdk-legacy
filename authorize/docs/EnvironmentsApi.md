@@ -23,7 +23,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/pingidentity/pingone-go-sdk-v2/authorize"
+    openapiclient "github.com/pingidentity/pingone-go-sdk-legacy/authorize"
 )
 
 func main() {

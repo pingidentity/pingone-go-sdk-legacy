@@ -27,7 +27,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/pingidentity/pingone-go-sdk-v2/credentials"
+    openapiclient "github.com/pingidentity/pingone-go-sdk-legacy/credentials"
 )
 
 func main() {
@@ -101,7 +101,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/pingidentity/pingone-go-sdk-v2/credentials"
+    openapiclient "github.com/pingidentity/pingone-go-sdk-legacy/credentials"
 )
 
 func main() {
@@ -174,7 +174,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/pingidentity/pingone-go-sdk-v2/credentials"
+    openapiclient "github.com/pingidentity/pingone-go-sdk-legacy/credentials"
 )
 
 func main() {
@@ -246,7 +246,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/pingidentity/pingone-go-sdk-v2/credentials"
+    openapiclient "github.com/pingidentity/pingone-go-sdk-legacy/credentials"
 )
 
 func main() {
@@ -321,7 +321,7 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "github.com/pingidentity/pingone-go-sdk-v2/credentials"
+    openapiclient "github.com/pingidentity/pingone-go-sdk-legacy/credentials"
 )
 
 func main() {

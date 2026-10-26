@@ -5,8 +5,8 @@ import (
 	"os"
 	"testing"
 
-	"github.com/pingidentity/pingone-go-sdk-v2/management"
-	"github.com/pingidentity/pingone-go-sdk-v2/pingone/model"
+	"github.com/pingidentity/pingone-go-sdk-legacy/management"
+	"github.com/pingidentity/pingone-go-sdk-legacy/pingone/model"
 )
 
 func TestAccAPIClient_Deprecated_Success(t *testing.T) {

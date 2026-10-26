@@ -1,4 +1,4 @@
-module github.com/pingidentity/pingone-go-sdk-v2
+module github.com/pingidentity/pingone-go-sdk-legacy
 
 go 1.25.6
 
@@ -9,12 +9,12 @@ tool (
 )
 
 require (
-	github.com/pingidentity/pingone-go-sdk-v2/authorize v0.9.0
-	github.com/pingidentity/pingone-go-sdk-v2/credentials v0.14.0
-	github.com/pingidentity/pingone-go-sdk-v2/management v0.78.0
-	github.com/pingidentity/pingone-go-sdk-v2/mfa v0.27.0
-	github.com/pingidentity/pingone-go-sdk-v2/risk v0.23.0
-	github.com/pingidentity/pingone-go-sdk-v2/verify v0.12.0
+	github.com/pingidentity/pingone-go-sdk-legacy/authorize v0.9.0
+	github.com/pingidentity/pingone-go-sdk-legacy/credentials v0.14.0
+	github.com/pingidentity/pingone-go-sdk-legacy/management v0.78.0
+	github.com/pingidentity/pingone-go-sdk-legacy/mfa v0.27.0
+	github.com/pingidentity/pingone-go-sdk-legacy/risk v0.23.0
+	github.com/pingidentity/pingone-go-sdk-legacy/verify v0.12.0
 	golang.org/x/oauth2 v0.36.0
 )
 

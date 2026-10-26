@@ -1,6 +1,6 @@
 TEST?=$$(go list ./...)
 OWNER=pingidentity
-REPO=pingone-go-sdk-v2
+REPO=pingone-go-sdk-legacy
 MODULE=authorize
 
 default: build
