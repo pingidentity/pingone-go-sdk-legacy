@@ -2,7 +2,7 @@
 TEST?=$$(go list ./...)
 OWNER=pingidentity
 REPO=pingone-go-sdk-legacy
-VERSION=0.16.0
+VERSION=0.17.0
 
 default: build
 
