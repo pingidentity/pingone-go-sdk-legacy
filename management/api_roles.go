@@ -67,16 +67,16 @@ func (a *RolesApiService) ReadAllRoles(ctx context.Context) ApiReadAllRolesReque
 //
 //	@return EntityArray
 func (a *RolesApiService) ReadAllRolesExecute(r ApiReadAllRolesRequest) EntityArrayPagedIterator {
-  return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
+	return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
 }
 
 func (a *RolesApiService) ReadAllRolesExecuteInitialPage(r ApiReadAllRolesRequest) (*EntityArray, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *EntityArray
+		err                 error
+		response            *http.Response
+		localVarReturnValue *EntityArray
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadAllRolesExecute(r)
@@ -305,11 +305,11 @@ func (a *RolesApiService) ReadOneRole(ctx context.Context, roleID string) ApiRea
 //	@return Role
 func (a *RolesApiService) ReadOneRoleExecute(r ApiReadOneRoleRequest) (*Role, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *Role
+		err                 error
+		response            *http.Response
+		localVarReturnValue *Role
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadOneRoleExecute(r)

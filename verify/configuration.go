@@ -90,9 +90,10 @@ type Configuration struct {
 // NewConfiguration returns a new Configuration object
 func NewConfiguration() *Configuration {
 	cfg := &Configuration{
-		DefaultHeader: make(map[string]string),
-		UserAgent:     "pingtools PingOne-GOLANG-SDK-verify/0.13.0",
-		Debug:         false,
+		DefaultHeader:      make(map[string]string),
+		UserAgent:          "pingtools PingOne-GOLANG-SDK-verify/0.11.2",
+		Debug:              false,
+		DefaultServerIndex: 0,
 		Servers: ServerConfigurations{
 			{
 				URL:         "{protocol}://{baseDomain}.{suffix}/v1",

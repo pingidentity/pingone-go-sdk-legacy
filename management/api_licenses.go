@@ -83,16 +83,16 @@ func (a *LicensesApiService) ReadAllLicenses(ctx context.Context, organizationID
 //
 //	@return EntityArray
 func (a *LicensesApiService) ReadAllLicensesExecute(r ApiReadAllLicensesRequest) EntityArrayPagedIterator {
-  return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
+	return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
 }
 
 func (a *LicensesApiService) ReadAllLicensesExecuteInitialPage(r ApiReadAllLicensesRequest) (*EntityArray, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *EntityArray
+		err                 error
+		response            *http.Response
+		localVarReturnValue *EntityArray
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadAllLicensesExecute(r)
@@ -331,11 +331,11 @@ func (a *LicensesApiService) ReadOneLicense(ctx context.Context, organizationID 
 //	@return License
 func (a *LicensesApiService) ReadOneLicenseExecute(r ApiReadOneLicenseRequest) (*License, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *License
+		err                 error
+		response            *http.Response
+		localVarReturnValue *License
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadOneLicenseExecute(r)
@@ -569,11 +569,11 @@ func (a *LicensesApiService) ReadOneLicenseName(ctx context.Context, organizatio
 //	@return LicenseName
 func (a *LicensesApiService) ReadOneLicenseNameExecute(r ApiReadOneLicenseNameRequest) (*LicenseName, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *LicenseName
+		err                 error
+		response            *http.Response
+		localVarReturnValue *LicenseName
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadOneLicenseNameExecute(r)
@@ -813,11 +813,11 @@ func (a *LicensesApiService) UpdateOneLicenseName(ctx context.Context, organizat
 //	@return LicenseName
 func (a *LicensesApiService) UpdateOneLicenseNameExecute(r ApiUpdateOneLicenseNameRequest) (*LicenseName, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *LicenseName
+		err                 error
+		response            *http.Response
+		localVarReturnValue *LicenseName
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalUpdateOneLicenseNameExecute(r)

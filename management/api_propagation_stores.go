@@ -73,11 +73,11 @@ func (a *PropagationStoresApiService) CreatePropagationStore(ctx context.Context
 //	@return PropagationStore
 func (a *PropagationStoresApiService) CreatePropagationStoreExecute(r ApiCreatePropagationStoreRequest) (*PropagationStore, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *PropagationStore
+		err                 error
+		response            *http.Response
+		localVarReturnValue *PropagationStore
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalCreatePropagationStoreExecute(r)
@@ -324,7 +324,7 @@ func (a *PropagationStoresApiService) DeletePropagationStoreExecute(r ApiDeleteP
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalDeletePropagationStoreExecute(r)
@@ -549,16 +549,16 @@ func (a *PropagationStoresApiService) ReadAllStores(ctx context.Context, environ
 //
 //	@return EntityArray
 func (a *PropagationStoresApiService) ReadAllStoresExecute(r ApiReadAllStoresRequest) EntityArrayPagedIterator {
-  return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
+	return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
 }
 
 func (a *PropagationStoresApiService) ReadAllStoresExecuteInitialPage(r ApiReadAllStoresRequest) (*EntityArray, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *EntityArray
+		err                 error
+		response            *http.Response
+		localVarReturnValue *EntityArray
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadAllStoresExecute(r)
@@ -791,11 +791,11 @@ func (a *PropagationStoresApiService) ReadOnePropagationStore(ctx context.Contex
 //	@return PropagationStore
 func (a *PropagationStoresApiService) ReadOnePropagationStoreExecute(r ApiReadOnePropagationStoreRequest) (*PropagationStore, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *PropagationStore
+		err                 error
+		response            *http.Response
+		localVarReturnValue *PropagationStore
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadOnePropagationStoreExecute(r)
@@ -1039,7 +1039,7 @@ func (a *PropagationStoresApiService) TestConnectionConfigurationExecute(r ApiTe
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalTestConnectionConfigurationExecute(r)
@@ -1285,11 +1285,11 @@ func (a *PropagationStoresApiService) UpdatePropagationStore(ctx context.Context
 //	@return PropagationStore
 func (a *PropagationStoresApiService) UpdatePropagationStoreExecute(r ApiUpdatePropagationStoreRequest) (*PropagationStore, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *PropagationStore
+		err                 error
+		response            *http.Response
+		localVarReturnValue *PropagationStore
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalUpdatePropagationStoreExecute(r)

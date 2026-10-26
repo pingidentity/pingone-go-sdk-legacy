@@ -71,7 +71,7 @@ func (a *ApplicationSecretApiService) DeletePreviousApplicationSecretExecute(r A
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalDeletePreviousApplicationSecretExecute(r)
@@ -296,11 +296,11 @@ func (a *ApplicationSecretApiService) ReadApplicationSecret(ctx context.Context,
 //	@return ApplicationSecret
 func (a *ApplicationSecretApiService) ReadApplicationSecretExecute(r ApiReadApplicationSecretRequest) (*ApplicationSecret, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *ApplicationSecret
+		err                 error
+		response            *http.Response
+		localVarReturnValue *ApplicationSecret
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadApplicationSecretExecute(r)
@@ -540,11 +540,11 @@ func (a *ApplicationSecretApiService) UpdateApplicationSecret(ctx context.Contex
 //	@return ApplicationSecret
 func (a *ApplicationSecretApiService) UpdateApplicationSecretExecute(r ApiUpdateApplicationSecretRequest) (*ApplicationSecret, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *ApplicationSecret
+		err                 error
+		response            *http.Response
+		localVarReturnValue *ApplicationSecret
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalUpdateApplicationSecretExecute(r)

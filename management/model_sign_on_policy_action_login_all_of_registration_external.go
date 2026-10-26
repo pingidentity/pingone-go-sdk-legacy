@@ -19,7 +19,7 @@ var _ MappedNullable = &SignOnPolicyActionLoginAllOfRegistrationExternal{}
 
 // SignOnPolicyActionLoginAllOfRegistrationExternal struct for SignOnPolicyActionLoginAllOfRegistrationExternal
 type SignOnPolicyActionLoginAllOfRegistrationExternal struct {
-	// A string that specifies the link to the external identity provider's identity store. This property is set when the administrator chooses to have users register in an external identity store. This attribute can be set only when the registration.enabled property is set to false.
+	// A string that specifies the link to the external identity provider's (test change) identity store. This property is set when the administrator chooses to have users register in an external identity store. This attribute can be set only when the registration.enabled property is set to false.
 	Href string `json:"href"`
 }
 

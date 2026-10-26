@@ -21,7 +21,7 @@ Name | Type | Description | Notes
 **OnDelete** | Pointer to [**CredentialTypeOnDelete**](CredentialTypeOnDelete.md) |  | [optional] 
 **Title** | **string** | A string that specifies the title of the credential. Verification sites are expected to be able to request the issued credential from the compatible wallet app using the title. | 
 **UpdatedAt** | Pointer to **time.Time** |  | [optional] [readonly] 
-**Version** | Pointer to [**CredentialTypeVersionNumber**](CredentialTypeVersionNumber.md) |  | [optional] 
+**Version** | Pointer to [**CredentialTypeVersion**](CredentialTypeVersion.md) |  | [optional] 
 **CredentialType** | Pointer to [**CredentialDigitalWalletNotificationResultsInnerNotification**](CredentialDigitalWalletNotificationResultsInnerNotification.md) |  | [optional] 
 **ExpiresAt** | Pointer to **time.Time** |  | [optional] [readonly] 
 **Notification** | Pointer to [**CredentialDigitalWalletNotification**](CredentialDigitalWalletNotification.md) |  | [optional] 
@@ -460,20 +460,20 @@ HasUpdatedAt returns a boolean if a field has been set.
 
 ### GetVersion
 
-`func (o *EntityArrayEmbeddedItemsInner) GetVersion() CredentialTypeVersionNumber`
+`func (o *EntityArrayEmbeddedItemsInner) GetVersion() CredentialTypeVersion`
 
 GetVersion returns the Version field if non-nil, zero value otherwise.
 
 ### GetVersionOk
 
-`func (o *EntityArrayEmbeddedItemsInner) GetVersionOk() (*CredentialTypeVersionNumber, bool)`
+`func (o *EntityArrayEmbeddedItemsInner) GetVersionOk() (*CredentialTypeVersion, bool)`
 
 GetVersionOk returns a tuple with the Version field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetVersion
 
-`func (o *EntityArrayEmbeddedItemsInner) SetVersion(v CredentialTypeVersionNumber)`
+`func (o *EntityArrayEmbeddedItemsInner) SetVersion(v CredentialTypeVersion)`
 
 SetVersion sets Version field to given value.
 

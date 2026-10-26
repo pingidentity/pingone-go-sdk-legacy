@@ -26,7 +26,7 @@ func (dst *EntityArrayEmbeddedItemsInner) UnmarshalJSON(data []byte) error {
 
 	var err error
 	// try to unmarshal JSON data into CredentialType
-	err = json.Unmarshal(data, &dst.CredentialType);
+	err = json.Unmarshal(data, &dst.CredentialType)
 	if err == nil {
 		jsonCredentialType, _ := json.Marshal(dst.CredentialType)
 		if string(jsonCredentialType) == "{}" { // empty struct
@@ -43,7 +43,7 @@ func (dst *EntityArrayEmbeddedItemsInner) UnmarshalJSON(data []byte) error {
 	}
 
 	// try to unmarshal JSON data into UserCredential
-	err = json.Unmarshal(data, &dst.UserCredential);
+	err = json.Unmarshal(data, &dst.UserCredential)
 	if err == nil {
 		jsonUserCredential, _ := json.Marshal(dst.UserCredential)
 		if string(jsonUserCredential) == "{}" { // empty struct

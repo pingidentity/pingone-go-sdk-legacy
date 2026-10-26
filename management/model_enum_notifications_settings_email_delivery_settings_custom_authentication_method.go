@@ -15,23 +15,19 @@ import (
 	"fmt"
 )
 
-// EnumNotificationsSettingsEmailDeliverySettingsCustomAuthenticationMethod Use the value `BASIC` if your authentication with the email provider uses a username and password. Use `BEARER` if your authentication is based on the use of a bearer token. Use `OAUTH2` if your authentication is based on OAuth 2.0. Use `CUSTOM_HEADER` if your authentication is based on a custom header.
+// EnumNotificationsSettingsEmailDeliverySettingsCustomAuthenticationMethod Use the value `BASIC` if your authentication with the email provider uses a username and password. Use `BEARER` if your authentication is based on the use of a bearer token.
 type EnumNotificationsSettingsEmailDeliverySettingsCustomAuthenticationMethod string
 
 // List of EnumNotificationsSettingsEmailDeliverySettingsCustomAuthenticationMethod
 const (
-	ENUMNOTIFICATIONSSETTINGSEMAILDELIVERYSETTINGSCUSTOMAUTHENTICATIONMETHOD_BASIC         EnumNotificationsSettingsEmailDeliverySettingsCustomAuthenticationMethod = "BASIC"
-	ENUMNOTIFICATIONSSETTINGSEMAILDELIVERYSETTINGSCUSTOMAUTHENTICATIONMETHOD_BEARER        EnumNotificationsSettingsEmailDeliverySettingsCustomAuthenticationMethod = "BEARER"
-	ENUMNOTIFICATIONSSETTINGSEMAILDELIVERYSETTINGSCUSTOMAUTHENTICATIONMETHOD_OAUTH2        EnumNotificationsSettingsEmailDeliverySettingsCustomAuthenticationMethod = "OAUTH2"
-	ENUMNOTIFICATIONSSETTINGSEMAILDELIVERYSETTINGSCUSTOMAUTHENTICATIONMETHOD_CUSTOM_HEADER EnumNotificationsSettingsEmailDeliverySettingsCustomAuthenticationMethod = "CUSTOM_HEADER"
+	ENUMNOTIFICATIONSSETTINGSEMAILDELIVERYSETTINGSCUSTOMAUTHENTICATIONMETHOD_BASIC  EnumNotificationsSettingsEmailDeliverySettingsCustomAuthenticationMethod = "BASIC"
+	ENUMNOTIFICATIONSSETTINGSEMAILDELIVERYSETTINGSCUSTOMAUTHENTICATIONMETHOD_BEARER EnumNotificationsSettingsEmailDeliverySettingsCustomAuthenticationMethod = "BEARER"
 )
 
 // All allowed values of EnumNotificationsSettingsEmailDeliverySettingsCustomAuthenticationMethod enum
 var AllowedEnumNotificationsSettingsEmailDeliverySettingsCustomAuthenticationMethodEnumValues = []EnumNotificationsSettingsEmailDeliverySettingsCustomAuthenticationMethod{
 	"BASIC",
 	"BEARER",
-	"OAUTH2",
-	"CUSTOM_HEADER",
 }
 
 func (v *EnumNotificationsSettingsEmailDeliverySettingsCustomAuthenticationMethod) UnmarshalJSON(src []byte) error {

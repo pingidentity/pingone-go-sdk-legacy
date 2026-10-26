@@ -74,7 +74,7 @@ func (a *UserAgreementConsentsApiService) EnvironmentsEnvironmentIDUsersUserIDAg
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalEnvironmentsEnvironmentIDUsersUserIDAgreementConsentsAgreementIDGetExecute(r)
@@ -310,7 +310,7 @@ func (a *UserAgreementConsentsApiService) EnvironmentsEnvironmentIDUsersUserIDAg
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalEnvironmentsEnvironmentIDUsersUserIDAgreementConsentsAgreementIDPostExecute(r)
@@ -551,7 +551,7 @@ func (a *UserAgreementConsentsApiService) EnvironmentsEnvironmentIDUsersUserIDAg
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalEnvironmentsEnvironmentIDUsersUserIDAgreementConsentsGetExecute(r)

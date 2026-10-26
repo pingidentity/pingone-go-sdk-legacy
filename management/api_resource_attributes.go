@@ -76,11 +76,11 @@ func (a *ResourceAttributesApiService) CreateResourceAttribute(ctx context.Conte
 //	@return ResourceAttribute
 func (a *ResourceAttributesApiService) CreateResourceAttributeExecute(r ApiCreateResourceAttributeRequest) (*ResourceAttribute, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *ResourceAttribute
+		err                 error
+		response            *http.Response
+		localVarReturnValue *ResourceAttribute
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalCreateResourceAttributeExecute(r)
@@ -331,7 +331,7 @@ func (a *ResourceAttributesApiService) DeleteResourceAttributeExecute(r ApiDelet
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalDeleteResourceAttributeExecute(r)
@@ -560,16 +560,16 @@ func (a *ResourceAttributesApiService) ReadAllResourceAttributes(ctx context.Con
 //
 //	@return EntityArray
 func (a *ResourceAttributesApiService) ReadAllResourceAttributesExecute(r ApiReadAllResourceAttributesRequest) EntityArrayPagedIterator {
-  return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
+	return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
 }
 
 func (a *ResourceAttributesApiService) ReadAllResourceAttributesExecuteInitialPage(r ApiReadAllResourceAttributesRequest) (*EntityArray, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *EntityArray
+		err                 error
+		response            *http.Response
+		localVarReturnValue *EntityArray
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadAllResourceAttributesExecute(r)
@@ -806,11 +806,11 @@ func (a *ResourceAttributesApiService) ReadOneResourceAttribute(ctx context.Cont
 //	@return ResourceAttribute
 func (a *ResourceAttributesApiService) ReadOneResourceAttributeExecute(r ApiReadOneResourceAttributeRequest) (*ResourceAttribute, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *ResourceAttribute
+		err                 error
+		response            *http.Response
+		localVarReturnValue *ResourceAttribute
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadOneResourceAttributeExecute(r)
@@ -1054,11 +1054,11 @@ func (a *ResourceAttributesApiService) UpdateResourceAttribute(ctx context.Conte
 //	@return ResourceAttribute
 func (a *ResourceAttributesApiService) UpdateResourceAttributeExecute(r ApiUpdateResourceAttributeRequest) (*ResourceAttribute, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *ResourceAttribute
+		err                 error
+		response            *http.Response
+		localVarReturnValue *ResourceAttribute
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalUpdateResourceAttributeExecute(r)

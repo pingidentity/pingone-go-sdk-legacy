@@ -71,7 +71,7 @@ func (a *SessionsApiService) EnvironmentsEnvironmentIDUsersUserIDSessionsGetExec
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalEnvironmentsEnvironmentIDUsersUserIDSessionsGetExecute(r)
@@ -300,7 +300,7 @@ func (a *SessionsApiService) EnvironmentsEnvironmentIDUsersUserIDSessionsSession
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalEnvironmentsEnvironmentIDUsersUserIDSessionsSessionIDDeleteExecute(r)
@@ -530,7 +530,7 @@ func (a *SessionsApiService) EnvironmentsEnvironmentIDUsersUserIDSessionsSession
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalEnvironmentsEnvironmentIDUsersUserIDSessionsSessionIDGetExecute(r)

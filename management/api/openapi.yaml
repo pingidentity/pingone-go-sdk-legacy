@@ -37444,8 +37444,6 @@ components:
     EnumBillOfMaterialsProductTags:
       enum:
       - DAVINCI_MINIMAL
-      - AUTHENTICATION_MODE_AGENT
-      - AUTHENTICATION_MODE_AGENTLESS
       type: string
     EnumBrandingLogoType:
       description: The type of format used for the image. Options are IMAGE and NONE.
@@ -37764,7 +37762,7 @@ components:
       - AUTOMATIC
       type: string
     EnumFormFIDO2Action:
-      description: A string that specifies the FIDO2 action.
+      description: A string that specifies the FIDO2 action. Also hehe.
       enum:
       - REGISTER
       - AUTHENTICATE
@@ -38091,30 +38089,10 @@ components:
     EnumNotificationsSettingsEmailDeliverySettingsCustomAuthenticationMethod:
       description: Use the value `BASIC` if your authentication with the email provider
         uses a username and password. Use `BEARER` if your authentication is based
-        on the use of a bearer token. Use `OAUTH2` if your authentication is based
-        on OAuth 2.0. Use `CUSTOM_HEADER` if your authentication is based on a custom
-        header.
+        on the use of a bearer token.
       enum:
       - BASIC
       - BEARER
-      - OAUTH2
-      - CUSTOM_HEADER
-      type: string
-    EnumNotificationsSettingsEmailDeliverySettingsCustomAuthenticationGrantType:
-      default: CLIENT_CREDENTIALS
-      description: |
-        The grant type used to request the access token from the authorization server. Possible values: `JWT_BEARER`, `CLIENT_CREDENTIALS`. The default value is `CLIENT_CREDENTIALS`.
-      enum:
-      - JWT_BEARER
-      - CLIENT_CREDENTIALS
-      type: string
-    EnumNotificationsSettingsEmailDeliverySettingsCustomAuthenticationClientAuthenticationMethod:
-      description: |
-        The method used to send the OAuth 2.0 client credentials to the authorization server. Possible values: `BASIC_AUTH_HEADER`, `BODY`. This is a read-only property.
-      enum:
-      - BASIC_AUTH_HEADER
-      - BODY
-      readOnly: true
       type: string
     EnumNotificationsSettingsEmailDeliverySettingsProtocol:
       enum:
@@ -38231,28 +38209,10 @@ components:
       type: string
     EnumNotificationsSettingsPhoneDeliverySettingsCustomAuthMethod:
       description: |
-        The custom provider account's authentication method. Possible values: `BASIC`, `BEARER`, `OAUTH2`, `CUSTOM_HEADER`
+        The custom provider account's authentication method. Possible values: `BASIC`, `BEARER`
       enum:
       - BASIC
       - BEARER
-      - OAUTH2
-      - CUSTOM_HEADER
-      type: string
-    EnumNotificationsSettingsPhoneDeliverySettingsCustomAuthGrantType:
-      default: CLIENT_CREDENTIALS
-      description: |
-        The grant type used to request the access token from the authorization server. Possible values: `JWT_BEARER`, `CLIENT_CREDENTIALS`. The default value is `CLIENT_CREDENTIALS`.
-      enum:
-      - JWT_BEARER
-      - CLIENT_CREDENTIALS
-      type: string
-    EnumNotificationsSettingsPhoneDeliverySettingsCustomAuthClientAuthenticationMethod:
-      description: |
-        The method used to send the OAuth 2.0 client credentials to the authorization server. Possible values: `BASIC_AUTH_HEADER`, `BODY`. This is a read-only property.
-      enum:
-      - BASIC_AUTH_HEADER
-      - BODY
-      readOnly: true
       type: string
     EnumNotificationsSettingsPhoneDeliverySettingsTwilioSyniverseNumbersType:
       description: |
@@ -38305,7 +38265,7 @@ components:
         \ The PING_ONE_BASE product represents the default set of services that an\
         \ environment can use on the PingOne platform. Options for other Ping Identity\
         \ products are PING_FEDERATE, PING_ACCESS, PING_DIRECTORY, PING_AUTHORIZE,\
-        \ PING_ID, PING_INTELLIGENCE, PING_CENTRAL, PING_ONE_PAM, and IDENTITY_CLOUD"
+        \ PING_ID, PING_INTELLIGENCE, and PING_CENTRAL"
       enum:
       - PING_ONE_MFA
       - PING_ONE_DAVINCI
@@ -38330,8 +38290,6 @@ components:
       - PING_ONE_ID
       - PING_INTELLIGENCE
       - PING_CENTRAL
-      - PING_ONE_PAM
-      - IDENTITY_CLOUD
       type: string
     EnumPropagationStoreConnectionStatusContentType:
       enum:
@@ -38701,10 +38659,8 @@ components:
       - APPROVE_AND_OPEN_APP
       type: string
     EnumTemplateName:
-      description: The name of the template
+      description: The name of the template - edited
       enum:
-      - account_created
-      - account_updated
       - credential_issued
       - credential_revoked
       - credential_updated
@@ -38717,14 +38673,10 @@ components:
       - general
       - id_verification
       - new_device_paired
-      - password_change_admin
-      - password_change_user
       - recovery_code_template
-      - password_recovery_new
       - strong_authentication
       - transaction
       - verification_code_template
-      - verification_code_new
       type: string
     EnumTrustedEmailStatus:
       description: A string that specifies the status of the trusted email address.
@@ -42368,7 +42320,6 @@ components:
               id: id
             name: name
             description: description
-            enableMappedClaims: true
             id: id
             mappedClaims:
             - mappedClaims
@@ -42387,7 +42338,6 @@ components:
               id: id
             name: name
             description: description
-            enableMappedClaims: true
             id: id
             mappedClaims:
             - mappedClaims
@@ -42676,14 +42626,10 @@ components:
       type: object
     EnvironmentStatus:
       example:
-        license:
-          id: id
         status: null
       properties:
         status:
           $ref: '#/components/schemas/EnumEnvironmentStatus'
-        license:
-          $ref: '#/components/schemas/EnvironmentStatus_license'
       required:
       - status
       type: object
@@ -46778,7 +46724,6 @@ components:
           id: id
         name: name
         description: description
-        enableMappedClaims: true
         id: id
         mappedClaims:
         - mappedClaims
@@ -46805,13 +46750,6 @@ components:
         description:
           description: A string that specifies the description of the scope.
           type: string
-        enableMappedClaims:
-          description: "A Boolean that enables attribute mapping in scopes to control\
-            \ the attributes included in access tokens. If this property is not set\
-            \ or set to `false` (default), the access token includes all custom attribute\
-            \ claims. When set to `true`, the access token includes only the claims\
-            \ mapped in the scope."
-          type: boolean
         environment:
           $ref: '#/components/schemas/ObjectEnvironment'
         schemaAttributes:
@@ -46830,12 +46768,12 @@ components:
           type: array
         mappedClaims:
           description: "A list of custom resource attribute IDs. This property applies\
-            \ only for the resource with its `type` property set to `OPENID_CONNECT`\
-            \ or `CUSTOM`. Moreover, this property does not display predefined OpenID\
-            \ Connect (OIDC) mappings, such as the `email` claim in the OIDC `email`\
-            \ scope or the `name` claim in the `profile` scope. You can create custom\
-            \ attributes, and these custom attributes can be added to `mappedClaims`\
-            \ and will display in the response."
+            \ only for the resource with its type property set to `OPENID_CONNECT`.\
+            \ Moreover, this property does not display predefined OpenID Connect (OIDC)\
+            \ mappings, such as the `email` claim in the OIDC `email` scope or the\
+            \ `name` claim in the `profile` scope. You can create custom attributes,\
+            \ and these custom attributes can be added to `mappedClaims` and will\
+            \ display in the response."
           items:
             type: string
           type: array
@@ -47619,7 +47557,7 @@ components:
           recovery:
             $ref: '#/components/schemas/SignOnPolicyActionLogin_allOf_recovery'
           registration:
-            $ref: '#/components/schemas/SignOnPolicyActionLogin_allOf_registration'
+            $ref: '#/components/schemas/SignOnPolicyActionIDFirst_allOf_registration'
           socialProviders:
             description: An array of strings that specifies the IDs of the identity
               providers that can be used for the social login sign-on flow.
@@ -51471,7 +51409,6 @@ components:
             id: id
           name: name
           description: description
-          enableMappedClaims: true
           id: id
           mappedClaims:
           - mappedClaims
@@ -51490,7 +51427,6 @@ components:
             id: id
           name: name
           description: description
-          enableMappedClaims: true
           id: id
           mappedClaims:
           - mappedClaims
@@ -51904,19 +51840,6 @@ components:
       oneOf:
       - $ref: '#/components/schemas/EnumRegionCode'
       - type: string
-    EnvironmentStatus_license:
-      description: The PingOne license to assign to the environment when setting the
-        status to `ACTIVE`. This property is only required when setting the status
-        to `ACTIVE`.
-      example:
-        id: id
-      properties:
-        id:
-          description: The id of the license.
-          type: string
-      required:
-      - id
-      type: object
     FlowPolicy_application:
       description: An object that specifies the application information associated
         with the flow policy resource.
@@ -53102,7 +53025,7 @@ components:
           description: The countries where the specified methods should be allowed
             or denied. Use the two-letter country codes from ISO 3166-1.
           items:
-            pattern: "^[A-Z]{2}$"
+            pattern: ^(A(D|E|F|G|I|L|M|N|O|R|S|T|Q|U|W|X|Z)|B(A|B|D|E|F|G|H|I|J|L|M|N|O|R|S|T|V|W|Y|Z)|C(A|C|D|F|G|H|I|K|L|M|N|O|R|U|V|X|Y|Z)|D(E|J|K|M|O|Z)|E(C|E|G|H|R|S|T)|F(I|J|K|M|O|R)|G(A|B|D|E|F|G|H|I|L|M|N|P|Q|R|S|T|U|W|Y)|H(K|M|N|R|T|U)|I(D|E|Q|L|M|N|O|R|S|T)|J(E|M|O|P)|K(E|G|H|I|M|N|P|R|W|Y|Z)|L(A|B|C|I|K|R|S|T|U|V|Y)|M(A|C|D|E|F|G|H|K|L|M|N|O|Q|P|R|S|T|U|V|W|X|Y|Z)|N(A|C|E|F|G|I|L|O|P|R|U|Z)|OM|P(A|E|F|G|H|K|L|M|N|R|S|T|W|Y)|QA|R(E|O|S|U|W)|S(A|B|C|D|E|G|H|I|J|K|L|M|N|O|R|T|V|Y|Z)|T(C|D|F|G|H|J|K|L|M|N|O|R|T|V|W|Z)|U(A|G|M|S|Y|Z)|V(A|C|E|G|I|N|U)|W(F|S)|Y(E|T)|Z(A|M|W))$
             type: string
           type: array
       required:
@@ -53144,7 +53067,7 @@ components:
           description: The countries for which the fallback order should be used.
             Use the two-letter country codes from ISO 3166-1.
           items:
-            pattern: "^[A-Z]{2}$"
+            pattern: ^(A(D|E|F|G|I|L|M|N|O|R|S|T|Q|U|W|X|Z)|B(A|B|D|E|F|G|H|I|J|L|M|N|O|R|S|T|V|W|Y|Z)|C(A|C|D|F|G|H|I|K|L|M|N|O|R|U|V|X|Y|Z)|D(E|J|K|M|O|Z)|E(C|E|G|H|R|S|T)|F(I|J|K|M|O|R)|G(A|B|D|E|F|G|H|I|L|M|N|P|Q|R|S|T|U|W|Y)|H(K|M|N|R|T|U)|I(D|E|Q|L|M|N|O|R|S|T)|J(E|M|O|P)|K(E|G|H|I|M|N|P|R|W|Y|Z)|L(A|B|C|I|K|R|S|T|U|V|Y)|M(A|C|D|E|F|G|H|K|L|M|N|O|Q|P|R|S|T|U|V|W|X|Y|Z)|N(A|C|E|F|G|I|L|O|P|R|U|Z)|OM|P(A|E|F|G|H|K|L|M|N|R|S|T|W|Y)|QA|R(E|O|S|U|W)|S(A|B|C|D|E|G|H|I|J|K|L|M|N|O|R|T|V|Y|Z)|T(C|D|F|G|H|J|K|L|M|N|O|R|T|V|W|Z)|U(A|G|M|S|Y|Z)|V(A|C|E|G|I|N|U)|W(F|S)|Y(E|T)|Z(A|M|W))$
             type: string
           type: array
         fallbackChain:
@@ -53327,41 +53250,6 @@ components:
             \ password to provide the password for authenticating with the email provider."
           format: password
           type: string
-        authUrl:
-          description: The URL of the authorization server that issues the access
-            token for the email provider. Required when `authentication.method=OAUTH2`
-          type: string
-        grantType:
-          $ref: '#/components/schemas/EnumNotificationsSettingsEmailDeliverySettingsCustomAuthenticationGrantType'
-        assertion:
-          description: The JWT assertion used to request the access token from the
-            authorization server. Must be a valid JWT. Required when `authentication.grantType=JWT_BEARER`
-          type: string
-        clientId:
-          description: The client ID used to request the access token from the authorization
-            server. Required when `authentication.grantType=CLIENT_CREDENTIALS`
-          type: string
-        clientSecret:
-          description: The client secret used to request the access token from the
-            authorization server. Required when `authentication.grantType=CLIENT_CREDENTIALS`
-          format: password
-          type: string
-        scopes:
-          description: "An array of scopes to request in the access token from the\
-            \ authorization server, for example, `mail.send`."
-          items:
-            type: string
-          type: array
-        headerName:
-          description: The name of the custom header used to authenticate requests
-            to the email provider. Required when `authentication.method=CUSTOM_HEADER`
-          type: string
-        headerValue:
-          description: The value of the custom header used to authenticate requests
-            to the email provider. Required when `authentication.method=CUSTOM_HEADER`
-          type: string
-        clientAuthenticationMethod:
-          $ref: '#/components/schemas/EnumNotificationsSettingsEmailDeliverySettingsCustomAuthenticationClientAuthenticationMethod'
       required:
       - method
       type: object
@@ -53461,41 +53349,6 @@ components:
             when `authentication.method=BEARER`
           format: password
           type: string
-        authUrl:
-          description: The URL of the authorization server that issues the access
-            token for the custom provider account. Required when `authentication.method=OAUTH2`
-          type: string
-        grantType:
-          $ref: '#/components/schemas/EnumNotificationsSettingsPhoneDeliverySettingsCustomAuthGrantType'
-        assertion:
-          description: The JWT assertion used to request the access token from the
-            authorization server. Must be a valid JWT. Required when `authentication.grantType=JWT_BEARER`
-          type: string
-        clientId:
-          description: The client ID used to request the access token from the authorization
-            server. Required when `authentication.grantType=CLIENT_CREDENTIALS`
-          type: string
-        clientSecret:
-          description: The client secret used to request the access token from the
-            authorization server. Required when `authentication.grantType=CLIENT_CREDENTIALS`
-          format: password
-          type: string
-        scopes:
-          description: "An array of scopes to request in the access token from the\
-            \ authorization server, for example, `sms:send`, `voice:send`."
-          items:
-            type: string
-          type: array
-        headerName:
-          description: The name of the custom header used to authenticate requests
-            to the custom provider. Required when `authentication.method=CUSTOM_HEADER`
-          type: string
-        headerValue:
-          description: The value of the custom header used to authenticate requests
-            to the custom provider. Required when `authentication.method=CUSTOM_HEADER`
-          type: string
-        clientAuthenticationMethod:
-          $ref: '#/components/schemas/EnumNotificationsSettingsPhoneDeliverySettingsCustomAuthClientAuthenticationMethod'
       required:
       - method
       type: object
@@ -54091,9 +53944,9 @@ components:
       properties:
         href:
           description: A string that specifies the link to the external identity provider's
-            identity store. This property is set when the administrator chooses to
-            have users register in an external identity store. This attribute can
-            be set only when the registration.enabled property is set to false.
+            (test change) identity store. This property is set when the administrator
+            chooses to have users register in an external identity store. This attribute
+            can be set only when the registration.enabled property is set to false.
           type: string
       required:
       - href
@@ -54295,6 +54148,44 @@ components:
       required:
       - condition
       - identityProvider
+      type: object
+      example: null
+    SignOnPolicyActionIDFirst_allOf_registration_external:
+      properties:
+        href:
+          description: A string that specifies the link to the external identity provider's
+            identity store. This property is set when the administrator chooses to
+            have users register in an external identity store. This attribute can
+            be set only when the registration.enabled property is set to false.
+          type: string
+      required:
+      - href
+      type: object
+      example: null
+    SignOnPolicyActionIDFirst_allOf_registration:
+      description: Specifies the account registration options.
+      properties:
+        enabled:
+          description: "A boolean that specifies the enabled/disabled state of the\
+            \ policy action. The default is disabled when creating a new policy. When\
+            \ enabled, it allows the use of the new user registration flow. This attribute\
+            \ should be set to true when implementing the social login sign-on policy\
+            \ option."
+          type: boolean
+        external:
+          $ref: '#/components/schemas/SignOnPolicyActionIDFirst_allOf_registration_external'
+        population:
+          $ref: '#/components/schemas/SignOnPolicyActionLogin_allOf_registration_population'
+        confirmIdentityProviderAttributes:
+          default: false
+          description: "A boolean that specifies whether users must confirm data returned\
+            \ from an identity provider prior to registration. Users can modify the\
+            \ data and omit non-required attributes. Modified attributes are added\
+            \ to the user's profile during account creation. This is an optional property.\
+            \ If omitted, the default value is set to false."
+          type: boolean
+      required:
+      - enabled
       type: object
       example: null
     SignOnPolicyActionIDP_allOf_identityProvider:
@@ -54640,7 +54531,7 @@ components:
             \ example, the country codes for the United States and Sweden are `US`\
             \ and \"SE\", respectively. Valid characters consist of two upper-case\
             \ letters (regex `[A-Z]{2}`)."
-          pattern: "^[A-Z]{2}$"
+          pattern: "[A-Z]{2}"
           type: string
         locality:
           description: "A string that specifies the city or locality component of\

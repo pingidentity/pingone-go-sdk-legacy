@@ -45,8 +45,8 @@ type CredentialType struct {
 	// A string that specifies the title of the credential. Verification sites are expected to be able to request the issued credential from the compatible wallet app using the title.
 	Title string `json:"title"`
 	// A string that specifies the date and time the credential type was last updated; can be null.
-	UpdatedAt *time.Time                   `json:"updatedAt,omitempty"`
-	Version   *CredentialTypeVersionNumber `json:"version,omitempty"`
+	UpdatedAt *time.Time             `json:"updatedAt,omitempty"`
+	Version   *CredentialTypeVersion `json:"version,omitempty"`
 }
 
 // NewCredentialType instantiates a new CredentialType object
@@ -590,9 +590,9 @@ func (o *CredentialType) SetUpdatedAt(v time.Time) {
 }
 
 // GetVersion returns the Version field value if set, zero value otherwise.
-func (o *CredentialType) GetVersion() CredentialTypeVersionNumber {
+func (o *CredentialType) GetVersion() CredentialTypeVersion {
 	if o == nil || IsNil(o.Version) {
-		var ret CredentialTypeVersionNumber
+		var ret CredentialTypeVersion
 		return ret
 	}
 	return *o.Version
@@ -600,7 +600,7 @@ func (o *CredentialType) GetVersion() CredentialTypeVersionNumber {
 
 // GetVersionOk returns a tuple with the Version field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *CredentialType) GetVersionOk() (*CredentialTypeVersionNumber, bool) {
+func (o *CredentialType) GetVersionOk() (*CredentialTypeVersion, bool) {
 	if o == nil || IsNil(o.Version) {
 		return nil, false
 	}
@@ -616,8 +616,8 @@ func (o *CredentialType) HasVersion() bool {
 	return false
 }
 
-// SetVersion gets a reference to the given CredentialTypeVersionNumber and assigns it to the Version field.
-func (o *CredentialType) SetVersion(v CredentialTypeVersionNumber) {
+// SetVersion gets a reference to the given CredentialTypeVersion and assigns it to the Version field.
+func (o *CredentialType) SetVersion(v CredentialTypeVersion) {
 	o.Version = &v
 }
 

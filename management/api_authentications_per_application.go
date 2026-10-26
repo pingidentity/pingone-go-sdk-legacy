@@ -93,7 +93,7 @@ func (a *AuthenticationsPerApplicationApiService) EnvironmentsEnvironmentIDAppli
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalEnvironmentsEnvironmentIDApplicationSignonsGetExecute(r)

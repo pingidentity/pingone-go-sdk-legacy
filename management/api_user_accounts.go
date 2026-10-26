@@ -82,11 +82,11 @@ func (a *UserAccountsApiService) UserAccount(ctx context.Context, environmentID 
 //	@return User
 func (a *UserAccountsApiService) UserAccountExecute(r ApiUserAccountRequest) (*User, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *User
+		err                 error
+		response            *http.Response
+		localVarReturnValue *User
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalUserAccountExecute(r)

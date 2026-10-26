@@ -335,7 +335,7 @@ func (a *FIDODeviceApiService) DeleteFidoDeviceExecute(r ApiDeleteFidoDeviceRequ
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalDeleteFidoDeviceExecute(r)
@@ -560,16 +560,16 @@ func (a *FIDODeviceApiService) ReadFidoDevices(ctx context.Context, environmentI
 //
 //	@return EntityArray
 func (a *FIDODeviceApiService) ReadFidoDevicesExecute(r ApiReadFidoDevicesRequest) EntityArrayPagedIterator {
-  return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
+	return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
 }
 
 func (a *FIDODeviceApiService) ReadFidoDevicesExecuteInitialPage(r ApiReadFidoDevicesRequest) (*EntityArray, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *EntityArray
+		err                 error
+		response            *http.Response
+		localVarReturnValue *EntityArray
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadFidoDevicesExecute(r)

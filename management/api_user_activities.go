@@ -74,7 +74,7 @@ func (a *UserActivitiesApiService) EnvironmentsEnvironmentIDUserActivitiesGetExe
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalEnvironmentsEnvironmentIDUserActivitiesGetExecute(r)

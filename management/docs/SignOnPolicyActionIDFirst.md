@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **DiscoveryRules** | Pointer to [**[]SignOnPolicyActionIDFirstAllOfDiscoveryRules**](SignOnPolicyActionIDFirstAllOfDiscoveryRules.md) | The list of IDP discovery rules that are evaluated in order when no user is associated with the user identifier. The maximum number of rules is 100. The condition on which this identity provider is used to authenticate the user is expressed using the PingOne policy condition language | [optional] 
 **EnforceLockoutForIdentityProviders** | Pointer to **bool** | A boolean that if set to true and if the user&#39;s account is locked (the account.canAuthenticate attribute is set to false), then social sign on with an external identity provider is prevented. | [optional] 
 **Recovery** | Pointer to [**SignOnPolicyActionLoginAllOfRecovery**](SignOnPolicyActionLoginAllOfRecovery.md) |  | [optional] 
-**Registration** | Pointer to [**SignOnPolicyActionLoginAllOfRegistration**](SignOnPolicyActionLoginAllOfRegistration.md) |  | [optional] 
+**Registration** | Pointer to [**SignOnPolicyActionIDFirstAllOfRegistration**](SignOnPolicyActionIDFirstAllOfRegistration.md) |  | [optional] 
 **SocialProviders** | Pointer to [**[]SignOnPolicyActionLoginAllOfSocialProviders**](SignOnPolicyActionLoginAllOfSocialProviders.md) | An array of strings that specifies the IDs of the identity providers that can be used for the social login sign-on flow. | [optional] 
 
 ## Methods
@@ -278,20 +278,20 @@ HasRecovery returns a boolean if a field has been set.
 
 ### GetRegistration
 
-`func (o *SignOnPolicyActionIDFirst) GetRegistration() SignOnPolicyActionLoginAllOfRegistration`
+`func (o *SignOnPolicyActionIDFirst) GetRegistration() SignOnPolicyActionIDFirstAllOfRegistration`
 
 GetRegistration returns the Registration field if non-nil, zero value otherwise.
 
 ### GetRegistrationOk
 
-`func (o *SignOnPolicyActionIDFirst) GetRegistrationOk() (*SignOnPolicyActionLoginAllOfRegistration, bool)`
+`func (o *SignOnPolicyActionIDFirst) GetRegistrationOk() (*SignOnPolicyActionIDFirstAllOfRegistration, bool)`
 
 GetRegistrationOk returns a tuple with the Registration field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetRegistration
 
-`func (o *SignOnPolicyActionIDFirst) SetRegistration(v SignOnPolicyActionLoginAllOfRegistration)`
+`func (o *SignOnPolicyActionIDFirst) SetRegistration(v SignOnPolicyActionIDFirstAllOfRegistration)`
 
 SetRegistration sets Registration field to given value.
 

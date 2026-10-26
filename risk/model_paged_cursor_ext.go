@@ -10,7 +10,6 @@ const (
 	PAGINATION_HAL_LINK_INDEX_PREV = "prev"
 )
 
-
 type PagedCursor struct {
 	EntityArray  *EntityArray
 	HTTPResponse *http.Response

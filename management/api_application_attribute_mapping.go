@@ -76,11 +76,11 @@ func (a *ApplicationAttributeMappingApiService) CreateApplicationAttributeMappin
 //	@return ApplicationAttributeMapping
 func (a *ApplicationAttributeMappingApiService) CreateApplicationAttributeMappingExecute(r ApiCreateApplicationAttributeMappingRequest) (*ApplicationAttributeMapping, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *ApplicationAttributeMapping
+		err                 error
+		response            *http.Response
+		localVarReturnValue *ApplicationAttributeMapping
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalCreateApplicationAttributeMappingExecute(r)
@@ -331,7 +331,7 @@ func (a *ApplicationAttributeMappingApiService) DeleteApplicationAttributeMappin
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalDeleteApplicationAttributeMappingExecute(r)
@@ -560,16 +560,16 @@ func (a *ApplicationAttributeMappingApiService) ReadAllApplicationAttributeMappi
 //
 //	@return EntityArray
 func (a *ApplicationAttributeMappingApiService) ReadAllApplicationAttributeMappingsExecute(r ApiReadAllApplicationAttributeMappingsRequest) EntityArrayPagedIterator {
-  return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
+	return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
 }
 
 func (a *ApplicationAttributeMappingApiService) ReadAllApplicationAttributeMappingsExecuteInitialPage(r ApiReadAllApplicationAttributeMappingsRequest) (*EntityArray, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *EntityArray
+		err                 error
+		response            *http.Response
+		localVarReturnValue *EntityArray
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadAllApplicationAttributeMappingsExecute(r)
@@ -806,11 +806,11 @@ func (a *ApplicationAttributeMappingApiService) ReadOneApplicationAttributeMappi
 //	@return ApplicationAttributeMapping
 func (a *ApplicationAttributeMappingApiService) ReadOneApplicationAttributeMappingExecute(r ApiReadOneApplicationAttributeMappingRequest) (*ApplicationAttributeMapping, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *ApplicationAttributeMapping
+		err                 error
+		response            *http.Response
+		localVarReturnValue *ApplicationAttributeMapping
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadOneApplicationAttributeMappingExecute(r)
@@ -1054,11 +1054,11 @@ func (a *ApplicationAttributeMappingApiService) UpdateApplicationAttributeMappin
 //	@return ApplicationAttributeMapping
 func (a *ApplicationAttributeMappingApiService) UpdateApplicationAttributeMappingExecute(r ApiUpdateApplicationAttributeMappingRequest) (*ApplicationAttributeMapping, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *ApplicationAttributeMapping
+		err                 error
+		response            *http.Response
+		localVarReturnValue *ApplicationAttributeMapping
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalUpdateApplicationAttributeMappingExecute(r)

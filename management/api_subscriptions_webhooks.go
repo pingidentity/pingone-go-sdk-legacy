@@ -74,11 +74,11 @@ func (a *SubscriptionsWebhooksApiService) CreateSubscription(ctx context.Context
 //	@return Subscription
 func (a *SubscriptionsWebhooksApiService) CreateSubscriptionExecute(r ApiCreateSubscriptionRequest) (*Subscription, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *Subscription
+		err                 error
+		response            *http.Response
+		localVarReturnValue *Subscription
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalCreateSubscriptionExecute(r)
@@ -351,7 +351,7 @@ func (a *SubscriptionsWebhooksApiService) DeleteSubscriptionExecute(r ApiDeleteS
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalDeleteSubscriptionExecute(r)
@@ -576,16 +576,16 @@ func (a *SubscriptionsWebhooksApiService) ReadAllSubscriptions(ctx context.Conte
 //
 //	@return EntityArray
 func (a *SubscriptionsWebhooksApiService) ReadAllSubscriptionsExecute(r ApiReadAllSubscriptionsRequest) EntityArrayPagedIterator {
-  return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
+	return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
 }
 
 func (a *SubscriptionsWebhooksApiService) ReadAllSubscriptionsExecuteInitialPage(r ApiReadAllSubscriptionsRequest) (*EntityArray, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *EntityArray
+		err                 error
+		response            *http.Response
+		localVarReturnValue *EntityArray
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadAllSubscriptionsExecute(r)
@@ -818,11 +818,11 @@ func (a *SubscriptionsWebhooksApiService) ReadOneSubscription(ctx context.Contex
 //	@return Subscription
 func (a *SubscriptionsWebhooksApiService) ReadOneSubscriptionExecute(r ApiReadOneSubscriptionRequest) (*Subscription, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *Subscription
+		err                 error
+		response            *http.Response
+		localVarReturnValue *Subscription
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadOneSubscriptionExecute(r)
@@ -1062,11 +1062,11 @@ func (a *SubscriptionsWebhooksApiService) UpdateSubscription(ctx context.Context
 //	@return Subscription
 func (a *SubscriptionsWebhooksApiService) UpdateSubscriptionExecute(r ApiUpdateSubscriptionRequest) (*Subscription, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *Subscription
+		err                 error
+		response            *http.Response
+		localVarReturnValue *Subscription
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalUpdateSubscriptionExecute(r)

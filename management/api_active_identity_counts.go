@@ -87,7 +87,7 @@ func (a *ActiveIdentityCountsApiService) EnvironmentsEnvironmentIDActiveIdentity
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalEnvironmentsEnvironmentIDActiveIdentityCountsGetExecute(r)
@@ -342,7 +342,7 @@ func (a *ActiveIdentityCountsApiService) EnvironmentsEnvironmentIDMetricsActiveI
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalEnvironmentsEnvironmentIDMetricsActiveIdentityCountsGetExecute(r)
@@ -597,7 +597,7 @@ func (a *ActiveIdentityCountsApiService) ReadActiveIdentityCountExecute(r ApiRea
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalReadActiveIdentityCountExecute(r)

@@ -71,7 +71,7 @@ func (a *UserPasswordsApiService) EnvironmentsEnvironmentIDUsersUserIDPasswordGe
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalEnvironmentsEnvironmentIDUsersUserIDPasswordGetExecute(r)
@@ -309,7 +309,7 @@ func (a *UserPasswordsApiService) EnvironmentsEnvironmentIDUsersUserIDPasswordPo
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalEnvironmentsEnvironmentIDUsersUserIDPasswordPostExecute(r)
@@ -563,7 +563,7 @@ func (a *UserPasswordsApiService) EnvironmentsEnvironmentIDUsersUserIDPasswordPu
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalEnvironmentsEnvironmentIDUsersUserIDPasswordPutExecute(r)

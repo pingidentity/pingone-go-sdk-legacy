@@ -15,7 +15,7 @@ import (
 	"fmt"
 )
 
-// EnumFormFIDO2Action A string that specifies the FIDO2 action.
+// EnumFormFIDO2Action A string that specifies the FIDO2 action. Also hehe.
 type EnumFormFIDO2Action string
 
 // List of EnumFormFIDO2Action

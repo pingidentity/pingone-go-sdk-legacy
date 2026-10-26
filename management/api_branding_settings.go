@@ -68,11 +68,11 @@ func (a *BrandingSettingsApiService) ReadBrandingSettings(ctx context.Context, e
 //	@return BrandingSettings
 func (a *BrandingSettingsApiService) ReadBrandingSettingsExecute(r ApiReadBrandingSettingsRequest) (*BrandingSettings, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *BrandingSettings
+		err                 error
+		response            *http.Response
+		localVarReturnValue *BrandingSettings
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadBrandingSettingsExecute(r)
@@ -308,11 +308,11 @@ func (a *BrandingSettingsApiService) UpdateBrandingSettings(ctx context.Context,
 //	@return BrandingSettings
 func (a *BrandingSettingsApiService) UpdateBrandingSettingsExecute(r ApiUpdateBrandingSettingsRequest) (*BrandingSettings, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *BrandingSettings
+		err                 error
+		response            *http.Response
+		localVarReturnValue *BrandingSettings
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalUpdateBrandingSettingsExecute(r)

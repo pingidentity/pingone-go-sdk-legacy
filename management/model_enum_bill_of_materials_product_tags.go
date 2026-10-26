@@ -20,16 +20,12 @@ type EnumBillOfMaterialsProductTags string
 
 // List of EnumBillOfMaterialsProductTags
 const (
-	ENUMBILLOFMATERIALSPRODUCTTAGS_DAVINCI_MINIMAL               EnumBillOfMaterialsProductTags = "DAVINCI_MINIMAL"
-	ENUMBILLOFMATERIALSPRODUCTTAGS_AUTHENTICATION_MODE_AGENT     EnumBillOfMaterialsProductTags = "AUTHENTICATION_MODE_AGENT"
-	ENUMBILLOFMATERIALSPRODUCTTAGS_AUTHENTICATION_MODE_AGENTLESS EnumBillOfMaterialsProductTags = "AUTHENTICATION_MODE_AGENTLESS"
+	ENUMBILLOFMATERIALSPRODUCTTAGS_DAVINCI_MINIMAL EnumBillOfMaterialsProductTags = "DAVINCI_MINIMAL"
 )
 
 // All allowed values of EnumBillOfMaterialsProductTags enum
 var AllowedEnumBillOfMaterialsProductTagsEnumValues = []EnumBillOfMaterialsProductTags{
 	"DAVINCI_MINIMAL",
-	"AUTHENTICATION_MODE_AGENT",
-	"AUTHENTICATION_MODE_AGENTLESS",
 }
 
 func (v *EnumBillOfMaterialsProductTags) UnmarshalJSON(src []byte) error {

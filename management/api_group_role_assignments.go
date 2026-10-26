@@ -76,11 +76,11 @@ func (a *GroupRoleAssignmentsApiService) CreateGroupRoleAssignment(ctx context.C
 //	@return RoleAssignment
 func (a *GroupRoleAssignmentsApiService) CreateGroupRoleAssignmentExecute(r ApiCreateGroupRoleAssignmentRequest) (*RoleAssignment, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *RoleAssignment
+		err                 error
+		response            *http.Response
+		localVarReturnValue *RoleAssignment
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalCreateGroupRoleAssignmentExecute(r)
@@ -331,7 +331,7 @@ func (a *GroupRoleAssignmentsApiService) DeleteGroupRoleAssignmentExecute(r ApiD
 		err      error
 		response *http.Response
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			resp, err := r.ApiService.internalDeleteGroupRoleAssignmentExecute(r)
@@ -560,16 +560,16 @@ func (a *GroupRoleAssignmentsApiService) ReadGroupRoleAssignments(ctx context.Co
 //
 //	@return EntityArray
 func (a *GroupRoleAssignmentsApiService) ReadGroupRoleAssignmentsExecute(r ApiReadGroupRoleAssignmentsRequest) EntityArrayPagedIterator {
-  return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
+	return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
 }
 
 func (a *GroupRoleAssignmentsApiService) ReadGroupRoleAssignmentsExecuteInitialPage(r ApiReadGroupRoleAssignmentsRequest) (*EntityArray, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *EntityArray
+		err                 error
+		response            *http.Response
+		localVarReturnValue *EntityArray
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadGroupRoleAssignmentsExecute(r)
@@ -806,11 +806,11 @@ func (a *GroupRoleAssignmentsApiService) ReadOneGroupRoleAssignment(ctx context.
 //	@return RoleAssignment
 func (a *GroupRoleAssignmentsApiService) ReadOneGroupRoleAssignmentExecute(r ApiReadOneGroupRoleAssignmentRequest) (*RoleAssignment, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *RoleAssignment
+		err                 error
+		response            *http.Response
+		localVarReturnValue *RoleAssignment
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadOneGroupRoleAssignmentExecute(r)

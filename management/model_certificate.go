@@ -11,8 +11,8 @@ API version: 2023-06-29
 package management
 
 import (
-	"math/big"
 	"encoding/json"
+	"math/big"
 	"time"
 )
 
@@ -40,7 +40,7 @@ type Certificate struct {
 	Name         string              `json:"name"`
 	Organization *ObjectOrganization `json:"organization,omitempty"`
 	// Specifies the serial number of the key or certificate.
-	SerialNumber       *big.Int                               `json:"serialNumber,omitempty"`
+	SerialNumber       *big.Int                             `json:"serialNumber,omitempty"`
 	SignatureAlgorithm EnumCertificateKeySignagureAlgorithm `json:"signatureAlgorithm"`
 	// The time the validity period starts.
 	StartsAt *time.Time                `json:"startsAt,omitempty"`

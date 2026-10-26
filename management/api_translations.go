@@ -87,16 +87,16 @@ func (a *TranslationsApiService) ReadTranslations(ctx context.Context, environme
 //
 //	@return EntityArray
 func (a *TranslationsApiService) ReadTranslationsExecute(r ApiReadTranslationsRequest) EntityArrayPagedIterator {
-  return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
+	return a.client.paginationIterator(r.ctx, r.ExecuteInitialPage)
 }
 
 func (a *TranslationsApiService) ReadTranslationsExecuteInitialPage(r ApiReadTranslationsRequest) (*EntityArray, *http.Response, error) {
 	var (
-		err                  error
-		response             *http.Response
-		localVarReturnValue  *EntityArray
+		err                 error
+		response            *http.Response
+		localVarReturnValue *EntityArray
 	)
-	
+
 	response, err = processResponse(
 		func() (any, *http.Response, error) {
 			return r.ApiService.internalReadTranslationsExecute(r)

@@ -31,9 +31,9 @@ type SignOnPolicyActionIDFirst struct {
 	// The list of IDP discovery rules that are evaluated in order when no user is associated with the user identifier. The maximum number of rules is 100. The condition on which this identity provider is used to authenticate the user is expressed using the PingOne policy condition language
 	DiscoveryRules []SignOnPolicyActionIDFirstAllOfDiscoveryRules `json:"discoveryRules,omitempty"`
 	// A boolean that if set to true and if the user's account is locked (the account.canAuthenticate attribute is set to false), then social sign on with an external identity provider is prevented.
-	EnforceLockoutForIdentityProviders *bool                                     `json:"enforceLockoutForIdentityProviders,omitempty"`
-	Recovery                           *SignOnPolicyActionLoginAllOfRecovery     `json:"recovery,omitempty"`
-	Registration                       *SignOnPolicyActionLoginAllOfRegistration `json:"registration,omitempty"`
+	EnforceLockoutForIdentityProviders *bool                                       `json:"enforceLockoutForIdentityProviders,omitempty"`
+	Recovery                           *SignOnPolicyActionLoginAllOfRecovery       `json:"recovery,omitempty"`
+	Registration                       *SignOnPolicyActionIDFirstAllOfRegistration `json:"registration,omitempty"`
 	// An array of strings that specifies the IDs of the identity providers that can be used for the social login sign-on flow.
 	SocialProviders []SignOnPolicyActionLoginAllOfSocialProviders `json:"socialProviders,omitempty"`
 }
@@ -362,9 +362,9 @@ func (o *SignOnPolicyActionIDFirst) SetRecovery(v SignOnPolicyActionLoginAllOfRe
 }
 
 // GetRegistration returns the Registration field value if set, zero value otherwise.
-func (o *SignOnPolicyActionIDFirst) GetRegistration() SignOnPolicyActionLoginAllOfRegistration {
+func (o *SignOnPolicyActionIDFirst) GetRegistration() SignOnPolicyActionIDFirstAllOfRegistration {
 	if o == nil || IsNil(o.Registration) {
-		var ret SignOnPolicyActionLoginAllOfRegistration
+		var ret SignOnPolicyActionIDFirstAllOfRegistration
 		return ret
 	}
 	return *o.Registration
@@ -372,7 +372,7 @@ func (o *SignOnPolicyActionIDFirst) GetRegistration() SignOnPolicyActionLoginAll
 
 // GetRegistrationOk returns a tuple with the Registration field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SignOnPolicyActionIDFirst) GetRegistrationOk() (*SignOnPolicyActionLoginAllOfRegistration, bool) {
+func (o *SignOnPolicyActionIDFirst) GetRegistrationOk() (*SignOnPolicyActionIDFirstAllOfRegistration, bool) {
 	if o == nil || IsNil(o.Registration) {
 		return nil, false
 	}
@@ -388,8 +388,8 @@ func (o *SignOnPolicyActionIDFirst) HasRegistration() bool {
 	return false
 }
 
-// SetRegistration gets a reference to the given SignOnPolicyActionLoginAllOfRegistration and assigns it to the Registration field.
-func (o *SignOnPolicyActionIDFirst) SetRegistration(v SignOnPolicyActionLoginAllOfRegistration) {
+// SetRegistration gets a reference to the given SignOnPolicyActionIDFirstAllOfRegistration and assigns it to the Registration field.
+func (o *SignOnPolicyActionIDFirst) SetRegistration(v SignOnPolicyActionIDFirstAllOfRegistration) {
 	o.Registration = &v
 }
 
