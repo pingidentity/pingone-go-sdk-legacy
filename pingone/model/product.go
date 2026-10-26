@@ -151,6 +151,11 @@ func init() {
 			ProductCode: "Privilege",
 			Selectable:  true,
 		},
+		{
+			APICode:     management.ENUMPRODUCTTYPE_ONE_RECOGNIZE,
+			ProductCode: "Recognize",
+			Selectable:  true,
+		},
 	}
 }
 
