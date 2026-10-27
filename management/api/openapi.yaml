@@ -38305,8 +38305,7 @@ components:
         \ The PING_ONE_BASE product represents the default set of services that an\
         \ environment can use on the PingOne platform. Options for other Ping Identity\
         \ products are PING_FEDERATE, PING_ACCESS, PING_DIRECTORY, PING_AUTHORIZE,\
-        \ PING_ID, PING_INTELLIGENCE, PING_CENTRAL, PING_ONE_PAM, IDENTITY_CLOUD,\
-        \ and PING_ONE_RECOGNIZE"
+        \ PING_ID, PING_INTELLIGENCE, PING_CENTRAL, PING_ONE_PAM, and IDENTITY_CLOUD"
       enum:
       - PING_ONE_MFA
       - PING_ONE_DAVINCI
@@ -38333,7 +38332,6 @@ components:
       - PING_CENTRAL
       - PING_ONE_PAM
       - IDENTITY_CLOUD
-      - PING_ONE_RECOGNIZE
       type: string
     EnumPropagationStoreConnectionStatusContentType:
       enum:

@@ -20,10 +20,11 @@ type EnumCDigitalWalletProvisionedCredentialWalletAction string
 
 // List of EnumCDigitalWalletProvisionedCredentialWalletAction
 const (
-	ENUMCDIGITALWALLETPROVISIONEDCREDENTIALWALLETACTION_ACCEPTED EnumCDigitalWalletProvisionedCredentialWalletAction = "CREDENTIAL_ACCEPTED"
-	ENUMCDIGITALWALLETPROVISIONEDCREDENTIALWALLETACTION_REJECTED EnumCDigitalWalletProvisionedCredentialWalletAction = "CREDENTIAL_REJECTED"
-	ENUMCDIGITALWALLETPROVISIONEDCREDENTIALWALLETACTION_REVOKED  EnumCDigitalWalletProvisionedCredentialWalletAction = "CREDENTIAL_REVOKED"
-	ENUMCDIGITALWALLETPROVISIONEDCREDENTIALWALLETACTION_DELETED  EnumCDigitalWalletProvisionedCredentialWalletAction = "CREDENTIAL_DELETED"
+	ENUMCDIGITALWALLETPROVISIONEDCREDENTIALWALLETACTION_ACCEPTED    EnumCDigitalWalletProvisionedCredentialWalletAction = "CREDENTIAL_ACCEPTED"
+	ENUMCDIGITALWALLETPROVISIONEDCREDENTIALWALLETACTION_REJECTED    EnumCDigitalWalletProvisionedCredentialWalletAction = "CREDENTIAL_REJECTED"
+	ENUMCDIGITALWALLETPROVISIONEDCREDENTIALWALLETACTION_REVOKED     EnumCDigitalWalletProvisionedCredentialWalletAction = "CREDENTIAL_REVOKED"
+	ENUMCDIGITALWALLETPROVISIONEDCREDENTIALWALLETACTION_DELETED     EnumCDigitalWalletProvisionedCredentialWalletAction = "CREDENTIAL_DELETED"
+	ENUMCDIGITALWALLETPROVISIONEDCREDENTIALWALLETACTION_OBLITERATED EnumCDigitalWalletProvisionedCredentialWalletAction = "CREDENTIAL_OBLITERATED"
 )
 
 // All allowed values of EnumCDigitalWalletProvisionedCredentialWalletAction enum
@@ -32,6 +33,7 @@ var AllowedEnumCDigitalWalletProvisionedCredentialWalletActionEnumValues = []Enu
 	"CREDENTIAL_REJECTED",
 	"CREDENTIAL_REVOKED",
 	"CREDENTIAL_DELETED",
+	"CREDENTIAL_OBLITERATED",
 }
 
 func (v *EnumCDigitalWalletProvisionedCredentialWalletAction) UnmarshalJSON(src []byte) error {
