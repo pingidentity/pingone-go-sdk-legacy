@@ -45,7 +45,8 @@ type ApplicationPingOnePortal struct {
 	PkceEnforcement         *EnumApplicationOIDCPKCEOption     `json:"pkceEnforcement,omitempty"`
 	TokenEndpointAuthMethod EnumApplicationOIDCTokenAuthMethod `json:"tokenEndpointAuthMethod"`
 	// If `true`, applies the default theme to the app portal application.
-	ApplyDefaultTheme bool `json:"applyDefaultTheme"`
+	ApplyDefaultTheme bool                       `json:"applyDefaultTheme"`
+	LogoutType        *EnumApplicationLogoutType `json:"logoutType,omitempty"`
 }
 
 // NewApplicationPingOnePortal instantiates a new ApplicationPingOnePortal object
@@ -567,6 +568,38 @@ func (o *ApplicationPingOnePortal) SetApplyDefaultTheme(v bool) {
 	o.ApplyDefaultTheme = v
 }
 
+// GetLogoutType returns the LogoutType field value if set, zero value otherwise.
+func (o *ApplicationPingOnePortal) GetLogoutType() EnumApplicationLogoutType {
+	if o == nil || IsNil(o.LogoutType) {
+		var ret EnumApplicationLogoutType
+		return ret
+	}
+	return *o.LogoutType
+}
+
+// GetLogoutTypeOk returns a tuple with the LogoutType field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *ApplicationPingOnePortal) GetLogoutTypeOk() (*EnumApplicationLogoutType, bool) {
+	if o == nil || IsNil(o.LogoutType) {
+		return nil, false
+	}
+	return o.LogoutType, true
+}
+
+// HasLogoutType returns a boolean if a field has been set.
+func (o *ApplicationPingOnePortal) HasLogoutType() bool {
+	if o != nil && !IsNil(o.LogoutType) {
+		return true
+	}
+
+	return false
+}
+
+// SetLogoutType gets a reference to the given EnumApplicationLogoutType and assigns it to the LogoutType field.
+func (o *ApplicationPingOnePortal) SetLogoutType(v EnumApplicationLogoutType) {
+	o.LogoutType = &v
+}
+
 func (o ApplicationPingOnePortal) MarshalJSON() ([]byte, error) {
 	toSerialize, err := o.ToMap()
 	if err != nil {
@@ -616,6 +649,9 @@ func (o ApplicationPingOnePortal) ToMap() (map[string]interface{}, error) {
 	}
 	toSerialize["tokenEndpointAuthMethod"] = o.TokenEndpointAuthMethod
 	toSerialize["applyDefaultTheme"] = o.ApplyDefaultTheme
+	if !IsNil(o.LogoutType) {
+		toSerialize["logoutType"] = o.LogoutType
+	}
 	return toSerialize, nil
 }
 

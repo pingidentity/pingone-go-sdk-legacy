@@ -13,6 +13,8 @@
 
 * `SERVICE` (value: `"SERVICE"`)
 
+* `AI_AGENT` (value: `"AI_AGENT"`)
+
 * `CUSTOM_APP` (value: `"CUSTOM_APP"`)
 
 * `PING_ONE_SELF_SERVICE` (value: `"PING_ONE_SELF_SERVICE"`)

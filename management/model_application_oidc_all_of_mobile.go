@@ -19,6 +19,8 @@ var _ MappedNullable = &ApplicationOIDCAllOfMobile{}
 
 // ApplicationOIDCAllOfMobile struct for ApplicationOIDCAllOfMobile
 type ApplicationOIDCAllOfMobile struct {
+	// If you set `mobile.integrityDetection.appleAppAttestSettings.enabled` to `true` to use Apple App Attest for device integrity checking, you must also set `mobile.appleTeamId` to the Team ID from your Apple Developer account.
+	AppleTeamId *string `json:"appleTeamId,omitempty"`
 	// A string that specifies the bundle associated with the application, for push notifications in native apps. The value of the bundleId property is unique per environment, and once defined, is immutable.  this setting overrides the top-level bundleId field
 	BundleId *string `json:"bundleId,omitempty"`
 	// A string that specifies the package name associated with the application, for push notifications in native apps. The value of the mobile.packageName property is unique per environment, and once defined, is immutable.  this setting overrides the top-level packageName field.
@@ -34,6 +36,16 @@ type ApplicationOIDCAllOfMobile struct {
 	Push                    *ApplicationOIDCAllOfMobilePush                    `json:"push,omitempty"`
 	// A string that specifies a URI prefix that enables direct triggering of the mobile application when scanning a QR code. The URI prefix can be set to a universal link with a valid value (which can be a URL address that starts with `HTTP://` or `HTTPS://`, such as `https://www.acme.com`), or an app schema, which is just a string and requires no special validation.
 	UriPrefix *string `json:"uriPrefix,omitempty"`
+	// Must be set to `true`.
+	PingIDSettings                     *bool                                                         `json:"pingIDSettings,omitempty"`
+	AllowAuthenticationDeviceLocked    *ApplicationOIDCAllOfMobileAllowAuthenticationDeviceLocked    `json:"allowAuthenticationDeviceLocked,omitempty"`
+	AllowUnPairAndChangeDeviceFromApp  *ApplicationOIDCAllOfMobileAllowUnPairAndChangeDeviceFromApp  `json:"allowUnPairAndChangeDeviceFromApp,omitempty"`
+	MobileAppSecurityPinRequire        *ApplicationOIDCAllOfMobileMobileAppSecurityPinRequire        `json:"mobileAppSecurityPinRequire,omitempty"`
+	MobileDeviceBiometricsSetting      *ApplicationOIDCAllOfMobileMobileDeviceBiometricsSetting      `json:"mobileDeviceBiometricsSetting,omitempty"`
+	NotifyOptionalMobileVersionUpdates *ApplicationOIDCAllOfMobileNotifyOptionalMobileVersionUpdates `json:"notifyOptionalMobileVersionUpdates,omitempty"`
+	NotifyRequireMobileVersionUpdates  *ApplicationOIDCAllOfMobileNotifyRequireMobileVersionUpdates  `json:"notifyRequireMobileVersionUpdates,omitempty"`
+	OtpPushNotificationEnabled         *ApplicationOIDCAllOfMobileOtpPushNotificationEnabled         `json:"otpPushNotificationEnabled,omitempty"`
+	ShowAuthenticationInformation      *ApplicationOIDCAllOfMobileShowAuthenticationInformation      `json:"showAuthenticationInformation,omitempty"`
 }
 
 // NewApplicationOIDCAllOfMobile instantiates a new ApplicationOIDCAllOfMobile object
@@ -51,6 +63,38 @@ func NewApplicationOIDCAllOfMobile() *ApplicationOIDCAllOfMobile {
 func NewApplicationOIDCAllOfMobileWithDefaults() *ApplicationOIDCAllOfMobile {
 	this := ApplicationOIDCAllOfMobile{}
 	return &this
+}
+
+// GetAppleTeamId returns the AppleTeamId field value if set, zero value otherwise.
+func (o *ApplicationOIDCAllOfMobile) GetAppleTeamId() string {
+	if o == nil || IsNil(o.AppleTeamId) {
+		var ret string
+		return ret
+	}
+	return *o.AppleTeamId
+}
+
+// GetAppleTeamIdOk returns a tuple with the AppleTeamId field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *ApplicationOIDCAllOfMobile) GetAppleTeamIdOk() (*string, bool) {
+	if o == nil || IsNil(o.AppleTeamId) {
+		return nil, false
+	}
+	return o.AppleTeamId, true
+}
+
+// HasAppleTeamId returns a boolean if a field has been set.
+func (o *ApplicationOIDCAllOfMobile) HasAppleTeamId() bool {
+	if o != nil && !IsNil(o.AppleTeamId) {
+		return true
+	}
+
+	return false
+}
+
+// SetAppleTeamId gets a reference to the given string and assigns it to the AppleTeamId field.
+func (o *ApplicationOIDCAllOfMobile) SetAppleTeamId(v string) {
+	o.AppleTeamId = &v
 }
 
 // GetBundleId returns the BundleId field value if set, zero value otherwise.
@@ -341,6 +385,294 @@ func (o *ApplicationOIDCAllOfMobile) SetUriPrefix(v string) {
 	o.UriPrefix = &v
 }
 
+// GetPingIDSettings returns the PingIDSettings field value if set, zero value otherwise.
+func (o *ApplicationOIDCAllOfMobile) GetPingIDSettings() bool {
+	if o == nil || IsNil(o.PingIDSettings) {
+		var ret bool
+		return ret
+	}
+	return *o.PingIDSettings
+}
+
+// GetPingIDSettingsOk returns a tuple with the PingIDSettings field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *ApplicationOIDCAllOfMobile) GetPingIDSettingsOk() (*bool, bool) {
+	if o == nil || IsNil(o.PingIDSettings) {
+		return nil, false
+	}
+	return o.PingIDSettings, true
+}
+
+// HasPingIDSettings returns a boolean if a field has been set.
+func (o *ApplicationOIDCAllOfMobile) HasPingIDSettings() bool {
+	if o != nil && !IsNil(o.PingIDSettings) {
+		return true
+	}
+
+	return false
+}
+
+// SetPingIDSettings gets a reference to the given bool and assigns it to the PingIDSettings field.
+func (o *ApplicationOIDCAllOfMobile) SetPingIDSettings(v bool) {
+	o.PingIDSettings = &v
+}
+
+// GetAllowAuthenticationDeviceLocked returns the AllowAuthenticationDeviceLocked field value if set, zero value otherwise.
+func (o *ApplicationOIDCAllOfMobile) GetAllowAuthenticationDeviceLocked() ApplicationOIDCAllOfMobileAllowAuthenticationDeviceLocked {
+	if o == nil || IsNil(o.AllowAuthenticationDeviceLocked) {
+		var ret ApplicationOIDCAllOfMobileAllowAuthenticationDeviceLocked
+		return ret
+	}
+	return *o.AllowAuthenticationDeviceLocked
+}
+
+// GetAllowAuthenticationDeviceLockedOk returns a tuple with the AllowAuthenticationDeviceLocked field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *ApplicationOIDCAllOfMobile) GetAllowAuthenticationDeviceLockedOk() (*ApplicationOIDCAllOfMobileAllowAuthenticationDeviceLocked, bool) {
+	if o == nil || IsNil(o.AllowAuthenticationDeviceLocked) {
+		return nil, false
+	}
+	return o.AllowAuthenticationDeviceLocked, true
+}
+
+// HasAllowAuthenticationDeviceLocked returns a boolean if a field has been set.
+func (o *ApplicationOIDCAllOfMobile) HasAllowAuthenticationDeviceLocked() bool {
+	if o != nil && !IsNil(o.AllowAuthenticationDeviceLocked) {
+		return true
+	}
+
+	return false
+}
+
+// SetAllowAuthenticationDeviceLocked gets a reference to the given ApplicationOIDCAllOfMobileAllowAuthenticationDeviceLocked and assigns it to the AllowAuthenticationDeviceLocked field.
+func (o *ApplicationOIDCAllOfMobile) SetAllowAuthenticationDeviceLocked(v ApplicationOIDCAllOfMobileAllowAuthenticationDeviceLocked) {
+	o.AllowAuthenticationDeviceLocked = &v
+}
+
+// GetAllowUnPairAndChangeDeviceFromApp returns the AllowUnPairAndChangeDeviceFromApp field value if set, zero value otherwise.
+func (o *ApplicationOIDCAllOfMobile) GetAllowUnPairAndChangeDeviceFromApp() ApplicationOIDCAllOfMobileAllowUnPairAndChangeDeviceFromApp {
+	if o == nil || IsNil(o.AllowUnPairAndChangeDeviceFromApp) {
+		var ret ApplicationOIDCAllOfMobileAllowUnPairAndChangeDeviceFromApp
+		return ret
+	}
+	return *o.AllowUnPairAndChangeDeviceFromApp
+}
+
+// GetAllowUnPairAndChangeDeviceFromAppOk returns a tuple with the AllowUnPairAndChangeDeviceFromApp field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *ApplicationOIDCAllOfMobile) GetAllowUnPairAndChangeDeviceFromAppOk() (*ApplicationOIDCAllOfMobileAllowUnPairAndChangeDeviceFromApp, bool) {
+	if o == nil || IsNil(o.AllowUnPairAndChangeDeviceFromApp) {
+		return nil, false
+	}
+	return o.AllowUnPairAndChangeDeviceFromApp, true
+}
+
+// HasAllowUnPairAndChangeDeviceFromApp returns a boolean if a field has been set.
+func (o *ApplicationOIDCAllOfMobile) HasAllowUnPairAndChangeDeviceFromApp() bool {
+	if o != nil && !IsNil(o.AllowUnPairAndChangeDeviceFromApp) {
+		return true
+	}
+
+	return false
+}
+
+// SetAllowUnPairAndChangeDeviceFromApp gets a reference to the given ApplicationOIDCAllOfMobileAllowUnPairAndChangeDeviceFromApp and assigns it to the AllowUnPairAndChangeDeviceFromApp field.
+func (o *ApplicationOIDCAllOfMobile) SetAllowUnPairAndChangeDeviceFromApp(v ApplicationOIDCAllOfMobileAllowUnPairAndChangeDeviceFromApp) {
+	o.AllowUnPairAndChangeDeviceFromApp = &v
+}
+
+// GetMobileAppSecurityPinRequire returns the MobileAppSecurityPinRequire field value if set, zero value otherwise.
+func (o *ApplicationOIDCAllOfMobile) GetMobileAppSecurityPinRequire() ApplicationOIDCAllOfMobileMobileAppSecurityPinRequire {
+	if o == nil || IsNil(o.MobileAppSecurityPinRequire) {
+		var ret ApplicationOIDCAllOfMobileMobileAppSecurityPinRequire
+		return ret
+	}
+	return *o.MobileAppSecurityPinRequire
+}
+
+// GetMobileAppSecurityPinRequireOk returns a tuple with the MobileAppSecurityPinRequire field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *ApplicationOIDCAllOfMobile) GetMobileAppSecurityPinRequireOk() (*ApplicationOIDCAllOfMobileMobileAppSecurityPinRequire, bool) {
+	if o == nil || IsNil(o.MobileAppSecurityPinRequire) {
+		return nil, false
+	}
+	return o.MobileAppSecurityPinRequire, true
+}
+
+// HasMobileAppSecurityPinRequire returns a boolean if a field has been set.
+func (o *ApplicationOIDCAllOfMobile) HasMobileAppSecurityPinRequire() bool {
+	if o != nil && !IsNil(o.MobileAppSecurityPinRequire) {
+		return true
+	}
+
+	return false
+}
+
+// SetMobileAppSecurityPinRequire gets a reference to the given ApplicationOIDCAllOfMobileMobileAppSecurityPinRequire and assigns it to the MobileAppSecurityPinRequire field.
+func (o *ApplicationOIDCAllOfMobile) SetMobileAppSecurityPinRequire(v ApplicationOIDCAllOfMobileMobileAppSecurityPinRequire) {
+	o.MobileAppSecurityPinRequire = &v
+}
+
+// GetMobileDeviceBiometricsSetting returns the MobileDeviceBiometricsSetting field value if set, zero value otherwise.
+func (o *ApplicationOIDCAllOfMobile) GetMobileDeviceBiometricsSetting() ApplicationOIDCAllOfMobileMobileDeviceBiometricsSetting {
+	if o == nil || IsNil(o.MobileDeviceBiometricsSetting) {
+		var ret ApplicationOIDCAllOfMobileMobileDeviceBiometricsSetting
+		return ret
+	}
+	return *o.MobileDeviceBiometricsSetting
+}
+
+// GetMobileDeviceBiometricsSettingOk returns a tuple with the MobileDeviceBiometricsSetting field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *ApplicationOIDCAllOfMobile) GetMobileDeviceBiometricsSettingOk() (*ApplicationOIDCAllOfMobileMobileDeviceBiometricsSetting, bool) {
+	if o == nil || IsNil(o.MobileDeviceBiometricsSetting) {
+		return nil, false
+	}
+	return o.MobileDeviceBiometricsSetting, true
+}
+
+// HasMobileDeviceBiometricsSetting returns a boolean if a field has been set.
+func (o *ApplicationOIDCAllOfMobile) HasMobileDeviceBiometricsSetting() bool {
+	if o != nil && !IsNil(o.MobileDeviceBiometricsSetting) {
+		return true
+	}
+
+	return false
+}
+
+// SetMobileDeviceBiometricsSetting gets a reference to the given ApplicationOIDCAllOfMobileMobileDeviceBiometricsSetting and assigns it to the MobileDeviceBiometricsSetting field.
+func (o *ApplicationOIDCAllOfMobile) SetMobileDeviceBiometricsSetting(v ApplicationOIDCAllOfMobileMobileDeviceBiometricsSetting) {
+	o.MobileDeviceBiometricsSetting = &v
+}
+
+// GetNotifyOptionalMobileVersionUpdates returns the NotifyOptionalMobileVersionUpdates field value if set, zero value otherwise.
+func (o *ApplicationOIDCAllOfMobile) GetNotifyOptionalMobileVersionUpdates() ApplicationOIDCAllOfMobileNotifyOptionalMobileVersionUpdates {
+	if o == nil || IsNil(o.NotifyOptionalMobileVersionUpdates) {
+		var ret ApplicationOIDCAllOfMobileNotifyOptionalMobileVersionUpdates
+		return ret
+	}
+	return *o.NotifyOptionalMobileVersionUpdates
+}
+
+// GetNotifyOptionalMobileVersionUpdatesOk returns a tuple with the NotifyOptionalMobileVersionUpdates field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *ApplicationOIDCAllOfMobile) GetNotifyOptionalMobileVersionUpdatesOk() (*ApplicationOIDCAllOfMobileNotifyOptionalMobileVersionUpdates, bool) {
+	if o == nil || IsNil(o.NotifyOptionalMobileVersionUpdates) {
+		return nil, false
+	}
+	return o.NotifyOptionalMobileVersionUpdates, true
+}
+
+// HasNotifyOptionalMobileVersionUpdates returns a boolean if a field has been set.
+func (o *ApplicationOIDCAllOfMobile) HasNotifyOptionalMobileVersionUpdates() bool {
+	if o != nil && !IsNil(o.NotifyOptionalMobileVersionUpdates) {
+		return true
+	}
+
+	return false
+}
+
+// SetNotifyOptionalMobileVersionUpdates gets a reference to the given ApplicationOIDCAllOfMobileNotifyOptionalMobileVersionUpdates and assigns it to the NotifyOptionalMobileVersionUpdates field.
+func (o *ApplicationOIDCAllOfMobile) SetNotifyOptionalMobileVersionUpdates(v ApplicationOIDCAllOfMobileNotifyOptionalMobileVersionUpdates) {
+	o.NotifyOptionalMobileVersionUpdates = &v
+}
+
+// GetNotifyRequireMobileVersionUpdates returns the NotifyRequireMobileVersionUpdates field value if set, zero value otherwise.
+func (o *ApplicationOIDCAllOfMobile) GetNotifyRequireMobileVersionUpdates() ApplicationOIDCAllOfMobileNotifyRequireMobileVersionUpdates {
+	if o == nil || IsNil(o.NotifyRequireMobileVersionUpdates) {
+		var ret ApplicationOIDCAllOfMobileNotifyRequireMobileVersionUpdates
+		return ret
+	}
+	return *o.NotifyRequireMobileVersionUpdates
+}
+
+// GetNotifyRequireMobileVersionUpdatesOk returns a tuple with the NotifyRequireMobileVersionUpdates field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *ApplicationOIDCAllOfMobile) GetNotifyRequireMobileVersionUpdatesOk() (*ApplicationOIDCAllOfMobileNotifyRequireMobileVersionUpdates, bool) {
+	if o == nil || IsNil(o.NotifyRequireMobileVersionUpdates) {
+		return nil, false
+	}
+	return o.NotifyRequireMobileVersionUpdates, true
+}
+
+// HasNotifyRequireMobileVersionUpdates returns a boolean if a field has been set.
+func (o *ApplicationOIDCAllOfMobile) HasNotifyRequireMobileVersionUpdates() bool {
+	if o != nil && !IsNil(o.NotifyRequireMobileVersionUpdates) {
+		return true
+	}
+
+	return false
+}
+
+// SetNotifyRequireMobileVersionUpdates gets a reference to the given ApplicationOIDCAllOfMobileNotifyRequireMobileVersionUpdates and assigns it to the NotifyRequireMobileVersionUpdates field.
+func (o *ApplicationOIDCAllOfMobile) SetNotifyRequireMobileVersionUpdates(v ApplicationOIDCAllOfMobileNotifyRequireMobileVersionUpdates) {
+	o.NotifyRequireMobileVersionUpdates = &v
+}
+
+// GetOtpPushNotificationEnabled returns the OtpPushNotificationEnabled field value if set, zero value otherwise.
+func (o *ApplicationOIDCAllOfMobile) GetOtpPushNotificationEnabled() ApplicationOIDCAllOfMobileOtpPushNotificationEnabled {
+	if o == nil || IsNil(o.OtpPushNotificationEnabled) {
+		var ret ApplicationOIDCAllOfMobileOtpPushNotificationEnabled
+		return ret
+	}
+	return *o.OtpPushNotificationEnabled
+}
+
+// GetOtpPushNotificationEnabledOk returns a tuple with the OtpPushNotificationEnabled field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *ApplicationOIDCAllOfMobile) GetOtpPushNotificationEnabledOk() (*ApplicationOIDCAllOfMobileOtpPushNotificationEnabled, bool) {
+	if o == nil || IsNil(o.OtpPushNotificationEnabled) {
+		return nil, false
+	}
+	return o.OtpPushNotificationEnabled, true
+}
+
+// HasOtpPushNotificationEnabled returns a boolean if a field has been set.
+func (o *ApplicationOIDCAllOfMobile) HasOtpPushNotificationEnabled() bool {
+	if o != nil && !IsNil(o.OtpPushNotificationEnabled) {
+		return true
+	}
+
+	return false
+}
+
+// SetOtpPushNotificationEnabled gets a reference to the given ApplicationOIDCAllOfMobileOtpPushNotificationEnabled and assigns it to the OtpPushNotificationEnabled field.
+func (o *ApplicationOIDCAllOfMobile) SetOtpPushNotificationEnabled(v ApplicationOIDCAllOfMobileOtpPushNotificationEnabled) {
+	o.OtpPushNotificationEnabled = &v
+}
+
+// GetShowAuthenticationInformation returns the ShowAuthenticationInformation field value if set, zero value otherwise.
+func (o *ApplicationOIDCAllOfMobile) GetShowAuthenticationInformation() ApplicationOIDCAllOfMobileShowAuthenticationInformation {
+	if o == nil || IsNil(o.ShowAuthenticationInformation) {
+		var ret ApplicationOIDCAllOfMobileShowAuthenticationInformation
+		return ret
+	}
+	return *o.ShowAuthenticationInformation
+}
+
+// GetShowAuthenticationInformationOk returns a tuple with the ShowAuthenticationInformation field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *ApplicationOIDCAllOfMobile) GetShowAuthenticationInformationOk() (*ApplicationOIDCAllOfMobileShowAuthenticationInformation, bool) {
+	if o == nil || IsNil(o.ShowAuthenticationInformation) {
+		return nil, false
+	}
+	return o.ShowAuthenticationInformation, true
+}
+
+// HasShowAuthenticationInformation returns a boolean if a field has been set.
+func (o *ApplicationOIDCAllOfMobile) HasShowAuthenticationInformation() bool {
+	if o != nil && !IsNil(o.ShowAuthenticationInformation) {
+		return true
+	}
+
+	return false
+}
+
+// SetShowAuthenticationInformation gets a reference to the given ApplicationOIDCAllOfMobileShowAuthenticationInformation and assigns it to the ShowAuthenticationInformation field.
+func (o *ApplicationOIDCAllOfMobile) SetShowAuthenticationInformation(v ApplicationOIDCAllOfMobileShowAuthenticationInformation) {
+	o.ShowAuthenticationInformation = &v
+}
+
 func (o ApplicationOIDCAllOfMobile) MarshalJSON() ([]byte, error) {
 	toSerialize, err := o.ToMap()
 	if err != nil {
@@ -351,6 +683,9 @@ func (o ApplicationOIDCAllOfMobile) MarshalJSON() ([]byte, error) {
 
 func (o ApplicationOIDCAllOfMobile) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
+	if !IsNil(o.AppleTeamId) {
+		toSerialize["appleTeamId"] = o.AppleTeamId
+	}
 	if !IsNil(o.BundleId) {
 		toSerialize["bundleId"] = o.BundleId
 	}
@@ -377,6 +712,33 @@ func (o ApplicationOIDCAllOfMobile) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.UriPrefix) {
 		toSerialize["uriPrefix"] = o.UriPrefix
+	}
+	if !IsNil(o.PingIDSettings) {
+		toSerialize["pingIDSettings"] = o.PingIDSettings
+	}
+	if !IsNil(o.AllowAuthenticationDeviceLocked) {
+		toSerialize["allowAuthenticationDeviceLocked"] = o.AllowAuthenticationDeviceLocked
+	}
+	if !IsNil(o.AllowUnPairAndChangeDeviceFromApp) {
+		toSerialize["allowUnPairAndChangeDeviceFromApp"] = o.AllowUnPairAndChangeDeviceFromApp
+	}
+	if !IsNil(o.MobileAppSecurityPinRequire) {
+		toSerialize["mobileAppSecurityPinRequire"] = o.MobileAppSecurityPinRequire
+	}
+	if !IsNil(o.MobileDeviceBiometricsSetting) {
+		toSerialize["mobileDeviceBiometricsSetting"] = o.MobileDeviceBiometricsSetting
+	}
+	if !IsNil(o.NotifyOptionalMobileVersionUpdates) {
+		toSerialize["notifyOptionalMobileVersionUpdates"] = o.NotifyOptionalMobileVersionUpdates
+	}
+	if !IsNil(o.NotifyRequireMobileVersionUpdates) {
+		toSerialize["notifyRequireMobileVersionUpdates"] = o.NotifyRequireMobileVersionUpdates
+	}
+	if !IsNil(o.OtpPushNotificationEnabled) {
+		toSerialize["otpPushNotificationEnabled"] = o.OtpPushNotificationEnabled
+	}
+	if !IsNil(o.ShowAuthenticationInformation) {
+		toSerialize["showAuthenticationInformation"] = o.ShowAuthenticationInformation
 	}
 	return toSerialize, nil
 }

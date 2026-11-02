@@ -47,7 +47,10 @@ type ApplicationPingOneSelfService struct {
 	// If `true`, shows the default theme footer on the self service application. Applies only if `applyDefaultTheme` is also `true`.
 	EnableDefaultThemeFooter *bool `json:"enableDefaultThemeFooter,omitempty"`
 	// If `true`, applies the default theme to the self service application.
-	ApplyDefaultTheme bool `json:"applyDefaultTheme"`
+	ApplyDefaultTheme bool                       `json:"applyDefaultTheme"`
+	LogoutType        *EnumApplicationLogoutType `json:"logoutType,omitempty"`
+	// When set to `true`, PingID users can manage their devices using the MyAccount app. This will also add the MyAccount app to all PingID policies that already include Device Management. To limit the scope of PingID users, ensure an MFA policy or MFA DaVinci flow policy limiting their scope is added to the MyAccount app. For more information, refer to [Self service](https://docs.pingidentity.com/pingone/user_experience/p1_self_service.html) in the PingOne admin documentation.
+	ManageDevicesViaMyAccountEnabled *bool `json:"manageDevicesViaMyAccountEnabled,omitempty"`
 }
 
 // NewApplicationPingOneSelfService instantiates a new ApplicationPingOneSelfService object
@@ -601,6 +604,70 @@ func (o *ApplicationPingOneSelfService) SetApplyDefaultTheme(v bool) {
 	o.ApplyDefaultTheme = v
 }
 
+// GetLogoutType returns the LogoutType field value if set, zero value otherwise.
+func (o *ApplicationPingOneSelfService) GetLogoutType() EnumApplicationLogoutType {
+	if o == nil || IsNil(o.LogoutType) {
+		var ret EnumApplicationLogoutType
+		return ret
+	}
+	return *o.LogoutType
+}
+
+// GetLogoutTypeOk returns a tuple with the LogoutType field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *ApplicationPingOneSelfService) GetLogoutTypeOk() (*EnumApplicationLogoutType, bool) {
+	if o == nil || IsNil(o.LogoutType) {
+		return nil, false
+	}
+	return o.LogoutType, true
+}
+
+// HasLogoutType returns a boolean if a field has been set.
+func (o *ApplicationPingOneSelfService) HasLogoutType() bool {
+	if o != nil && !IsNil(o.LogoutType) {
+		return true
+	}
+
+	return false
+}
+
+// SetLogoutType gets a reference to the given EnumApplicationLogoutType and assigns it to the LogoutType field.
+func (o *ApplicationPingOneSelfService) SetLogoutType(v EnumApplicationLogoutType) {
+	o.LogoutType = &v
+}
+
+// GetManageDevicesViaMyAccountEnabled returns the ManageDevicesViaMyAccountEnabled field value if set, zero value otherwise.
+func (o *ApplicationPingOneSelfService) GetManageDevicesViaMyAccountEnabled() bool {
+	if o == nil || IsNil(o.ManageDevicesViaMyAccountEnabled) {
+		var ret bool
+		return ret
+	}
+	return *o.ManageDevicesViaMyAccountEnabled
+}
+
+// GetManageDevicesViaMyAccountEnabledOk returns a tuple with the ManageDevicesViaMyAccountEnabled field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *ApplicationPingOneSelfService) GetManageDevicesViaMyAccountEnabledOk() (*bool, bool) {
+	if o == nil || IsNil(o.ManageDevicesViaMyAccountEnabled) {
+		return nil, false
+	}
+	return o.ManageDevicesViaMyAccountEnabled, true
+}
+
+// HasManageDevicesViaMyAccountEnabled returns a boolean if a field has been set.
+func (o *ApplicationPingOneSelfService) HasManageDevicesViaMyAccountEnabled() bool {
+	if o != nil && !IsNil(o.ManageDevicesViaMyAccountEnabled) {
+		return true
+	}
+
+	return false
+}
+
+// SetManageDevicesViaMyAccountEnabled gets a reference to the given bool and assigns it to the ManageDevicesViaMyAccountEnabled field.
+func (o *ApplicationPingOneSelfService) SetManageDevicesViaMyAccountEnabled(v bool) {
+	o.ManageDevicesViaMyAccountEnabled = &v
+}
+
 func (o ApplicationPingOneSelfService) MarshalJSON() ([]byte, error) {
 	toSerialize, err := o.ToMap()
 	if err != nil {
@@ -653,6 +720,12 @@ func (o ApplicationPingOneSelfService) ToMap() (map[string]interface{}, error) {
 		toSerialize["enableDefaultThemeFooter"] = o.EnableDefaultThemeFooter
 	}
 	toSerialize["applyDefaultTheme"] = o.ApplyDefaultTheme
+	if !IsNil(o.LogoutType) {
+		toSerialize["logoutType"] = o.LogoutType
+	}
+	if !IsNil(o.ManageDevicesViaMyAccountEnabled) {
+		toSerialize["manageDevicesViaMyAccountEnabled"] = o.ManageDevicesViaMyAccountEnabled
+	}
 	return toSerialize, nil
 }
 

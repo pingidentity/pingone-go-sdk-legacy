@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ExcludedPlatforms** | Pointer to [**[]EnumMobileIntegrityDetectionPlatform**](EnumMobileIntegrityDetectionPlatform.md) | You can enable device integrity checking separately for Android and iOS by setting &#x60;mobile.integrityDetection.mode&#x60; to &#x60;ENABLED&#x60; and then using &#x60;mobile.integrityDetection.excludedPlatforms&#x60; to specify the OS where you do not want to use device integrity checking. The values to use are &#x60;GOOGLE&#x60; and &#x60;IOS&#x60; (all upper case). Note that this is implemented as an array even though currently you can only include a single value.  If &#x60;GOOGLE&#x60; is not included as a value, &#x60;googlePlay&#x60; is required to be set. | [optional] 
 **Mode** | Pointer to [**EnumEnabledStatus**](EnumEnabledStatus.md) |  | [optional] 
+**AppleAppAttestSettings** | Pointer to [**ApplicationOIDCAllOfMobileIntegrityDetectionAppleAppAttestSettings**](ApplicationOIDCAllOfMobileIntegrityDetectionAppleAppAttestSettings.md) |  | [optional] 
 **CacheDuration** | Pointer to [**ApplicationOIDCAllOfMobileIntegrityDetectionCacheDuration**](ApplicationOIDCAllOfMobileIntegrityDetectionCacheDuration.md) |  | [optional] 
 **GooglePlay** | Pointer to [**ApplicationOIDCAllOfMobileIntegrityDetectionGooglePlay**](ApplicationOIDCAllOfMobileIntegrityDetectionGooglePlay.md) |  | [optional] 
 
@@ -77,6 +78,31 @@ SetMode sets Mode field to given value.
 `func (o *ApplicationOIDCAllOfMobileIntegrityDetection) HasMode() bool`
 
 HasMode returns a boolean if a field has been set.
+
+### GetAppleAppAttestSettings
+
+`func (o *ApplicationOIDCAllOfMobileIntegrityDetection) GetAppleAppAttestSettings() ApplicationOIDCAllOfMobileIntegrityDetectionAppleAppAttestSettings`
+
+GetAppleAppAttestSettings returns the AppleAppAttestSettings field if non-nil, zero value otherwise.
+
+### GetAppleAppAttestSettingsOk
+
+`func (o *ApplicationOIDCAllOfMobileIntegrityDetection) GetAppleAppAttestSettingsOk() (*ApplicationOIDCAllOfMobileIntegrityDetectionAppleAppAttestSettings, bool)`
+
+GetAppleAppAttestSettingsOk returns a tuple with the AppleAppAttestSettings field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAppleAppAttestSettings
+
+`func (o *ApplicationOIDCAllOfMobileIntegrityDetection) SetAppleAppAttestSettings(v ApplicationOIDCAllOfMobileIntegrityDetectionAppleAppAttestSettings)`
+
+SetAppleAppAttestSettings sets AppleAppAttestSettings field to given value.
+
+### HasAppleAppAttestSettings
+
+`func (o *ApplicationOIDCAllOfMobileIntegrityDetection) HasAppleAppAttestSettings() bool`
+
+HasAppleAppAttestSettings returns a boolean if a field has been set.
 
 ### GetCacheDuration
 

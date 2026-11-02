@@ -48,16 +48,26 @@ type ApplicationWSFED struct {
 	AudienceRestriction *string                  `json:"audienceRestriction,omitempty"`
 	CorsSettings        *ApplicationCorsSettings `json:"corsSettings,omitempty"`
 	// The federated domain name (for example, the Azure custom domain).
-	DomainName string                          `json:"domainName"`
-	IdpSigning ApplicationWSFEDAllOfIdpSigning `json:"idpSigning"`
-	Kerberos   *ApplicationWSFEDAllOfKerberos  `json:"kerberos,omitempty"`
+	DomainName string `json:"domainName"`
+	// Required for Entra ID hybrid join. The value must be the name of a custom user attribute that an administrator has created. See [Creating attributes and a population for hybrid joined devices](https://docs.pingidentity.com/pingone/use_cases/p1_microsoft_entra_hybrid_join.html#p1-create-attributes) for more information.
+	HybridJoinDeviceAttribute *string                           `json:"hybridJoinDeviceAttribute,omitempty"`
+	StsTokenType              *EnumApplicationWSFEDStsTokenType `json:"stsTokenType,omitempty"`
+	// Must be `true` to enable Entra ID hybrid join. After it's set to `true`, update Entra ID to use the new metadata exchange endpoint. See [Updating the federated IdP setting](https://docs.pingidentity.com/pingone/use_cases/p1_microsoft_entra_hybrid_join.html#p1-update-federated-idp) for more information.
+	UseMex13 *bool `json:"useMex13,omitempty"`
+	// Specifies the PingOne user attribute used to match the username from a Security Token Service (STS) request to an existing user profile. By default, PingOne matches the username against the user's email address. Configure this setting if the username in the token is the user's user principal name (`userPrincipalName` attribute in Active Directory) but it differs from their email address (`mail` attribute in Active Directory), or if the username is something other than the user's user principal name or email address. The selected attribute must match the username format in the token to ensure successful identification. When specifying a PingOne custom user attribute as the `userAttributeUsernameMatch` property value, the admin must ensure the attribute is configured with the schemaType `CUSTOM`, type `STRING`, unique `true`, enabled `true`, and multiValued `false`.
+	UserAttributeUsernameMatch *string `json:"userAttributeUsernameMatch,omitempty"`
+	// The user attribute to match against the user information in the X.509 certificate. Supports Microsoft Windows primary refresh token (PRT) operations when users log on to their Windows devices, or unlock their locked Windows devices, using PingID. See [Integrating PingID with Windows Login](https://docs.pingidentity.com/pingid/pingid_integrations/pid_integrating_with_windows_login_passwordless.html). If this setting isn't specified, Windows PRT operations are still supported, but only when users log on to (or unlock) their Windows devices using their username and password.
+	UserAttributeX509Match *string `json:"userAttributeX509Match,omitempty"`
+	// Contains the list of valid issuance certificate IDs for the application. A maximum of 10 certificate IDs can be specified. Supports Microsoft Windows primary refresh token (PRT) operations when users log on to their Windows devices, or unlock their locked Windows devices, using PingID. See [Integrating PingID with Windows Login](https://docs.pingidentity.com/pingid/pingid_integrations/pid_integrating_with_windows_login_passwordless.html). If this setting isn't specified, Windows PRT operations are still supported, but only when users log on to (or unlock) their Windows devices using their username and password.
+	ValidIssuanceCertificates []ApplicationWSFEDAllOfValidIssuanceCertificates `json:"validIssuanceCertificates,omitempty"`
+	IdpSigning                ApplicationWSFEDAllOfIdpSigning                  `json:"idpSigning"`
+	Kerberos                  *ApplicationWSFEDAllOfKerberos                   `json:"kerberos,omitempty"`
 	// The URL that the replying party (such as, Office365) uses to accept submissions of RequestSecurityTokenResponse messages that are a result of SSO requests.
 	ReplyUrl string `json:"replyUrl"`
 	// The single logout endpoint URL.
 	SloEndpoint                 *string                                          `json:"sloEndpoint,omitempty"`
 	SubjectNameIdentifierFormat *EnumApplicationWSFEDSubjectNameIdentifierFormat `json:"subjectNameIdentifierFormat,omitempty"`
-	// The WS-Trust (Web Services Trust) version to use. Valid values are `1.2` and `1.3`.
-	WsTrustVersion *string `json:"wsTrustVersion,omitempty"`
+	WsTrustVersion              *EnumApplicationWSFEDWsTrustVersion              `json:"wsTrustVersion,omitempty"`
 }
 
 // NewApplicationWSFED instantiates a new ApplicationWSFED object
@@ -628,6 +638,198 @@ func (o *ApplicationWSFED) SetDomainName(v string) {
 	o.DomainName = v
 }
 
+// GetHybridJoinDeviceAttribute returns the HybridJoinDeviceAttribute field value if set, zero value otherwise.
+func (o *ApplicationWSFED) GetHybridJoinDeviceAttribute() string {
+	if o == nil || IsNil(o.HybridJoinDeviceAttribute) {
+		var ret string
+		return ret
+	}
+	return *o.HybridJoinDeviceAttribute
+}
+
+// GetHybridJoinDeviceAttributeOk returns a tuple with the HybridJoinDeviceAttribute field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *ApplicationWSFED) GetHybridJoinDeviceAttributeOk() (*string, bool) {
+	if o == nil || IsNil(o.HybridJoinDeviceAttribute) {
+		return nil, false
+	}
+	return o.HybridJoinDeviceAttribute, true
+}
+
+// HasHybridJoinDeviceAttribute returns a boolean if a field has been set.
+func (o *ApplicationWSFED) HasHybridJoinDeviceAttribute() bool {
+	if o != nil && !IsNil(o.HybridJoinDeviceAttribute) {
+		return true
+	}
+
+	return false
+}
+
+// SetHybridJoinDeviceAttribute gets a reference to the given string and assigns it to the HybridJoinDeviceAttribute field.
+func (o *ApplicationWSFED) SetHybridJoinDeviceAttribute(v string) {
+	o.HybridJoinDeviceAttribute = &v
+}
+
+// GetStsTokenType returns the StsTokenType field value if set, zero value otherwise.
+func (o *ApplicationWSFED) GetStsTokenType() EnumApplicationWSFEDStsTokenType {
+	if o == nil || IsNil(o.StsTokenType) {
+		var ret EnumApplicationWSFEDStsTokenType
+		return ret
+	}
+	return *o.StsTokenType
+}
+
+// GetStsTokenTypeOk returns a tuple with the StsTokenType field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *ApplicationWSFED) GetStsTokenTypeOk() (*EnumApplicationWSFEDStsTokenType, bool) {
+	if o == nil || IsNil(o.StsTokenType) {
+		return nil, false
+	}
+	return o.StsTokenType, true
+}
+
+// HasStsTokenType returns a boolean if a field has been set.
+func (o *ApplicationWSFED) HasStsTokenType() bool {
+	if o != nil && !IsNil(o.StsTokenType) {
+		return true
+	}
+
+	return false
+}
+
+// SetStsTokenType gets a reference to the given EnumApplicationWSFEDStsTokenType and assigns it to the StsTokenType field.
+func (o *ApplicationWSFED) SetStsTokenType(v EnumApplicationWSFEDStsTokenType) {
+	o.StsTokenType = &v
+}
+
+// GetUseMex13 returns the UseMex13 field value if set, zero value otherwise.
+func (o *ApplicationWSFED) GetUseMex13() bool {
+	if o == nil || IsNil(o.UseMex13) {
+		var ret bool
+		return ret
+	}
+	return *o.UseMex13
+}
+
+// GetUseMex13Ok returns a tuple with the UseMex13 field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *ApplicationWSFED) GetUseMex13Ok() (*bool, bool) {
+	if o == nil || IsNil(o.UseMex13) {
+		return nil, false
+	}
+	return o.UseMex13, true
+}
+
+// HasUseMex13 returns a boolean if a field has been set.
+func (o *ApplicationWSFED) HasUseMex13() bool {
+	if o != nil && !IsNil(o.UseMex13) {
+		return true
+	}
+
+	return false
+}
+
+// SetUseMex13 gets a reference to the given bool and assigns it to the UseMex13 field.
+func (o *ApplicationWSFED) SetUseMex13(v bool) {
+	o.UseMex13 = &v
+}
+
+// GetUserAttributeUsernameMatch returns the UserAttributeUsernameMatch field value if set, zero value otherwise.
+func (o *ApplicationWSFED) GetUserAttributeUsernameMatch() string {
+	if o == nil || IsNil(o.UserAttributeUsernameMatch) {
+		var ret string
+		return ret
+	}
+	return *o.UserAttributeUsernameMatch
+}
+
+// GetUserAttributeUsernameMatchOk returns a tuple with the UserAttributeUsernameMatch field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *ApplicationWSFED) GetUserAttributeUsernameMatchOk() (*string, bool) {
+	if o == nil || IsNil(o.UserAttributeUsernameMatch) {
+		return nil, false
+	}
+	return o.UserAttributeUsernameMatch, true
+}
+
+// HasUserAttributeUsernameMatch returns a boolean if a field has been set.
+func (o *ApplicationWSFED) HasUserAttributeUsernameMatch() bool {
+	if o != nil && !IsNil(o.UserAttributeUsernameMatch) {
+		return true
+	}
+
+	return false
+}
+
+// SetUserAttributeUsernameMatch gets a reference to the given string and assigns it to the UserAttributeUsernameMatch field.
+func (o *ApplicationWSFED) SetUserAttributeUsernameMatch(v string) {
+	o.UserAttributeUsernameMatch = &v
+}
+
+// GetUserAttributeX509Match returns the UserAttributeX509Match field value if set, zero value otherwise.
+func (o *ApplicationWSFED) GetUserAttributeX509Match() string {
+	if o == nil || IsNil(o.UserAttributeX509Match) {
+		var ret string
+		return ret
+	}
+	return *o.UserAttributeX509Match
+}
+
+// GetUserAttributeX509MatchOk returns a tuple with the UserAttributeX509Match field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *ApplicationWSFED) GetUserAttributeX509MatchOk() (*string, bool) {
+	if o == nil || IsNil(o.UserAttributeX509Match) {
+		return nil, false
+	}
+	return o.UserAttributeX509Match, true
+}
+
+// HasUserAttributeX509Match returns a boolean if a field has been set.
+func (o *ApplicationWSFED) HasUserAttributeX509Match() bool {
+	if o != nil && !IsNil(o.UserAttributeX509Match) {
+		return true
+	}
+
+	return false
+}
+
+// SetUserAttributeX509Match gets a reference to the given string and assigns it to the UserAttributeX509Match field.
+func (o *ApplicationWSFED) SetUserAttributeX509Match(v string) {
+	o.UserAttributeX509Match = &v
+}
+
+// GetValidIssuanceCertificates returns the ValidIssuanceCertificates field value if set, zero value otherwise.
+func (o *ApplicationWSFED) GetValidIssuanceCertificates() []ApplicationWSFEDAllOfValidIssuanceCertificates {
+	if o == nil || IsNil(o.ValidIssuanceCertificates) {
+		var ret []ApplicationWSFEDAllOfValidIssuanceCertificates
+		return ret
+	}
+	return o.ValidIssuanceCertificates
+}
+
+// GetValidIssuanceCertificatesOk returns a tuple with the ValidIssuanceCertificates field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *ApplicationWSFED) GetValidIssuanceCertificatesOk() ([]ApplicationWSFEDAllOfValidIssuanceCertificates, bool) {
+	if o == nil || IsNil(o.ValidIssuanceCertificates) {
+		return nil, false
+	}
+	return o.ValidIssuanceCertificates, true
+}
+
+// HasValidIssuanceCertificates returns a boolean if a field has been set.
+func (o *ApplicationWSFED) HasValidIssuanceCertificates() bool {
+	if o != nil && !IsNil(o.ValidIssuanceCertificates) {
+		return true
+	}
+
+	return false
+}
+
+// SetValidIssuanceCertificates gets a reference to the given []ApplicationWSFEDAllOfValidIssuanceCertificates and assigns it to the ValidIssuanceCertificates field.
+func (o *ApplicationWSFED) SetValidIssuanceCertificates(v []ApplicationWSFEDAllOfValidIssuanceCertificates) {
+	o.ValidIssuanceCertificates = v
+}
+
 // GetIdpSigning returns the IdpSigning field value
 func (o *ApplicationWSFED) GetIdpSigning() ApplicationWSFEDAllOfIdpSigning {
 	if o == nil {
@@ -773,9 +975,9 @@ func (o *ApplicationWSFED) SetSubjectNameIdentifierFormat(v EnumApplicationWSFED
 }
 
 // GetWsTrustVersion returns the WsTrustVersion field value if set, zero value otherwise.
-func (o *ApplicationWSFED) GetWsTrustVersion() string {
+func (o *ApplicationWSFED) GetWsTrustVersion() EnumApplicationWSFEDWsTrustVersion {
 	if o == nil || IsNil(o.WsTrustVersion) {
-		var ret string
+		var ret EnumApplicationWSFEDWsTrustVersion
 		return ret
 	}
 	return *o.WsTrustVersion
@@ -783,7 +985,7 @@ func (o *ApplicationWSFED) GetWsTrustVersion() string {
 
 // GetWsTrustVersionOk returns a tuple with the WsTrustVersion field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *ApplicationWSFED) GetWsTrustVersionOk() (*string, bool) {
+func (o *ApplicationWSFED) GetWsTrustVersionOk() (*EnumApplicationWSFEDWsTrustVersion, bool) {
 	if o == nil || IsNil(o.WsTrustVersion) {
 		return nil, false
 	}
@@ -799,8 +1001,8 @@ func (o *ApplicationWSFED) HasWsTrustVersion() bool {
 	return false
 }
 
-// SetWsTrustVersion gets a reference to the given string and assigns it to the WsTrustVersion field.
-func (o *ApplicationWSFED) SetWsTrustVersion(v string) {
+// SetWsTrustVersion gets a reference to the given EnumApplicationWSFEDWsTrustVersion and assigns it to the WsTrustVersion field.
+func (o *ApplicationWSFED) SetWsTrustVersion(v EnumApplicationWSFEDWsTrustVersion) {
 	o.WsTrustVersion = &v
 }
 
@@ -858,6 +1060,24 @@ func (o ApplicationWSFED) ToMap() (map[string]interface{}, error) {
 		toSerialize["corsSettings"] = o.CorsSettings
 	}
 	toSerialize["domainName"] = o.DomainName
+	if !IsNil(o.HybridJoinDeviceAttribute) {
+		toSerialize["hybridJoinDeviceAttribute"] = o.HybridJoinDeviceAttribute
+	}
+	if !IsNil(o.StsTokenType) {
+		toSerialize["stsTokenType"] = o.StsTokenType
+	}
+	if !IsNil(o.UseMex13) {
+		toSerialize["useMex13"] = o.UseMex13
+	}
+	if !IsNil(o.UserAttributeUsernameMatch) {
+		toSerialize["userAttributeUsernameMatch"] = o.UserAttributeUsernameMatch
+	}
+	if !IsNil(o.UserAttributeX509Match) {
+		toSerialize["userAttributeX509Match"] = o.UserAttributeX509Match
+	}
+	if !IsNil(o.ValidIssuanceCertificates) {
+		toSerialize["validIssuanceCertificates"] = o.ValidIssuanceCertificates
+	}
 	toSerialize["idpSigning"] = o.IdpSigning
 	if !IsNil(o.Kerberos) {
 		toSerialize["kerberos"] = o.Kerberos

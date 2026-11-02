@@ -50,6 +50,7 @@ Name | Type | Description | Notes
 **DevicePollingInterval** | Pointer to **int32** | An integer that specifies the frequency (in seconds) for the client to poll the &#x60;/as/token&#x60; endpoint. This property is required only for applications in which the &#x60;grantTypes&#x60; property is set to &#x60;device_code&#x60;. The default value is &#x60;5&#x60; seconds. It can have a value of no more than &#x60;60&#x60; seconds (&#x60;min&#x60;/&#x60;max&#x60;&#x3D;&#x60;1&#x60;/&#x60;60&#x60;). | [optional] [default to 5]
 **IdpSignoff** | Pointer to **bool** | Set this to true to allow an application to request to terminate a user session using only the ID token. The application is not required to have access to the session token cookie. | [optional] 
 **IncludeX5t** | Pointer to **bool** | Specifies whether tokens signed for this application include the &#x60;x5t&#x60;&#x60; signature header in the signed JWT. Refer to [JSON Web Signature (JWS), section \&quot;x5t\&quot; (X.509 Certificate SHA-1 Thumbprint) Header Parameter](https://www.rfc-editor.org/rfc/rfc7515.html#section-4.1.7). | [optional] 
+**IncludeTyp** | Pointer to **bool** | Specifies whether tokens signed for this application include the &#x60;typ&#x60; header with a value of &#x60;at+jwt&#x60;, regardless of whether the intended audience is the UserInfo endpoint, PingOne APIs, or custom resources. This specifies the JWT as an OAuth 2.0 access token for increased security. On March 2, 2027, PingOne will always include the &#x60;typ&#x60; header with a value of &#x60;at+jwt&#x60; when minting access token for the UserInfo endpoint, PingOne APIs, or custom resources. Learn more in [Access token claims](https://apidocs.pingidentity.com/pingone/platform/v1/api/#access-token-claims), https://datatracker.ietf.org/doc/html/rfc7519#section-5.1, and https://datatracker.ietf.org/doc/html/rfc9068#section-2.1. | [optional] 
 **Jwks** | Pointer to **string** | A JWKS string that validates the signature of signed JWTs for applications that use the &#x60;PRIVATE_KEY_JWT&#x60; option for the &#x60;tokenEndpointAuthMethod&#x60;. This property is required when &#x60;tokenEndpointAuthMethod&#x60; is &#x60;PRIVATE_KEY_JWT&#x60; and the &#x60;jwksUrl&#x60; property is empty. For more information, see [Create a private_key_jwt JWKS string](https://apidocs.pingidentity.com/pingone/platform/v1/api/#create-a-private_key_jwt-jwks-string). This property is also required if the optional &#x60;request&#x60; property JWT on the authorize endpoint is signed using the RS256 (or RS384, RS512) signing algorithm and the &#x60;jwksUrl&#x60; property is empty. For more infornmation about signing the request property JWT, see [Create a request property JWT](https://apidocs.pingidentity.com/pingone/platform/v1/api/#create-a-request-property-jwt). | [optional] 
 **JwksUrl** | Pointer to **string** | A URL (supports &#x60;https://&#x60; only) that provides access to a JWKS string that validates the signature of signed JWTs for applications that use the &#x60;PRIVATE_KEY_JWT&#x60; option for the &#x60;tokenEndpointAuthMethod&#x60;. This property is required when &#x60;tokenEndpointAuthMethod&#x60; is &#x60;PRIVATE_KEY_JWT&#x60; and the &#x60;jwks&#x60; property is empty. For more information, see [Create a private_key_jwt JWKS string](https://apidocs.pingidentity.com/pingone/platform/v1/api/#create-a-private_key_jwt-jwks-string). This property is also required if the optional &#x60;request&#x60; property JWT on the authorize endpoint is signed using the RS256 (or RS384, RS512) signing algorithm and the &#x60;jwks&#x60; property is empty. For more infornmation about signing the request property JWT, see [Create a request property JWT](https://apidocs.pingidentity.com/pingone/platform/v1/api/#create-a-request-property-jwt). | [optional] 
 **Mobile** | Pointer to [**ApplicationOIDCAllOfMobile**](ApplicationOIDCAllOfMobile.md) |  | [optional] 
@@ -69,6 +70,7 @@ Name | Type | Description | Notes
 **RequestScopesForMultipleResourcesEnabled** | Pointer to **bool** | Specifies whether the application can request scopes from multiple custom resources. The default value is &#x60;false&#x60;. For more information about scopes and access tokens, refer to [Resource Scopes](https://apidocs.pingidentity.com/pingone/platform/v1/api/#resource-scopes). | [optional] [default to false]
 **RequireSignedRequestObject** | Pointer to **bool** | Indicates that the Java Web Token (JWT) for the [request query](https://openid.net/specs/openid-connect-core-1_0.html#RequestObject) parameter is required to be signed. If &#x60;false&#x60; or null (default), a signed request object is not required. Both &#x60;supportUnsignedRequestObject&#x60; and this property cannot be set to &#x60;true&#x60;. | [optional] 
 **ResponseTypes** | Pointer to [**[]EnumApplicationOIDCResponseType**](EnumApplicationOIDCResponseType.md) | The code or token type returned by an authorization request. Options are &#x60;TOKEN&#x60;, &#x60;ID_TOKEN&#x60;, and &#x60;CODE&#x60;. For hybrid flows that specify &#x60;CODE&#x60; with &#x60;TOKEN&#x60; or &#x60;ID_TOKEN&#x60;, see [Hybrid grant type](https://apidocs.pingidentity.com/pingone/main/v1/api/#hybrid-grant-type). | [optional] 
+**SkipTokenSessionValidation** | Pointer to **bool** | Indicates whether the session associated with an access token or a refresh token should be taken into consideration when PingOne needs to determine the validity of the token. When set to &#x60;true&#x60;, PingOne ignores the session status, allowing the use of a valid token even if the user session has expired. When unset, this property&#39;s value is treated as &#x60;false&#x60;, which invalidates the token (regardless of the token&#39;s validity) if the user session is invalid. To learn more, refer to [Token validation](https://apidocs.pingidentity.com/pingone/platform/v1/api/#token-validation). | [optional] 
 **Signing** | Pointer to [**ApplicationOIDCAllOfSigning**](ApplicationOIDCAllOfSigning.md) |  | [optional] 
 **SupportUnsignedRequestObject** | Pointer to **bool** | A boolean that specifies whether the [request query](https://openid.net/specs/openid-connect-core-1_0.html#RequestObject) parameter JWT is allowed to be unsigned. If false or null (default), an unsigned request object is not allowed. | [optional] 
 **Tags** | Pointer to [**[]EnumApplicationTags**](EnumApplicationTags.md) | An array that specifies the list of labels associated with the application. Options are &#x60;PING_FED_CONNECTION_INTEGRATION&#x60;.  Only applicable for creating worker applications. | [optional] 
@@ -76,9 +78,15 @@ Name | Type | Description | Notes
 **TokenEndpointAuthMethod** | [**EnumApplicationOIDCTokenAuthMethod**](EnumApplicationOIDCTokenAuthMethod.md) |  | 
 **AudienceRestriction** | Pointer to **string** | The service provider ID. Defaults to &#x60;urn:federation:MicrosoftOnline&#x60;. | [optional] [default to "urn:federation:MicrosoftOnline"]
 **DomainName** | **string** | The federated domain name (for example, the Azure custom domain). | 
+**HybridJoinDeviceAttribute** | Pointer to **string** | Required for Entra ID hybrid join. The value must be the name of a custom user attribute that an administrator has created. See [Creating attributes and a population for hybrid joined devices](https://docs.pingidentity.com/pingone/use_cases/p1_microsoft_entra_hybrid_join.html#p1-create-attributes) for more information. | [optional] 
+**StsTokenType** | Pointer to [**EnumApplicationWSFEDStsTokenType**](EnumApplicationWSFEDStsTokenType.md) |  | [optional] 
+**UseMex13** | Pointer to **bool** | Must be &#x60;true&#x60; to enable Entra ID hybrid join. After it&#39;s set to &#x60;true&#x60;, update Entra ID to use the new metadata exchange endpoint. See [Updating the federated IdP setting](https://docs.pingidentity.com/pingone/use_cases/p1_microsoft_entra_hybrid_join.html#p1-update-federated-idp) for more information. | [optional] 
+**UserAttributeUsernameMatch** | Pointer to **string** | Specifies the PingOne user attribute used to match the username from a Security Token Service (STS) request to an existing user profile. By default, PingOne matches the username against the user&#39;s email address. Configure this setting if the username in the token is the user&#39;s user principal name (&#x60;userPrincipalName&#x60; attribute in Active Directory) but it differs from their email address (&#x60;mail&#x60; attribute in Active Directory), or if the username is something other than the user&#39;s user principal name or email address. The selected attribute must match the username format in the token to ensure successful identification. When specifying a PingOne custom user attribute as the &#x60;userAttributeUsernameMatch&#x60; property value, the admin must ensure the attribute is configured with the schemaType &#x60;CUSTOM&#x60;, type &#x60;STRING&#x60;, unique &#x60;true&#x60;, enabled &#x60;true&#x60;, and multiValued &#x60;false&#x60;. | [optional] 
+**UserAttributeX509Match** | Pointer to **string** | The user attribute to match against the user information in the X.509 certificate. Supports Microsoft Windows primary refresh token (PRT) operations when users log on to their Windows devices, or unlock their locked Windows devices, using PingID. See [Integrating PingID with Windows Login](https://docs.pingidentity.com/pingid/pingid_integrations/pid_integrating_with_windows_login_passwordless.html). If this setting isn&#39;t specified, Windows PRT operations are still supported, but only when users log on to (or unlock) their Windows devices using their username and password. | [optional] 
+**ValidIssuanceCertificates** | Pointer to [**[]ApplicationWSFEDAllOfValidIssuanceCertificates**](ApplicationWSFEDAllOfValidIssuanceCertificates.md) | Contains the list of valid issuance certificate IDs for the application. A maximum of 10 certificate IDs can be specified. Supports Microsoft Windows primary refresh token (PRT) operations when users log on to their Windows devices, or unlock their locked Windows devices, using PingID. See [Integrating PingID with Windows Login](https://docs.pingidentity.com/pingid/pingid_integrations/pid_integrating_with_windows_login_passwordless.html). If this setting isn&#39;t specified, Windows PRT operations are still supported, but only when users log on to (or unlock) their Windows devices using their username and password. | [optional] 
 **ReplyUrl** | **string** | The URL that the replying party (such as, Office365) uses to accept submissions of RequestSecurityTokenResponse messages that are a result of SSO requests. | 
 **SubjectNameIdentifierFormat** | Pointer to [**EnumApplicationWSFEDSubjectNameIdentifierFormat**](EnumApplicationWSFEDSubjectNameIdentifierFormat.md) |  | [optional] 
-**WsTrustVersion** | Pointer to **string** | The WS-Trust (Web Services Trust) version to use. Valid values are &#x60;1.2&#x60; and &#x60;1.3&#x60;. | [optional] 
+**WsTrustVersion** | Pointer to [**EnumApplicationWSFEDWsTrustVersion**](EnumApplicationWSFEDWsTrustVersion.md) |  | [optional] 
 **ExternalId** | Pointer to **string** | For applications whose type is &#x60;PORTAL_LINK_APP&#x60;, you can use this field to specify an external ID that should be used for the application in contexts such as targeted risk policies. Note that &#x60;PORTAL_LINK_APP&#x60; applications that do not have an external ID specified are not displayed in the list of applications when defining a targeted risk policy in the UI. | [optional] 
 
 ## Methods
@@ -1205,6 +1213,31 @@ SetIncludeX5t sets IncludeX5t field to given value.
 
 HasIncludeX5t returns a boolean if a field has been set.
 
+### GetIncludeTyp
+
+`func (o *CreateApplicationRequest) GetIncludeTyp() bool`
+
+GetIncludeTyp returns the IncludeTyp field if non-nil, zero value otherwise.
+
+### GetIncludeTypOk
+
+`func (o *CreateApplicationRequest) GetIncludeTypOk() (*bool, bool)`
+
+GetIncludeTypOk returns a tuple with the IncludeTyp field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIncludeTyp
+
+`func (o *CreateApplicationRequest) SetIncludeTyp(v bool)`
+
+SetIncludeTyp sets IncludeTyp field to given value.
+
+### HasIncludeTyp
+
+`func (o *CreateApplicationRequest) HasIncludeTyp() bool`
+
+HasIncludeTyp returns a boolean if a field has been set.
+
 ### GetJwks
 
 `func (o *CreateApplicationRequest) GetJwks() string`
@@ -1680,6 +1713,31 @@ SetResponseTypes sets ResponseTypes field to given value.
 
 HasResponseTypes returns a boolean if a field has been set.
 
+### GetSkipTokenSessionValidation
+
+`func (o *CreateApplicationRequest) GetSkipTokenSessionValidation() bool`
+
+GetSkipTokenSessionValidation returns the SkipTokenSessionValidation field if non-nil, zero value otherwise.
+
+### GetSkipTokenSessionValidationOk
+
+`func (o *CreateApplicationRequest) GetSkipTokenSessionValidationOk() (*bool, bool)`
+
+GetSkipTokenSessionValidationOk returns a tuple with the SkipTokenSessionValidation field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSkipTokenSessionValidation
+
+`func (o *CreateApplicationRequest) SetSkipTokenSessionValidation(v bool)`
+
+SetSkipTokenSessionValidation sets SkipTokenSessionValidation field to given value.
+
+### HasSkipTokenSessionValidation
+
+`func (o *CreateApplicationRequest) HasSkipTokenSessionValidation() bool`
+
+HasSkipTokenSessionValidation returns a boolean if a field has been set.
+
 ### GetSigning
 
 `func (o *CreateApplicationRequest) GetSigning() ApplicationOIDCAllOfSigning`
@@ -1845,6 +1903,156 @@ and a boolean to check if the value has been set.
 SetDomainName sets DomainName field to given value.
 
 
+### GetHybridJoinDeviceAttribute
+
+`func (o *CreateApplicationRequest) GetHybridJoinDeviceAttribute() string`
+
+GetHybridJoinDeviceAttribute returns the HybridJoinDeviceAttribute field if non-nil, zero value otherwise.
+
+### GetHybridJoinDeviceAttributeOk
+
+`func (o *CreateApplicationRequest) GetHybridJoinDeviceAttributeOk() (*string, bool)`
+
+GetHybridJoinDeviceAttributeOk returns a tuple with the HybridJoinDeviceAttribute field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetHybridJoinDeviceAttribute
+
+`func (o *CreateApplicationRequest) SetHybridJoinDeviceAttribute(v string)`
+
+SetHybridJoinDeviceAttribute sets HybridJoinDeviceAttribute field to given value.
+
+### HasHybridJoinDeviceAttribute
+
+`func (o *CreateApplicationRequest) HasHybridJoinDeviceAttribute() bool`
+
+HasHybridJoinDeviceAttribute returns a boolean if a field has been set.
+
+### GetStsTokenType
+
+`func (o *CreateApplicationRequest) GetStsTokenType() EnumApplicationWSFEDStsTokenType`
+
+GetStsTokenType returns the StsTokenType field if non-nil, zero value otherwise.
+
+### GetStsTokenTypeOk
+
+`func (o *CreateApplicationRequest) GetStsTokenTypeOk() (*EnumApplicationWSFEDStsTokenType, bool)`
+
+GetStsTokenTypeOk returns a tuple with the StsTokenType field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetStsTokenType
+
+`func (o *CreateApplicationRequest) SetStsTokenType(v EnumApplicationWSFEDStsTokenType)`
+
+SetStsTokenType sets StsTokenType field to given value.
+
+### HasStsTokenType
+
+`func (o *CreateApplicationRequest) HasStsTokenType() bool`
+
+HasStsTokenType returns a boolean if a field has been set.
+
+### GetUseMex13
+
+`func (o *CreateApplicationRequest) GetUseMex13() bool`
+
+GetUseMex13 returns the UseMex13 field if non-nil, zero value otherwise.
+
+### GetUseMex13Ok
+
+`func (o *CreateApplicationRequest) GetUseMex13Ok() (*bool, bool)`
+
+GetUseMex13Ok returns a tuple with the UseMex13 field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUseMex13
+
+`func (o *CreateApplicationRequest) SetUseMex13(v bool)`
+
+SetUseMex13 sets UseMex13 field to given value.
+
+### HasUseMex13
+
+`func (o *CreateApplicationRequest) HasUseMex13() bool`
+
+HasUseMex13 returns a boolean if a field has been set.
+
+### GetUserAttributeUsernameMatch
+
+`func (o *CreateApplicationRequest) GetUserAttributeUsernameMatch() string`
+
+GetUserAttributeUsernameMatch returns the UserAttributeUsernameMatch field if non-nil, zero value otherwise.
+
+### GetUserAttributeUsernameMatchOk
+
+`func (o *CreateApplicationRequest) GetUserAttributeUsernameMatchOk() (*string, bool)`
+
+GetUserAttributeUsernameMatchOk returns a tuple with the UserAttributeUsernameMatch field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUserAttributeUsernameMatch
+
+`func (o *CreateApplicationRequest) SetUserAttributeUsernameMatch(v string)`
+
+SetUserAttributeUsernameMatch sets UserAttributeUsernameMatch field to given value.
+
+### HasUserAttributeUsernameMatch
+
+`func (o *CreateApplicationRequest) HasUserAttributeUsernameMatch() bool`
+
+HasUserAttributeUsernameMatch returns a boolean if a field has been set.
+
+### GetUserAttributeX509Match
+
+`func (o *CreateApplicationRequest) GetUserAttributeX509Match() string`
+
+GetUserAttributeX509Match returns the UserAttributeX509Match field if non-nil, zero value otherwise.
+
+### GetUserAttributeX509MatchOk
+
+`func (o *CreateApplicationRequest) GetUserAttributeX509MatchOk() (*string, bool)`
+
+GetUserAttributeX509MatchOk returns a tuple with the UserAttributeX509Match field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUserAttributeX509Match
+
+`func (o *CreateApplicationRequest) SetUserAttributeX509Match(v string)`
+
+SetUserAttributeX509Match sets UserAttributeX509Match field to given value.
+
+### HasUserAttributeX509Match
+
+`func (o *CreateApplicationRequest) HasUserAttributeX509Match() bool`
+
+HasUserAttributeX509Match returns a boolean if a field has been set.
+
+### GetValidIssuanceCertificates
+
+`func (o *CreateApplicationRequest) GetValidIssuanceCertificates() []ApplicationWSFEDAllOfValidIssuanceCertificates`
+
+GetValidIssuanceCertificates returns the ValidIssuanceCertificates field if non-nil, zero value otherwise.
+
+### GetValidIssuanceCertificatesOk
+
+`func (o *CreateApplicationRequest) GetValidIssuanceCertificatesOk() (*[]ApplicationWSFEDAllOfValidIssuanceCertificates, bool)`
+
+GetValidIssuanceCertificatesOk returns a tuple with the ValidIssuanceCertificates field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetValidIssuanceCertificates
+
+`func (o *CreateApplicationRequest) SetValidIssuanceCertificates(v []ApplicationWSFEDAllOfValidIssuanceCertificates)`
+
+SetValidIssuanceCertificates sets ValidIssuanceCertificates field to given value.
+
+### HasValidIssuanceCertificates
+
+`func (o *CreateApplicationRequest) HasValidIssuanceCertificates() bool`
+
+HasValidIssuanceCertificates returns a boolean if a field has been set.
+
 ### GetReplyUrl
 
 `func (o *CreateApplicationRequest) GetReplyUrl() string`
@@ -1892,20 +2100,20 @@ HasSubjectNameIdentifierFormat returns a boolean if a field has been set.
 
 ### GetWsTrustVersion
 
-`func (o *CreateApplicationRequest) GetWsTrustVersion() string`
+`func (o *CreateApplicationRequest) GetWsTrustVersion() EnumApplicationWSFEDWsTrustVersion`
 
 GetWsTrustVersion returns the WsTrustVersion field if non-nil, zero value otherwise.
 
 ### GetWsTrustVersionOk
 
-`func (o *CreateApplicationRequest) GetWsTrustVersionOk() (*string, bool)`
+`func (o *CreateApplicationRequest) GetWsTrustVersionOk() (*EnumApplicationWSFEDWsTrustVersion, bool)`
 
 GetWsTrustVersionOk returns a tuple with the WsTrustVersion field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetWsTrustVersion
 
-`func (o *CreateApplicationRequest) SetWsTrustVersion(v string)`
+`func (o *CreateApplicationRequest) SetWsTrustVersion(v EnumApplicationWSFEDWsTrustVersion)`
 
 SetWsTrustVersion sets WsTrustVersion field to given value.
 
