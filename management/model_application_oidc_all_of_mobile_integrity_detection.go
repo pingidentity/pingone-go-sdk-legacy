@@ -20,10 +20,11 @@ var _ MappedNullable = &ApplicationOIDCAllOfMobileIntegrityDetection{}
 // ApplicationOIDCAllOfMobileIntegrityDetection struct for ApplicationOIDCAllOfMobileIntegrityDetection
 type ApplicationOIDCAllOfMobileIntegrityDetection struct {
 	// You can enable device integrity checking separately for Android and iOS by setting `mobile.integrityDetection.mode` to `ENABLED` and then using `mobile.integrityDetection.excludedPlatforms` to specify the OS where you do not want to use device integrity checking. The values to use are `GOOGLE` and `IOS` (all upper case). Note that this is implemented as an array even though currently you can only include a single value.  If `GOOGLE` is not included as a value, `googlePlay` is required to be set.
-	ExcludedPlatforms []EnumMobileIntegrityDetectionPlatform                     `json:"excludedPlatforms,omitempty"`
-	Mode              *EnumEnabledStatus                                         `json:"mode,omitempty"`
-	CacheDuration     *ApplicationOIDCAllOfMobileIntegrityDetectionCacheDuration `json:"cacheDuration,omitempty"`
-	GooglePlay        *ApplicationOIDCAllOfMobileIntegrityDetectionGooglePlay    `json:"googlePlay,omitempty"`
+	ExcludedPlatforms      []EnumMobileIntegrityDetectionPlatform                              `json:"excludedPlatforms,omitempty"`
+	Mode                   *EnumEnabledStatus                                                  `json:"mode,omitempty"`
+	AppleAppAttestSettings *ApplicationOIDCAllOfMobileIntegrityDetectionAppleAppAttestSettings `json:"appleAppAttestSettings,omitempty"`
+	CacheDuration          *ApplicationOIDCAllOfMobileIntegrityDetectionCacheDuration          `json:"cacheDuration,omitempty"`
+	GooglePlay             *ApplicationOIDCAllOfMobileIntegrityDetectionGooglePlay             `json:"googlePlay,omitempty"`
 }
 
 // NewApplicationOIDCAllOfMobileIntegrityDetection instantiates a new ApplicationOIDCAllOfMobileIntegrityDetection object
@@ -107,6 +108,38 @@ func (o *ApplicationOIDCAllOfMobileIntegrityDetection) SetMode(v EnumEnabledStat
 	o.Mode = &v
 }
 
+// GetAppleAppAttestSettings returns the AppleAppAttestSettings field value if set, zero value otherwise.
+func (o *ApplicationOIDCAllOfMobileIntegrityDetection) GetAppleAppAttestSettings() ApplicationOIDCAllOfMobileIntegrityDetectionAppleAppAttestSettings {
+	if o == nil || IsNil(o.AppleAppAttestSettings) {
+		var ret ApplicationOIDCAllOfMobileIntegrityDetectionAppleAppAttestSettings
+		return ret
+	}
+	return *o.AppleAppAttestSettings
+}
+
+// GetAppleAppAttestSettingsOk returns a tuple with the AppleAppAttestSettings field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *ApplicationOIDCAllOfMobileIntegrityDetection) GetAppleAppAttestSettingsOk() (*ApplicationOIDCAllOfMobileIntegrityDetectionAppleAppAttestSettings, bool) {
+	if o == nil || IsNil(o.AppleAppAttestSettings) {
+		return nil, false
+	}
+	return o.AppleAppAttestSettings, true
+}
+
+// HasAppleAppAttestSettings returns a boolean if a field has been set.
+func (o *ApplicationOIDCAllOfMobileIntegrityDetection) HasAppleAppAttestSettings() bool {
+	if o != nil && !IsNil(o.AppleAppAttestSettings) {
+		return true
+	}
+
+	return false
+}
+
+// SetAppleAppAttestSettings gets a reference to the given ApplicationOIDCAllOfMobileIntegrityDetectionAppleAppAttestSettings and assigns it to the AppleAppAttestSettings field.
+func (o *ApplicationOIDCAllOfMobileIntegrityDetection) SetAppleAppAttestSettings(v ApplicationOIDCAllOfMobileIntegrityDetectionAppleAppAttestSettings) {
+	o.AppleAppAttestSettings = &v
+}
+
 // GetCacheDuration returns the CacheDuration field value if set, zero value otherwise.
 func (o *ApplicationOIDCAllOfMobileIntegrityDetection) GetCacheDuration() ApplicationOIDCAllOfMobileIntegrityDetectionCacheDuration {
 	if o == nil || IsNil(o.CacheDuration) {
@@ -186,6 +219,9 @@ func (o ApplicationOIDCAllOfMobileIntegrityDetection) ToMap() (map[string]interf
 	}
 	if !IsNil(o.Mode) {
 		toSerialize["mode"] = o.Mode
+	}
+	if !IsNil(o.AppleAppAttestSettings) {
+		toSerialize["appleAppAttestSettings"] = o.AppleAppAttestSettings
 	}
 	if !IsNil(o.CacheDuration) {
 		toSerialize["cacheDuration"] = o.CacheDuration

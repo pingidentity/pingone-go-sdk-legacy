@@ -22,6 +22,8 @@ Name | Type | Description | Notes
 **TokenEndpointAuthMethod** | [**EnumApplicationOIDCTokenAuthMethod**](EnumApplicationOIDCTokenAuthMethod.md) |  | 
 **EnableDefaultThemeFooter** | Pointer to **bool** | If &#x60;true&#x60;, shows the default theme footer on the self service application. Applies only if &#x60;applyDefaultTheme&#x60; is also &#x60;true&#x60;. | [optional] 
 **ApplyDefaultTheme** | **bool** | If &#x60;true&#x60;, applies the default theme to the self service application. | 
+**LogoutType** | Pointer to [**EnumApplicationLogoutType**](EnumApplicationLogoutType.md) |  | [optional] 
+**ManageDevicesViaMyAccountEnabled** | Pointer to **bool** | When set to &#x60;true&#x60;, PingID users can manage their devices using the MyAccount app. This will also add the MyAccount app to all PingID policies that already include Device Management. To limit the scope of PingID users, ensure an MFA policy or MFA DaVinci flow policy limiting their scope is added to the MyAccount app. For more information, refer to [Self service](https://docs.pingidentity.com/pingone/user_experience/p1_self_service.html) in the PingOne admin documentation. | [optional] 
 
 ## Methods
 
@@ -461,6 +463,56 @@ and a boolean to check if the value has been set.
 
 SetApplyDefaultTheme sets ApplyDefaultTheme field to given value.
 
+
+### GetLogoutType
+
+`func (o *ApplicationPingOneSelfService) GetLogoutType() EnumApplicationLogoutType`
+
+GetLogoutType returns the LogoutType field if non-nil, zero value otherwise.
+
+### GetLogoutTypeOk
+
+`func (o *ApplicationPingOneSelfService) GetLogoutTypeOk() (*EnumApplicationLogoutType, bool)`
+
+GetLogoutTypeOk returns a tuple with the LogoutType field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLogoutType
+
+`func (o *ApplicationPingOneSelfService) SetLogoutType(v EnumApplicationLogoutType)`
+
+SetLogoutType sets LogoutType field to given value.
+
+### HasLogoutType
+
+`func (o *ApplicationPingOneSelfService) HasLogoutType() bool`
+
+HasLogoutType returns a boolean if a field has been set.
+
+### GetManageDevicesViaMyAccountEnabled
+
+`func (o *ApplicationPingOneSelfService) GetManageDevicesViaMyAccountEnabled() bool`
+
+GetManageDevicesViaMyAccountEnabled returns the ManageDevicesViaMyAccountEnabled field if non-nil, zero value otherwise.
+
+### GetManageDevicesViaMyAccountEnabledOk
+
+`func (o *ApplicationPingOneSelfService) GetManageDevicesViaMyAccountEnabledOk() (*bool, bool)`
+
+GetManageDevicesViaMyAccountEnabledOk returns a tuple with the ManageDevicesViaMyAccountEnabled field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetManageDevicesViaMyAccountEnabled
+
+`func (o *ApplicationPingOneSelfService) SetManageDevicesViaMyAccountEnabled(v bool)`
+
+SetManageDevicesViaMyAccountEnabled sets ManageDevicesViaMyAccountEnabled field to given value.
+
+### HasManageDevicesViaMyAccountEnabled
+
+`func (o *ApplicationPingOneSelfService) HasManageDevicesViaMyAccountEnabled() bool`
+
+HasManageDevicesViaMyAccountEnabled returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

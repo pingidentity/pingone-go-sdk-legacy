@@ -65,6 +65,8 @@ type ApplicationOIDC struct {
 	IdpSignoff *bool `json:"idpSignoff,omitempty"`
 	// Specifies whether tokens signed for this application include the `x5t`` signature header in the signed JWT. Refer to [JSON Web Signature (JWS), section \"x5t\" (X.509 Certificate SHA-1 Thumbprint) Header Parameter](https://www.rfc-editor.org/rfc/rfc7515.html#section-4.1.7).
 	IncludeX5t *bool `json:"includeX5t,omitempty"`
+	// Specifies whether tokens signed for this application include the `typ` header with a value of `at+jwt`, regardless of whether the intended audience is the UserInfo endpoint, PingOne APIs, or custom resources. This specifies the JWT as an OAuth 2.0 access token for increased security. On March 2, 2027, PingOne will always include the `typ` header with a value of `at+jwt` when minting access token for the UserInfo endpoint, PingOne APIs, or custom resources. Learn more in [Access token claims](https://apidocs.pingidentity.com/pingone/platform/v1/api/#access-token-claims), https://datatracker.ietf.org/doc/html/rfc7519#section-5.1, and https://datatracker.ietf.org/doc/html/rfc9068#section-2.1.
+	IncludeTyp *bool `json:"includeTyp,omitempty"`
 	// A JWKS string that validates the signature of signed JWTs for applications that use the `PRIVATE_KEY_JWT` option for the `tokenEndpointAuthMethod`. This property is required when `tokenEndpointAuthMethod` is `PRIVATE_KEY_JWT` and the `jwksUrl` property is empty. For more information, see [Create a private_key_jwt JWKS string](https://apidocs.pingidentity.com/pingone/platform/v1/api/#create-a-private_key_jwt-jwks-string). This property is also required if the optional `request` property JWT on the authorize endpoint is signed using the RS256 (or RS384, RS512) signing algorithm and the `jwksUrl` property is empty. For more infornmation about signing the request property JWT, see [Create a request property JWT](https://apidocs.pingidentity.com/pingone/platform/v1/api/#create-a-request-property-jwt).
 	Jwks *string `json:"jwks,omitempty"`
 	// A URL (supports `https://` only) that provides access to a JWKS string that validates the signature of signed JWTs for applications that use the `PRIVATE_KEY_JWT` option for the `tokenEndpointAuthMethod`. This property is required when `tokenEndpointAuthMethod` is `PRIVATE_KEY_JWT` and the `jwks` property is empty. For more information, see [Create a private_key_jwt JWKS string](https://apidocs.pingidentity.com/pingone/platform/v1/api/#create-a-private_key_jwt-jwks-string). This property is also required if the optional `request` property JWT on the authorize endpoint is signed using the RS256 (or RS384, RS512) signing algorithm and the `jwks` property is empty. For more infornmation about signing the request property JWT, see [Create a request property JWT](https://apidocs.pingidentity.com/pingone/platform/v1/api/#create-a-request-property-jwt).
@@ -100,7 +102,9 @@ type ApplicationOIDC struct {
 	RequireSignedRequestObject *bool `json:"requireSignedRequestObject,omitempty"`
 	// The code or token type returned by an authorization request. Options are `TOKEN`, `ID_TOKEN`, and `CODE`. For hybrid flows that specify `CODE` with `TOKEN` or `ID_TOKEN`, see [Hybrid grant type](https://apidocs.pingidentity.com/pingone/main/v1/api/#hybrid-grant-type).
 	ResponseTypes []EnumApplicationOIDCResponseType `json:"responseTypes,omitempty"`
-	Signing       *ApplicationOIDCAllOfSigning      `json:"signing,omitempty"`
+	// Indicates whether the session associated with an access token or a refresh token should be taken into consideration when PingOne needs to determine the validity of the token. When set to `true`, PingOne ignores the session status, allowing the use of a valid token even if the user session has expired. When unset, this property's value is treated as `false`, which invalidates the token (regardless of the token's validity) if the user session is invalid. To learn more, refer to [Token validation](https://apidocs.pingidentity.com/pingone/platform/v1/api/#token-validation).
+	SkipTokenSessionValidation *bool                        `json:"skipTokenSessionValidation,omitempty"`
+	Signing                    *ApplicationOIDCAllOfSigning `json:"signing,omitempty"`
 	// A boolean that specifies whether the [request query](https://openid.net/specs/openid-connect-core-1_0.html#RequestObject) parameter JWT is allowed to be unsigned. If false or null (default), an unsigned request object is not allowed.
 	SupportUnsignedRequestObject *bool `json:"supportUnsignedRequestObject,omitempty"`
 	// An array that specifies the list of labels associated with the application. Options are `PING_FED_CONNECTION_INTEGRATION`.  Only applicable for creating worker applications.
@@ -965,6 +969,38 @@ func (o *ApplicationOIDC) SetIncludeX5t(v bool) {
 	o.IncludeX5t = &v
 }
 
+// GetIncludeTyp returns the IncludeTyp field value if set, zero value otherwise.
+func (o *ApplicationOIDC) GetIncludeTyp() bool {
+	if o == nil || IsNil(o.IncludeTyp) {
+		var ret bool
+		return ret
+	}
+	return *o.IncludeTyp
+}
+
+// GetIncludeTypOk returns a tuple with the IncludeTyp field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *ApplicationOIDC) GetIncludeTypOk() (*bool, bool) {
+	if o == nil || IsNil(o.IncludeTyp) {
+		return nil, false
+	}
+	return o.IncludeTyp, true
+}
+
+// HasIncludeTyp returns a boolean if a field has been set.
+func (o *ApplicationOIDC) HasIncludeTyp() bool {
+	if o != nil && !IsNil(o.IncludeTyp) {
+		return true
+	}
+
+	return false
+}
+
+// SetIncludeTyp gets a reference to the given bool and assigns it to the IncludeTyp field.
+func (o *ApplicationOIDC) SetIncludeTyp(v bool) {
+	o.IncludeTyp = &v
+}
+
 // GetJwks returns the Jwks field value if set, zero value otherwise.
 func (o *ApplicationOIDC) GetJwks() string {
 	if o == nil || IsNil(o.Jwks) {
@@ -1605,6 +1641,38 @@ func (o *ApplicationOIDC) SetResponseTypes(v []EnumApplicationOIDCResponseType) 
 	o.ResponseTypes = v
 }
 
+// GetSkipTokenSessionValidation returns the SkipTokenSessionValidation field value if set, zero value otherwise.
+func (o *ApplicationOIDC) GetSkipTokenSessionValidation() bool {
+	if o == nil || IsNil(o.SkipTokenSessionValidation) {
+		var ret bool
+		return ret
+	}
+	return *o.SkipTokenSessionValidation
+}
+
+// GetSkipTokenSessionValidationOk returns a tuple with the SkipTokenSessionValidation field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *ApplicationOIDC) GetSkipTokenSessionValidationOk() (*bool, bool) {
+	if o == nil || IsNil(o.SkipTokenSessionValidation) {
+		return nil, false
+	}
+	return o.SkipTokenSessionValidation, true
+}
+
+// HasSkipTokenSessionValidation returns a boolean if a field has been set.
+func (o *ApplicationOIDC) HasSkipTokenSessionValidation() bool {
+	if o != nil && !IsNil(o.SkipTokenSessionValidation) {
+		return true
+	}
+
+	return false
+}
+
+// SetSkipTokenSessionValidation gets a reference to the given bool and assigns it to the SkipTokenSessionValidation field.
+func (o *ApplicationOIDC) SetSkipTokenSessionValidation(v bool) {
+	o.SkipTokenSessionValidation = &v
+}
+
 // GetSigning returns the Signing field value if set, zero value otherwise.
 func (o *ApplicationOIDC) GetSigning() ApplicationOIDCAllOfSigning {
 	if o == nil || IsNil(o.Signing) {
@@ -1869,6 +1937,9 @@ func (o ApplicationOIDC) ToMap() (map[string]interface{}, error) {
 	if !IsNil(o.IncludeX5t) {
 		toSerialize["includeX5t"] = o.IncludeX5t
 	}
+	if !IsNil(o.IncludeTyp) {
+		toSerialize["includeTyp"] = o.IncludeTyp
+	}
 	if !IsNil(o.Jwks) {
 		toSerialize["jwks"] = o.Jwks
 	}
@@ -1928,6 +1999,9 @@ func (o ApplicationOIDC) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.ResponseTypes) {
 		toSerialize["responseTypes"] = o.ResponseTypes
+	}
+	if !IsNil(o.SkipTokenSessionValidation) {
+		toSerialize["skipTokenSessionValidation"] = o.SkipTokenSessionValidation
 	}
 	if !IsNil(o.Signing) {
 		toSerialize["signing"] = o.Signing

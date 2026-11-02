@@ -15,7 +15,7 @@ import (
 	"fmt"
 )
 
-// EnumApplicationType A string that specifies the type associated with the application. This is a required property.
+// EnumApplicationType A string that specifies the type associated with the application. This is a required property. The `AI_AGENT` type is required when you have the Agent IAM Core license package.
 type EnumApplicationType string
 
 // List of EnumApplicationType
@@ -25,6 +25,7 @@ const (
 	ENUMAPPLICATIONTYPE_SINGLE_PAGE_APP        EnumApplicationType = "SINGLE_PAGE_APP"
 	ENUMAPPLICATIONTYPE_WORKER                 EnumApplicationType = "WORKER"
 	ENUMAPPLICATIONTYPE_SERVICE                EnumApplicationType = "SERVICE"
+	ENUMAPPLICATIONTYPE_AI_AGENT               EnumApplicationType = "AI_AGENT"
 	ENUMAPPLICATIONTYPE_CUSTOM_APP             EnumApplicationType = "CUSTOM_APP"
 	ENUMAPPLICATIONTYPE_PING_ONE_SELF_SERVICE  EnumApplicationType = "PING_ONE_SELF_SERVICE"
 	ENUMAPPLICATIONTYPE_PING_ONE_ADMIN_CONSOLE EnumApplicationType = "PING_ONE_ADMIN_CONSOLE"
@@ -40,6 +41,7 @@ var AllowedEnumApplicationTypeEnumValues = []EnumApplicationType{
 	"SINGLE_PAGE_APP",
 	"WORKER",
 	"SERVICE",
+	"AI_AGENT",
 	"CUSTOM_APP",
 	"PING_ONE_SELF_SERVICE",
 	"PING_ONE_ADMIN_CONSOLE",

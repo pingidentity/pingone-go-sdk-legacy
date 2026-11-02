@@ -37399,13 +37399,15 @@ components:
       type: string
     EnumApplicationType:
       description: A string that specifies the type associated with the application.
-        This is a required property.
+        This is a required property. The `AI_AGENT` type is required when you have
+        the Agent IAM Core license package.
       enum:
       - WEB_APP
       - NATIVE_APP
       - SINGLE_PAGE_APP
       - WORKER
       - SERVICE
+      - AI_AGENT
       - CUSTOM_APP
       - PING_ONE_SELF_SERVICE
       - PING_ONE_ADMIN_CONSOLE
@@ -37429,6 +37431,31 @@ components:
       description: The gateway type. This must be "LDAP".
       enum:
       - LDAP
+      type: string
+    EnumApplicationWSFEDStsTokenType:
+      description: "The type of token to use for `stsTokenType`. Valid values are\
+        \ `http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1`\
+        \ (corresponds to SAML 1.1 in the admin console, not suitable for Entra ID\
+        \ hybrid join) and `urn:oasis:names:tc:SAML:1.0:assertion` (corresponds to\
+        \ SAML 1.1 for Office 365 in the admin console, required for Entra ID hybrid\
+        \ join)."
+      enum:
+      - http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1
+      - urn:oasis:names:tc:SAML:1.0:assertion
+      type: string
+    EnumApplicationWSFEDWsTrustVersion:
+      description: The WS-Trust (Web Services Trust) version to use. Valid values
+        are `1.2` and `1.3`.
+      enum:
+      - "1.2"
+      - "1.3"
+      type: string
+    EnumApplicationLogoutType:
+      description: The logout type for the application. This can be either `OIDC_RP_INITIATED`
+        (the default) or `SAML2_SLO`.
+      enum:
+      - OIDC_RP_INITIATED
+      - SAML2_SLO
       type: string
     EnumAttributeMappingType:
       description: "A string that specifies the mapping type of the attribute. Options\
@@ -38290,6 +38317,16 @@ components:
       - PAID
       - TRIAL
       - INTERNAL
+      type: string
+    EnumMobileAppSecurityPinDigit:
+      description: "The type of security PIN digit for `mobile.mobileAppSecurityPinRequire.securityPinDigit`.\
+        \ If `mobile.mobileAppSecurityPinRequire.enabled` is set to `true`, then by\
+        \ default, a six-digit security PIN is required. To specify that a four-digit\
+        \ PIN is sufficient, set to `FOUR_DIGIT`. Use `SIX_DIGIT` to specify that\
+        \ a six-digit PIN is required."
+      enum:
+      - FOUR_DIGIT
+      - SIX_DIGIT
       type: string
     EnumPasscodeRefreshTimeUnit:
       default: SECONDS
@@ -39484,6 +39521,17 @@ components:
               \ Signature (JWS), section \"x5t\" (X.509 Certificate SHA-1 Thumbprint)\
               \ Header Parameter](https://www.rfc-editor.org/rfc/rfc7515.html#section-4.1.7)."
             type: boolean
+          includeTyp:
+            description: "Specifies whether tokens signed for this application include\
+              \ the `typ` header with a value of `at+jwt`, regardless of whether the\
+              \ intended audience is the UserInfo endpoint, PingOne APIs, or custom\
+              \ resources. This specifies the JWT as an OAuth 2.0 access token for\
+              \ increased security. On March 2, 2027, PingOne will always include\
+              \ the `typ` header with a value of `at+jwt` when minting access token\
+              \ for the UserInfo endpoint, PingOne APIs, or custom resources. Learn\
+              \ more in [Access token claims](https://apidocs.pingidentity.com/pingone/platform/v1/api/#access-token-claims),\
+              \ https://datatracker.ietf.org/doc/html/rfc7519#section-5.1, and https://datatracker.ietf.org/doc/html/rfc9068#section-2.1."
+            type: boolean
           jwks:
             description: "A JWKS string that validates the signature of signed JWTs\
               \ for applications that use the `PRIVATE_KEY_JWT` option for the `tokenEndpointAuthMethod`.\
@@ -39617,6 +39665,16 @@ components:
             items:
               $ref: '#/components/schemas/EnumApplicationOIDCResponseType'
             type: array
+          skipTokenSessionValidation:
+            description: "Indicates whether the session associated with an access\
+              \ token or a refresh token should be taken into consideration when PingOne\
+              \ needs to determine the validity of the token. When set to `true`,\
+              \ PingOne ignores the session status, allowing the use of a valid token\
+              \ even if the user session has expired. When unset, this property's\
+              \ value is treated as `false`, which invalidates the token (regardless\
+              \ of the token's validity) if the user session is invalid. To learn\
+              \ more, refer to [Token validation](https://apidocs.pingidentity.com/pingone/platform/v1/api/#token-validation)."
+            type: boolean
           signing:
             $ref: '#/components/schemas/ApplicationOIDC_allOf_signing'
           supportUnsignedRequestObject:
@@ -39669,6 +39727,8 @@ components:
           applyDefaultTheme:
             description: "If `true`, applies the default theme to the app portal application."
             type: boolean
+          logoutType:
+            $ref: '#/components/schemas/EnumApplicationLogoutType'
         required:
         - applyDefaultTheme
         type: object
@@ -39683,6 +39743,17 @@ components:
           applyDefaultTheme:
             description: "If `true`, applies the default theme to the self service\
               \ application."
+            type: boolean
+          logoutType:
+            $ref: '#/components/schemas/EnumApplicationLogoutType'
+          manageDevicesViaMyAccountEnabled:
+            description: "When set to `true`, PingID users can manage their devices\
+              \ using the MyAccount app. This will also add the MyAccount app to all\
+              \ PingID policies that already include Device Management. To limit the\
+              \ scope of PingID users, ensure an MFA policy or MFA DaVinci flow policy\
+              \ limiting their scope is added to the MyAccount app. For more information,\
+              \ refer to [Self service](https://docs.pingidentity.com/pingone/user_experience/p1_self_service.html)\
+              \ in the PingOne admin documentation."
             type: boolean
         required:
         - applyDefaultTheme
@@ -39902,6 +39973,59 @@ components:
             description: "The federated domain name (for example, the Azure custom\
               \ domain)."
             type: string
+          hybridJoinDeviceAttribute:
+            description: "Required for Entra ID hybrid join. The value must be the\
+              \ name of a custom user attribute that an administrator has created.\
+              \ See [Creating attributes and a population for hybrid joined devices](https://docs.pingidentity.com/pingone/use_cases/p1_microsoft_entra_hybrid_join.html#p1-create-attributes)\
+              \ for more information."
+            type: string
+          stsTokenType:
+            $ref: '#/components/schemas/EnumApplicationWSFEDStsTokenType'
+          useMex13:
+            description: "Must be `true` to enable Entra ID hybrid join. After it's\
+              \ set to `true`, update Entra ID to use the new metadata exchange endpoint.\
+              \ See [Updating the federated IdP setting](https://docs.pingidentity.com/pingone/use_cases/p1_microsoft_entra_hybrid_join.html#p1-update-federated-idp)\
+              \ for more information."
+            type: boolean
+          userAttributeUsernameMatch:
+            description: "Specifies the PingOne user attribute used to match the username\
+              \ from a Security Token Service (STS) request to an existing user profile.\
+              \ By default, PingOne matches the username against the user's email\
+              \ address. Configure this setting if the username in the token is the\
+              \ user's user principal name (`userPrincipalName` attribute in Active\
+              \ Directory) but it differs from their email address (`mail` attribute\
+              \ in Active Directory), or if the username is something other than the\
+              \ user's user principal name or email address. The selected attribute\
+              \ must match the username format in the token to ensure successful identification.\
+              \ When specifying a PingOne custom user attribute as the `userAttributeUsernameMatch`\
+              \ property value, the admin must ensure the attribute is configured\
+              \ with the schemaType `CUSTOM`, type `STRING`, unique `true`, enabled\
+              \ `true`, and multiValued `false`."
+            type: string
+          userAttributeX509Match:
+            description: "The user attribute to match against the user information\
+              \ in the X.509 certificate. Supports Microsoft Windows primary refresh\
+              \ token (PRT) operations when users log on to their Windows devices,\
+              \ or unlock their locked Windows devices, using PingID. See [Integrating\
+              \ PingID with Windows Login](https://docs.pingidentity.com/pingid/pingid_integrations/pid_integrating_with_windows_login_passwordless.html).\
+              \ If this setting isn't specified, Windows PRT operations are still\
+              \ supported, but only when users log on to (or unlock) their Windows\
+              \ devices using their username and password."
+            type: string
+          validIssuanceCertificates:
+            description: "Contains the list of valid issuance certificate IDs for\
+              \ the application. A maximum of 10 certificate IDs can be specified.\
+              \ Supports Microsoft Windows primary refresh token (PRT) operations\
+              \ when users log on to their Windows devices, or unlock their locked\
+              \ Windows devices, using PingID. See [Integrating PingID with Windows\
+              \ Login](https://docs.pingidentity.com/pingid/pingid_integrations/pid_integrating_with_windows_login_passwordless.html).\
+              \ If this setting isn't specified, Windows PRT operations are still\
+              \ supported, but only when users log on to (or unlock) their Windows\
+              \ devices using their username and password."
+            items:
+              $ref: '#/components/schemas/ApplicationWSFEDAllOfValidIssuanceCertificates'
+            maxItems: 10
+            type: array
           idpSigning:
             $ref: '#/components/schemas/ApplicationWSFED_allOf_idpSigning'
           kerberos:
@@ -39917,15 +40041,23 @@ components:
           subjectNameIdentifierFormat:
             $ref: '#/components/schemas/EnumApplicationWSFEDSubjectNameIdentifierFormat'
           wsTrustVersion:
-            description: The WS-Trust (Web Services Trust) version to use. Valid values
-              are `1.2` and `1.3`.
-            pattern: ^(1\.2|1\.3)$
-            type: string
+            $ref: '#/components/schemas/EnumApplicationWSFEDWsTrustVersion'
         required:
         - domainName
         - idpSigning
         - replyUrl
         type: object
+    ApplicationWSFEDAllOfValidIssuanceCertificates:
+      description: A Relationship object referencing a certificate key pair with usage
+        type `ISSUANCE`.
+      properties:
+        id:
+          description: The ID of the certificate key pair. The key must have a usage
+            type of `ISSUANCE`.
+          type: string
+      required:
+      - id
+      type: object
     BillOfMaterials:
       example:
         createdAt: createdAt
@@ -48834,6 +48966,16 @@ components:
       - timeUnit
       type: object
       example: null
+    ApplicationOIDC_allOf_mobile_integrityDetection_appleAppAttestSettings:
+      properties:
+        enabled:
+          description: "Set the value of `appleAppAttestSettings.enabled` to `true`\
+            \ if you have enabled device integrity checking for your iOS app and you\
+            \ want to use Apple App Attest for the check. If the value is set to `true`,\
+            \ you must also include a value for `mobile.appleTeamId`."
+          type: boolean
+      type: object
+      example: null
     ApplicationOIDC_allOf_mobile_integrityDetection_cacheDuration:
       properties:
         amount:
@@ -48892,6 +49034,8 @@ components:
           type: array
         mode:
           $ref: '#/components/schemas/EnumEnabledStatus'
+        appleAppAttestSettings:
+          $ref: '#/components/schemas/ApplicationOIDC_allOf_mobile_integrityDetection_appleAppAttestSettings'
         cacheDuration:
           $ref: '#/components/schemas/ApplicationOIDC_allOf_mobile_integrityDetection_cacheDuration'
         googlePlay:
@@ -48910,8 +49054,141 @@ components:
           $ref: '#/components/schemas/ApplicationOIDC_allOf_mobile_push_numberMatching'
       type: object
       example: null
+    ApplicationOIDC_allOf_mobile_allowAuthenticationDeviceLocked:
+      properties:
+        enabled:
+          description: Set to `true` if you want to allow users to authenticate from
+            the lock screen if they using Android 10.0 or earlier.
+          type: boolean
+      type: object
+      example: null
+    ApplicationOIDC_allOf_mobile_allowUnPairAndChangeDeviceFromApp:
+      properties:
+        enabled:
+          description: Set to `true` if you want to allow users to unpair or change
+            device from the PingID mobile app.
+          type: boolean
+      type: object
+      example: null
+    ApplicationOIDC_allOf_mobile_mobileAppSecurityPinRequire:
+      properties:
+        enabled:
+          description: Set to `true` if you want to require the user to enter a security
+            PIN to access the PingID mobile app.
+          type: boolean
+        requireForAllDevices:
+          description: "If `mobile.mobileAppSecurityPinRequire.enabled` is set to\
+            \ `true`, then by default, the PIN is required only if a device PIN or\
+            \ biometrics have not been defined for the device. Set `requireForAllDevices`\
+            \ to `true` if you want to require PIN use for all devices."
+          type: boolean
+        securityPinDigit:
+          $ref: '#/components/schemas/EnumMobileAppSecurityPinDigit'
+      type: object
+      example: null
+    ApplicationOIDC_allOf_mobile_mobileDeviceBiometricsSetting:
+      properties:
+        required:
+          description: "If you have allowed biometric authentication methods in the\
+            \ MFA policy, then by default, the user is required to use a biometric\
+            \ method with PingID if one is available on their device. If you want\
+            \ to specify that users can authenticate with the PingID mobile app only\
+            \ if they have a biometric method configured, set `mobile.mobileDeviceBiometricsSetting.required`\
+            \ to `true`."
+          type: boolean
+        devicePasscodeFallbackEnabled:
+          description: Set `devicePasscodeFallbackEnabled` to `true` if you want to
+            allow iOS users to authenticate using the device passcode if biometric
+            authentication fails.
+          type: boolean
+        faceIdConsentEnabled:
+          description: "For iOS devices, set `faceIdConsentEnabled` to `true` if you\
+            \ want to prevent users with FaceID defined from authenticating by mistake.\
+            \ When set to `true`, the user is prompted to consent explicitly before\
+            \ each face scan is taken."
+          type: boolean
+        notificationActionsEnabled:
+          description: Set `notificationActionsEnabled` to `true` if you want to allow
+            users to approve notification requests from their device's lock screen.
+          type: boolean
+      type: object
+      example: null
+    ApplicationOIDC_allOf_mobile_notifyOptionalMobileVersionUpdates:
+      properties:
+        enabled:
+          description: "Set `notifyOptionalMobileVersionUpdates.enabled` to `true`\
+            \ if you want to notify your users that there is a newer version of the\
+            \ PingID app available if they want to update. The notification is displayed\
+            \ as soon as the user opens the app. When set to `true`, you must provide\
+            \ a value for `notifyOptionalMobileVersionUpdates.android`, `notifyOptionalMobileVersionUpdates.ios`,\
+            \ or both."
+          type: boolean
+        android:
+          description: "If you set `notifyOptionalMobileVersionUpdates.enabled` to\
+            \ `true`, use `android` to specify the version of the app that you want\
+            \ to notify Android device users about. Set the value to `latest` if you\
+            \ want to always notify users about the latest version of the PingID app\
+            \ that is available."
+          type: string
+        ios:
+          description: "If you set `notifyOptionalMobileVersionUpdates.enabled` to\
+            \ `true`, use `ios` to specify the version of the app that you want to\
+            \ notify iOS device users about. Set the value to `latest` if you want\
+            \ to always notify users about the latest version of the PingID app that\
+            \ is available."
+          type: string
+      type: object
+      example: null
+    ApplicationOIDC_allOf_mobile_notifyRequireMobileVersionUpdates:
+      properties:
+        enabled:
+          description: "Set `notifyRequireMobileVersionUpdates.enabled` to `true`\
+            \ if you want to require a minimum version of the PingID app and notify\
+            \ the user that they must update the app if they are using an older version.\
+            \ The notification is displayed as soon as the user opens the app. When\
+            \ set to `true`, you must provide a value for `notifyRequireMobileVersionUpdates.android`,\
+            \ `notifyRequireMobileVersionUpdates.ios`, or both."
+          type: boolean
+        android:
+          description: "If you set `notifyRequireMobileVersionUpdates.enabled` to\
+            \ `true`, use `android` to specify the minimum version of the app that\
+            \ you want to require on Android devices. Set the value to `latest` if\
+            \ you want to require your users to always be running the latest version\
+            \ of the PingID app."
+          type: string
+        ios:
+          description: "If you set `notifyRequireMobileVersionUpdates.enabled` to\
+            \ `true`, use `ios` to specify the minimum version of the app that you\
+            \ want to require on iOS devices. Set the value to `latest` if you want\
+            \ to require your users to always be running the latest version of the\
+            \ PingID app."
+          type: string
+      type: object
+      example: null
+    ApplicationOIDC_allOf_mobile_otpPushNotificationEnabled:
+      properties:
+        enabled:
+          description: Set to `true` if you want users to receive a push notification
+            during authentication that they can tap to open the PingID app.
+          type: boolean
+      type: object
+      example: null
+    ApplicationOIDC_allOf_mobile_showAuthenticationInformation:
+      properties:
+        enabled:
+          description: Set to `true` if you want push notifications to include a map
+            that displays the location of the user requesting access.
+          type: boolean
+      type: object
+      example: null
     ApplicationOIDC_allOf_mobile:
       properties:
+        appleTeamId:
+          description: "If you set `mobile.integrityDetection.appleAppAttestSettings.enabled`\
+            \ to `true` to use Apple App Attest for device integrity checking, you\
+            \ must also set `mobile.appleTeamId` to the Team ID from your Apple Developer\
+            \ account."
+          type: string
         bundleId:
           description: "A string that specifies the bundle associated with the application,\
             \ for push notifications in native apps. The value of the bundleId property\
@@ -48961,6 +49238,25 @@ components:
             \ that starts with `HTTP://` or `HTTPS://`, such as `https://www.acme.com`),\
             \ or an app schema, which is just a string and requires no special validation."
           type: string
+        pingIDSettings:
+          description: Must be set to `true`.
+          type: boolean
+        allowAuthenticationDeviceLocked:
+          $ref: '#/components/schemas/ApplicationOIDC_allOf_mobile_allowAuthenticationDeviceLocked'
+        allowUnPairAndChangeDeviceFromApp:
+          $ref: '#/components/schemas/ApplicationOIDC_allOf_mobile_allowUnPairAndChangeDeviceFromApp'
+        mobileAppSecurityPinRequire:
+          $ref: '#/components/schemas/ApplicationOIDC_allOf_mobile_mobileAppSecurityPinRequire'
+        mobileDeviceBiometricsSetting:
+          $ref: '#/components/schemas/ApplicationOIDC_allOf_mobile_mobileDeviceBiometricsSetting'
+        notifyOptionalMobileVersionUpdates:
+          $ref: '#/components/schemas/ApplicationOIDC_allOf_mobile_notifyOptionalMobileVersionUpdates'
+        notifyRequireMobileVersionUpdates:
+          $ref: '#/components/schemas/ApplicationOIDC_allOf_mobile_notifyRequireMobileVersionUpdates'
+        otpPushNotificationEnabled:
+          $ref: '#/components/schemas/ApplicationOIDC_allOf_mobile_otpPushNotificationEnabled'
+        showAuthenticationInformation:
+          $ref: '#/components/schemas/ApplicationOIDC_allOf_mobile_showAuthenticationInformation'
       type: object
       example: null
     ApplicationOIDC_allOf_kerberos_key:

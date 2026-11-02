@@ -21,6 +21,7 @@ Name | Type | Description | Notes
 **PkceEnforcement** | Pointer to [**EnumApplicationOIDCPKCEOption**](EnumApplicationOIDCPKCEOption.md) |  | [optional] 
 **TokenEndpointAuthMethod** | [**EnumApplicationOIDCTokenAuthMethod**](EnumApplicationOIDCTokenAuthMethod.md) |  | 
 **ApplyDefaultTheme** | **bool** | If &#x60;true&#x60;, applies the default theme to the app portal application. | 
+**LogoutType** | Pointer to [**EnumApplicationLogoutType**](EnumApplicationLogoutType.md) |  | [optional] 
 
 ## Methods
 
@@ -435,6 +436,31 @@ and a boolean to check if the value has been set.
 
 SetApplyDefaultTheme sets ApplyDefaultTheme field to given value.
 
+
+### GetLogoutType
+
+`func (o *ApplicationPingOnePortal) GetLogoutType() EnumApplicationLogoutType`
+
+GetLogoutType returns the LogoutType field if non-nil, zero value otherwise.
+
+### GetLogoutTypeOk
+
+`func (o *ApplicationPingOnePortal) GetLogoutTypeOk() (*EnumApplicationLogoutType, bool)`
+
+GetLogoutTypeOk returns a tuple with the LogoutType field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLogoutType
+
+`func (o *ApplicationPingOnePortal) SetLogoutType(v EnumApplicationLogoutType)`
+
+SetLogoutType sets LogoutType field to given value.
+
+### HasLogoutType
+
+`func (o *ApplicationPingOnePortal) HasLogoutType() bool`
+
+HasLogoutType returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
