@@ -37578,6 +37578,7 @@ components:
       - ENVIRONMENT
       - POPULATION
       - APPLICATION
+      - GROUP
       type: string
     EnumCustomAdminRoleType:
       description: A value that indicates whether the role is a built-in role or a

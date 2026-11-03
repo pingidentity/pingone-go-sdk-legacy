@@ -24,6 +24,7 @@ const (
 	ENUMCUSTOMADMINROLEAPPLICABLETO_ENVIRONMENT  EnumCustomAdminRoleApplicableTo = "ENVIRONMENT"
 	ENUMCUSTOMADMINROLEAPPLICABLETO_POPULATION   EnumCustomAdminRoleApplicableTo = "POPULATION"
 	ENUMCUSTOMADMINROLEAPPLICABLETO_APPLICATION  EnumCustomAdminRoleApplicableTo = "APPLICATION"
+	ENUMCUSTOMADMINROLEAPPLICABLETO_GROUP        EnumCustomAdminRoleApplicableTo = "GROUP"
 )
 
 // All allowed values of EnumCustomAdminRoleApplicableTo enum
@@ -32,6 +33,7 @@ var AllowedEnumCustomAdminRoleApplicableToEnumValues = []EnumCustomAdminRoleAppl
 	"ENVIRONMENT",
 	"POPULATION",
 	"APPLICATION",
+	"GROUP",
 }
 
 func (v *EnumCustomAdminRoleApplicableTo) UnmarshalJSON(src []byte) error {
