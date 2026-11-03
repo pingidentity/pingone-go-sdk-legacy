@@ -24,6 +24,7 @@ const (
 	ENUMROLEASSIGNMENTSCOPETYPE_ENVIRONMENT  EnumRoleAssignmentScopeType = "ENVIRONMENT"
 	ENUMROLEASSIGNMENTSCOPETYPE_POPULATION   EnumRoleAssignmentScopeType = "POPULATION"
 	ENUMROLEASSIGNMENTSCOPETYPE_APPLICATION  EnumRoleAssignmentScopeType = "APPLICATION"
+	ENUMROLEASSIGNMENTSCOPETYPE_GROUP        EnumRoleAssignmentScopeType = "GROUP"
 )
 
 // All allowed values of EnumRoleAssignmentScopeType enum
@@ -32,6 +33,7 @@ var AllowedEnumRoleAssignmentScopeTypeEnumValues = []EnumRoleAssignmentScopeType
 	"ENVIRONMENT",
 	"POPULATION",
 	"APPLICATION",
+	"GROUP",
 }
 
 func (v *EnumRoleAssignmentScopeType) UnmarshalJSON(src []byte) error {
