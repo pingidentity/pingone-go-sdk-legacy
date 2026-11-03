@@ -38567,8 +38567,10 @@ components:
       description: The name of the role
       enum:
       - Authorize Gateway Policy Evaluator
+      - Advanced Help Desk Admin
       - Advanced Identity Cloud Super Admin
       - Advanced Identity Cloud Tenant Admin
+      - Advanced Identity Cloud Tenant Auditor
       - Application Owner
       - Client Application Developer
       - Configuration Read Only
@@ -38585,6 +38587,9 @@ components:
       - PingFederate Crypto Administrator
       - PingFederate Expression Administrator
       - PingFederate User Administrator
+      - PingOne Privilege Administrator
+      - PingOne Privilege Read-Only Administrator
+      - Promotion Admin
       type: string
     EnumRoleAssignmentScopeType:
       description: A string that specifies the type of resource defining the scope
@@ -38594,6 +38599,7 @@ components:
       - ENVIRONMENT
       - POPULATION
       - APPLICATION
+      - GROUP
       type: string
     EnumSchemaAttributeSchemaType:
       description: "A string that specifies the schema type of the attribute. It may\
