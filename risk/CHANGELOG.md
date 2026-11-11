@@ -1,3 +1,7 @@
+# v0.25.0 (2026-11-11)
+
+* **Enhancement** Added new `ProtectSettingsApi` to client, with support for the `/riskSettings` API endpoint.
+
 # v0.24.0 (2026-10-26)
 
 * **Breaking change** Module moved to `github.com/pingidentity/pingone-go-sdk-legacy/risk`. Any future releases for this module will be under this new module path.
