@@ -36,6 +36,7 @@ tags:
 - name: Risk Policies
 - name: Risk Evaluations
 - name: Risk Advanced Predictors
+- name: Protect Settings
 paths:
   /environments/{environmentID}:
     get:
@@ -1393,6 +1394,190 @@ paths:
       summary: UPDATE Risk Predictor
       tags:
       - Risk Advanced Predictors
+  /environments/{environmentID}/riskSettings:
+    get:
+      operationId: readProtectSettings
+      parameters:
+      - description: |
+          An ID for telemetry purposes to correlate transactions with client systems through PingOne products. This may be a user defined value. If a value isn't provided on the API request, a unique value will be generated in the API response. See [External transaction and session IDs](https://apidocs.pingidentity.com/pingone/platform/v1/api/#external-transaction-and-session-ids) for more information.
+          Any invalid characters will be converted to underscores. The following characters are allowed:
+          Unicode letters, combining marks, numeric characters, dots, underscores, dashes
+          `/`, `@`, `=`, `#`, `+`
+        explode: false
+        in: header
+        name: X-Ping-External-Transaction-ID
+        required: false
+        schema:
+          maxLength: 100
+          type: string
+        style: simple
+      - description: |
+          An ID for telemetry purposes to correlate sessions with client systems through PingOne products. This may be a user defined value. If a value isn't provided on the API request, a unique value will be generated in the API response. See [External transaction and session IDs](https://apidocs.pingidentity.com/pingone/platform/v1/api/#external-transaction-and-session-ids) for more information.
+          Any invalid characters will be converted to underscores. The following characters are allowed:
+          Unicode letters, combining marks, numeric characters, dots, underscores, dashes
+          `/`, `@`, `=`, `#`, `+`
+        explode: false
+        in: header
+        name: X-Ping-External-Session-ID
+        required: false
+        schema:
+          maxLength: 100
+          type: string
+        style: simple
+      - explode: false
+        in: path
+        name: environmentID
+        required: true
+        schema:
+          type: string
+        style: simple
+      responses:
+        "400":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/P1Error'
+          description: "Invalid request received.  Malformed JSON, malformed HTTP\
+            \ request."
+        "401":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/P1Error'
+          description: Request failed due to authorization issue.
+        "403":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/P1Error'
+          description: Request failed due to authorization issue.
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/P1Error'
+          description: Not found.
+        "409":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/P1Error'
+          description: Conflict.
+        "429":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/P1Error'
+          description: Request was rate limited
+        "500":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/P1Error'
+          description: Uncaught error occurred.  Platform outage
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RiskSettings'
+          description: Successful response
+      summary: READ Protect Settings
+      tags:
+      - Protect Settings
+    put:
+      operationId: updateProtectSettings
+      parameters:
+      - description: |
+          An ID for telemetry purposes to correlate transactions with client systems through PingOne products. This may be a user defined value. If a value isn't provided on the API request, a unique value will be generated in the API response. See [External transaction and session IDs](https://apidocs.pingidentity.com/pingone/platform/v1/api/#external-transaction-and-session-ids) for more information.
+          Any invalid characters will be converted to underscores. The following characters are allowed:
+          Unicode letters, combining marks, numeric characters, dots, underscores, dashes
+          `/`, `@`, `=`, `#`, `+`
+        explode: false
+        in: header
+        name: X-Ping-External-Transaction-ID
+        required: false
+        schema:
+          maxLength: 100
+          type: string
+        style: simple
+      - description: |
+          An ID for telemetry purposes to correlate sessions with client systems through PingOne products. This may be a user defined value. If a value isn't provided on the API request, a unique value will be generated in the API response. See [External transaction and session IDs](https://apidocs.pingidentity.com/pingone/platform/v1/api/#external-transaction-and-session-ids) for more information.
+          Any invalid characters will be converted to underscores. The following characters are allowed:
+          Unicode letters, combining marks, numeric characters, dots, underscores, dashes
+          `/`, `@`, `=`, `#`, `+`
+        explode: false
+        in: header
+        name: X-Ping-External-Session-ID
+        required: false
+        schema:
+          maxLength: 100
+          type: string
+        style: simple
+      - explode: false
+        in: path
+        name: environmentID
+        required: true
+        schema:
+          type: string
+        style: simple
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RiskSettings'
+      responses:
+        "400":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/P1Error'
+          description: "Invalid request received.  Malformed JSON, malformed HTTP\
+            \ request."
+        "401":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/P1Error'
+          description: Request failed due to authorization issue.
+        "403":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/P1Error'
+          description: Request failed due to authorization issue.
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/P1Error'
+          description: Not found.
+        "409":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/P1Error'
+          description: Conflict.
+        "429":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/P1Error'
+          description: Request was rate limited
+        "500":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/P1Error'
+          description: Uncaught error occurred.  Platform outage
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RiskSettings'
+          description: Successful response
+      summary: UPDATE Protect Settings
+      tags:
+      - Protect Settings
 components:
   responses:
     "400":
@@ -1749,15 +1934,14 @@ components:
       type: string
     EnumFlowType:
       default: AUTHENTICATION
-      description: "\tThe type of flow for which the risk evaluation is being carried\
-        \ out. Can take any of the following values:\n  `REGISTRATION` - initial registration\
-        \ of an account\n  `AUTHENTICATION` - standard authentication for login or\
-        \ actions such as password change\n  `ACCESS` - verification of whether user\
-        \ can access the relevant application, using tools such as PingAccess\n  `AUTHORIZATION`\
-        \ - verification of whether user is authorized to perform a specific action\
-        \ such as a profile change, using tools such as PingOne Authorize\n  `TRANSACTION`\
-        \ - authentication carried out in the context of a purchase or other monetary\
-        \ transaction\n  The default value is `AUTHENTICATION`.\n"
+      description: |
+        The type of flow for which the risk evaluation is being carried out. Can take any of the following values:
+        `REGISTRATION` - initial registration of an account
+        `AUTHENTICATION` - standard authentication for login or actions such as password change
+        `ACCESS` - verification of whether user can access the relevant application, using tools such as PingAccess
+        `AUTHORIZATION` - verification of whether user is authorized to perform a specific action such as a profile change, using tools such as PingOne Authorize
+        `TRANSACTION` - authentication carried out in the context of a purchase or other monetary transaction
+        The default value is `AUTHENTICATION`.
       enum:
       - AUTHENTICATION
       - REGISTRATION
@@ -3165,6 +3349,35 @@ components:
           use:
             $ref: '#/components/schemas/RiskPredictorVelocity_allOf_use'
         type: object
+    RiskSettings:
+      example:
+        dataRetention:
+          newDeviceInDays: 15
+          userLocationAnomalyInDays: 38
+          userBasedRiskBehaviorInDays: 120
+        environment:
+          id: id
+        _links:
+          key:
+            href: https://openapi-generator.tech
+        updatedAt: 2000-01-23T04:56:07.000+00:00
+      properties:
+        _links:
+          additionalProperties:
+            $ref: '#/components/schemas/LinksHATEOAS_value'
+          readOnly: true
+          type: object
+        dataRetention:
+          $ref: '#/components/schemas/RiskSettings_dataRetention'
+        environment:
+          $ref: '#/components/schemas/ObjectEnvironment'
+        updatedAt:
+          description: The date and time the Protect settings were last updated (format
+            ISO-8061).
+          format: date-time
+          readOnly: true
+          type: string
+      type: object
     LinksHATEOAS_value:
       example:
         href: https://openapi-generator.tech
@@ -4347,6 +4560,37 @@ components:
           $ref: '#/components/schemas/EnumPredictorVelocityUseType'
       type: object
       example: null
+    RiskSettings_dataRetention:
+      description: The object that contains the fields for setting the data retention
+        period for specific risk predictors.
+      example:
+        newDeviceInDays: 15
+        userLocationAnomalyInDays: 38
+        userBasedRiskBehaviorInDays: 120
+      properties:
+        newDeviceInDays:
+          description: "The number of days that data for the New Device predictor\
+            \ should be retained. Minimum is 1, maximum is 180."
+          maximum: 180
+          minimum: 1
+          type: integer
+        userBasedRiskBehaviorInDays:
+          description: "The number of days that data for the User Based Risk Behavior\
+            \ predictor should be retained. Minimum is 30, maximum is 180."
+          maximum: 180
+          minimum: 30
+          type: integer
+        userLocationAnomalyInDays:
+          description: "The number of days that data for the User Location Anomaly\
+            \ predictor should be retained. Minimum is 30, maximum is 90."
+          maximum: 90
+          minimum: 30
+          type: integer
+      required:
+      - newDeviceInDays
+      - userBasedRiskBehaviorInDays
+      - userLocationAnomalyInDays
+      type: object
   securitySchemes:
     bearer:
       bearerFormat: JWT

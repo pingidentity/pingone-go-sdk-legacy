@@ -1,6 +1,7 @@
 README.md
 api/openapi.yaml
 api_environments.go
+api_protect_settings.go
 api_risk_advanced_predictors.go
 api_risk_evaluations.go
 api_risk_policies.go
@@ -37,6 +38,7 @@ docs/ObjectEnvironment.md
 docs/P1Error.md
 docs/P1ErrorDetailsInner.md
 docs/P1ErrorDetailsInnerInnerError.md
+docs/ProtectSettingsApi.md
 docs/RiskAdvancedPredictorsApi.md
 docs/RiskEvaluation.md
 docs/RiskEvaluationDetails.md
@@ -122,6 +124,8 @@ docs/RiskPredictorVelocityAllOfFallback.md
 docs/RiskPredictorVelocityAllOfMaxDelay.md
 docs/RiskPredictorVelocityAllOfSlidingWindow.md
 docs/RiskPredictorVelocityAllOfUse.md
+docs/RiskSettings.md
+docs/RiskSettingsDataRetention.md
 model_entity_array.go
 model_entity_array__embedded.go
 model_enum_completion_status.go
@@ -235,5 +239,7 @@ model_risk_predictor_velocity_all_of_fallback.go
 model_risk_predictor_velocity_all_of_max_delay.go
 model_risk_predictor_velocity_all_of_sliding_window.go
 model_risk_predictor_velocity_all_of_use.go
+model_risk_settings.go
+model_risk_settings_data_retention.go
 response.go
 utils.go

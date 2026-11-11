@@ -15,7 +15,7 @@ import (
 	"fmt"
 )
 
-// EnumFlowType  The type of flow for which the risk evaluation is being carried out. Can take any of the following values:   `REGISTRATION` - initial registration of an account   `AUTHENTICATION` - standard authentication for login or actions such as password change   `ACCESS` - verification of whether user can access the relevant application, using tools such as PingAccess   `AUTHORIZATION` - verification of whether user is authorized to perform a specific action such as a profile change, using tools such as PingOne Authorize   `TRANSACTION` - authentication carried out in the context of a purchase or other monetary transaction   The default value is `AUTHENTICATION`.
+// EnumFlowType The type of flow for which the risk evaluation is being carried out. Can take any of the following values: `REGISTRATION` - initial registration of an account `AUTHENTICATION` - standard authentication for login or actions such as password change `ACCESS` - verification of whether user can access the relevant application, using tools such as PingAccess `AUTHORIZATION` - verification of whether user is authorized to perform a specific action such as a profile change, using tools such as PingOne Authorize `TRANSACTION` - authentication carried out in the context of a purchase or other monetary transaction The default value is `AUTHENTICATION`.
 type EnumFlowType string
 
 // List of EnumFlowType

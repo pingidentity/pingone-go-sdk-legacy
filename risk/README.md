@@ -78,6 +78,8 @@ All URIs are relative to *https://api.pingone.com/v1*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *EnvironmentsApi* | [**ReadOneEnvironment**](docs/EnvironmentsApi.md#readoneenvironment) | **Get** /environments/{environmentID} | READ One Environment
+*ProtectSettingsApi* | [**ReadProtectSettings**](docs/ProtectSettingsApi.md#readprotectsettings) | **Get** /environments/{environmentID}/riskSettings | READ Protect Settings
+*ProtectSettingsApi* | [**UpdateProtectSettings**](docs/ProtectSettingsApi.md#updateprotectsettings) | **Put** /environments/{environmentID}/riskSettings | UPDATE Protect Settings
 *RiskAdvancedPredictorsApi* | [**CreateRiskPredictor**](docs/RiskAdvancedPredictorsApi.md#createriskpredictor) | **Post** /environments/{environmentID}/riskPredictors | CREATE Risk Predictor
 *RiskAdvancedPredictorsApi* | [**DeleteRiskAdvancedPredictor**](docs/RiskAdvancedPredictorsApi.md#deleteriskadvancedpredictor) | **Delete** /environments/{environmentID}/riskPredictors/{riskPredictorID} | DELETE Risk Advanced Predictor
 *RiskAdvancedPredictorsApi* | [**ReadAllRiskPredictors**](docs/RiskAdvancedPredictorsApi.md#readallriskpredictors) | **Get** /environments/{environmentID}/riskPredictors | READ All Risk Predictors
@@ -209,6 +211,8 @@ Class | Method | HTTP request | Description
  - [RiskPredictorVelocityAllOfMaxDelay](docs/RiskPredictorVelocityAllOfMaxDelay.md)
  - [RiskPredictorVelocityAllOfSlidingWindow](docs/RiskPredictorVelocityAllOfSlidingWindow.md)
  - [RiskPredictorVelocityAllOfUse](docs/RiskPredictorVelocityAllOfUse.md)
+ - [RiskSettings](docs/RiskSettings.md)
+ - [RiskSettingsDataRetention](docs/RiskSettingsDataRetention.md)
 
 
 ## Documentation For Authorization
