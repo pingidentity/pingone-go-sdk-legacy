@@ -1,3 +1,7 @@
+# v0.14.0 (2026-11-13)
+
+* **Breaking Change** Removed the Voice Phrases and Voice Phrase Contents APIs (`VoicePhrasesApi`, `VoicePhraseContentsApi`) and the `VoiceConfiguration` and `VoicePhrase` models, as the underlying APIs are no longer supported by PingOne. The `Voice` attribute has also been removed from the `VerifyPolicy` model.
+
 # v0.13.0 (2026-10-26)
 
 * **Breaking change** Module moved to `github.com/pingidentity/pingone-go-sdk-legacy/verify`. Any future releases for this module will be under this new module path.
