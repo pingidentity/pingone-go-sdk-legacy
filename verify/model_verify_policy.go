@@ -36,10 +36,8 @@ type VerifyPolicy struct {
 	Email                  *OTPDeviceConfiguration        `json:"email,omitempty"`
 	Phone                  *OTPDeviceConfiguration        `json:"phone,omitempty"`
 	Transaction            *TransactionConfiguration      `json:"transaction,omitempty"`
-	// Deprecated
-	Voice     *VoiceConfiguration `json:"voice,omitempty"`
-	CreatedAt *time.Time          `json:"createdAt,omitempty"`
-	UpdatedAt *time.Time          `json:"updatedAt,omitempty"`
+	CreatedAt              *time.Time                     `json:"createdAt,omitempty"`
+	UpdatedAt              *time.Time                     `json:"updatedAt,omitempty"`
 }
 
 // NewVerifyPolicy instantiates a new VerifyPolicy object
@@ -468,41 +466,6 @@ func (o *VerifyPolicy) SetTransaction(v TransactionConfiguration) {
 	o.Transaction = &v
 }
 
-// GetVoice returns the Voice field value if set, zero value otherwise.
-// Deprecated
-func (o *VerifyPolicy) GetVoice() VoiceConfiguration {
-	if o == nil || IsNil(o.Voice) {
-		var ret VoiceConfiguration
-		return ret
-	}
-	return *o.Voice
-}
-
-// GetVoiceOk returns a tuple with the Voice field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-// Deprecated
-func (o *VerifyPolicy) GetVoiceOk() (*VoiceConfiguration, bool) {
-	if o == nil || IsNil(o.Voice) {
-		return nil, false
-	}
-	return o.Voice, true
-}
-
-// HasVoice returns a boolean if a field has been set.
-func (o *VerifyPolicy) HasVoice() bool {
-	if o != nil && !IsNil(o.Voice) {
-		return true
-	}
-
-	return false
-}
-
-// SetVoice gets a reference to the given VoiceConfiguration and assigns it to the Voice field.
-// Deprecated
-func (o *VerifyPolicy) SetVoice(v VoiceConfiguration) {
-	o.Voice = &v
-}
-
 // GetCreatedAt returns the CreatedAt field value if set, zero value otherwise.
 func (o *VerifyPolicy) GetCreatedAt() time.Time {
 	if o == nil || IsNil(o.CreatedAt) {
@@ -613,9 +576,6 @@ func (o VerifyPolicy) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.Transaction) {
 		toSerialize["transaction"] = o.Transaction
-	}
-	if !IsNil(o.Voice) {
-		toSerialize["voice"] = o.Voice
 	}
 	if !IsNil(o.CreatedAt) {
 		toSerialize["createdAt"] = o.CreatedAt
