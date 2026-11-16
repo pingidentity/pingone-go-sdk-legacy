@@ -48,10 +48,6 @@ type APIClient struct {
 	HALApi *HALApiService
 
 	VerifyPoliciesApi *VerifyPoliciesApiService
-
-	VoicePhrasesApi *VoicePhrasesApiService
-
-	VoicePhraseContentsApi *VoicePhraseContentsApiService
 }
 
 type service struct {
@@ -93,8 +89,6 @@ func NewAPIClient(cfg *Configuration) *APIClient {
 	c.EnvironmentsApi = (*EnvironmentsApiService)(&c.common)
 	c.HALApi = (*HALApiService)(&c.common)
 	c.VerifyPoliciesApi = (*VerifyPoliciesApiService)(&c.common)
-	c.VoicePhrasesApi = (*VoicePhrasesApiService)(&c.common)
-	c.VoicePhraseContentsApi = (*VoicePhraseContentsApiService)(&c.common)
 
 	return c
 }
