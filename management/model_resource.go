@@ -38,6 +38,10 @@ type Resource struct {
 	Resource    *IdentityProviderAttributeIdentityProvider `json:"resource,omitempty"`
 	// A string that specifies the resource’s unique identifier.
 	Id *string `json:"id,omitempty"`
+	// The JSON Web Key Set (JWKS) associated with the resource. This property is required when `introspectEndpointAuthMethod` is `PRIVATE_KEY_JWT` and the `jwksUrl` property is empty. For more information, see [Create a private_key_jwt JWKS string](https://apidocs.pingidentity.com/pingone/platform/v1/api/#create-a-private_key_jwt-jwks-string).
+	Jwks *string `json:"jwks,omitempty"`
+	// The URL of the `jwks` value specified for the resource. This property is required when `introspectEndpointAuthMethod` is `PRIVATE_KEY_JWT` and the `jwks` property is empty. For more information, see [Create a private_key_jwt JWKS string](https://apidocs.pingidentity.com/pingone/platform/v1/api/#create-a-private_key_jwt-jwks-string).
+	JwksUrl *string `json:"jwksUrl,omitempty"`
 	// A string that specifies the resource name, which must be provided and must be unique within an environment.
 	Name                         string                                    `json:"name"`
 	IntrospectEndpointAuthMethod *EnumResourceIntrospectEndpointAuthMethod `json:"introspectEndpointAuthMethod,omitempty"`
@@ -416,6 +420,70 @@ func (o *Resource) SetId(v string) {
 	o.Id = &v
 }
 
+// GetJwks returns the Jwks field value if set, zero value otherwise.
+func (o *Resource) GetJwks() string {
+	if o == nil || IsNil(o.Jwks) {
+		var ret string
+		return ret
+	}
+	return *o.Jwks
+}
+
+// GetJwksOk returns a tuple with the Jwks field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *Resource) GetJwksOk() (*string, bool) {
+	if o == nil || IsNil(o.Jwks) {
+		return nil, false
+	}
+	return o.Jwks, true
+}
+
+// HasJwks returns a boolean if a field has been set.
+func (o *Resource) HasJwks() bool {
+	if o != nil && !IsNil(o.Jwks) {
+		return true
+	}
+
+	return false
+}
+
+// SetJwks gets a reference to the given string and assigns it to the Jwks field.
+func (o *Resource) SetJwks(v string) {
+	o.Jwks = &v
+}
+
+// GetJwksUrl returns the JwksUrl field value if set, zero value otherwise.
+func (o *Resource) GetJwksUrl() string {
+	if o == nil || IsNil(o.JwksUrl) {
+		var ret string
+		return ret
+	}
+	return *o.JwksUrl
+}
+
+// GetJwksUrlOk returns a tuple with the JwksUrl field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *Resource) GetJwksUrlOk() (*string, bool) {
+	if o == nil || IsNil(o.JwksUrl) {
+		return nil, false
+	}
+	return o.JwksUrl, true
+}
+
+// HasJwksUrl returns a boolean if a field has been set.
+func (o *Resource) HasJwksUrl() bool {
+	if o != nil && !IsNil(o.JwksUrl) {
+		return true
+	}
+
+	return false
+}
+
+// SetJwksUrl gets a reference to the given string and assigns it to the JwksUrl field.
+func (o *Resource) SetJwksUrl(v string) {
+	o.JwksUrl = &v
+}
+
 // GetName returns the Name field value
 func (o *Resource) GetName() string {
 	if o == nil {
@@ -578,6 +646,12 @@ func (o Resource) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.Id) {
 		toSerialize["id"] = o.Id
+	}
+	if !IsNil(o.Jwks) {
+		toSerialize["jwks"] = o.Jwks
+	}
+	if !IsNil(o.JwksUrl) {
+		toSerialize["jwksUrl"] = o.JwksUrl
 	}
 	toSerialize["name"] = o.Name
 	if !IsNil(o.IntrospectEndpointAuthMethod) {

@@ -15,6 +15,8 @@ Name | Type | Description | Notes
 **Environment** | Pointer to [**ObjectEnvironment**](ObjectEnvironment.md) |  | [optional] 
 **Resource** | Pointer to [**IdentityProviderAttributeIdentityProvider**](IdentityProviderAttributeIdentityProvider.md) |  | [optional] 
 **Id** | Pointer to **string** | A string that specifies the resource’s unique identifier. | [optional] [readonly] 
+**Jwks** | Pointer to **string** | The JSON Web Key Set (JWKS) associated with the resource. This property is required when &#x60;introspectEndpointAuthMethod&#x60; is &#x60;PRIVATE_KEY_JWT&#x60; and the &#x60;jwksUrl&#x60; property is empty. For more information, see [Create a private_key_jwt JWKS string](https://apidocs.pingidentity.com/pingone/platform/v1/api/#create-a-private_key_jwt-jwks-string). | [optional] 
+**JwksUrl** | Pointer to **string** | The URL of the &#x60;jwks&#x60; value specified for the resource. This property is required when &#x60;introspectEndpointAuthMethod&#x60; is &#x60;PRIVATE_KEY_JWT&#x60; and the &#x60;jwks&#x60; property is empty. For more information, see [Create a private_key_jwt JWKS string](https://apidocs.pingidentity.com/pingone/platform/v1/api/#create-a-private_key_jwt-jwks-string). | [optional] 
 **Name** | **string** | A string that specifies the resource name, which must be provided and must be unique within an environment. | 
 **IntrospectEndpointAuthMethod** | Pointer to [**EnumResourceIntrospectEndpointAuthMethod**](EnumResourceIntrospectEndpointAuthMethod.md) |  | [optional] 
 **Type** | Pointer to [**EnumResourceType**](EnumResourceType.md) |  | [optional] 
@@ -313,6 +315,56 @@ SetId sets Id field to given value.
 `func (o *Resource) HasId() bool`
 
 HasId returns a boolean if a field has been set.
+
+### GetJwks
+
+`func (o *Resource) GetJwks() string`
+
+GetJwks returns the Jwks field if non-nil, zero value otherwise.
+
+### GetJwksOk
+
+`func (o *Resource) GetJwksOk() (*string, bool)`
+
+GetJwksOk returns a tuple with the Jwks field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetJwks
+
+`func (o *Resource) SetJwks(v string)`
+
+SetJwks sets Jwks field to given value.
+
+### HasJwks
+
+`func (o *Resource) HasJwks() bool`
+
+HasJwks returns a boolean if a field has been set.
+
+### GetJwksUrl
+
+`func (o *Resource) GetJwksUrl() string`
+
+GetJwksUrl returns the JwksUrl field if non-nil, zero value otherwise.
+
+### GetJwksUrlOk
+
+`func (o *Resource) GetJwksUrlOk() (*string, bool)`
+
+GetJwksUrlOk returns a tuple with the JwksUrl field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetJwksUrl
+
+`func (o *Resource) SetJwksUrl(v string)`
+
+SetJwksUrl sets JwksUrl field to given value.
+
+### HasJwksUrl
+
+`func (o *Resource) HasJwksUrl() bool`
+
+HasJwksUrl returns a boolean if a field has been set.
 
 ### GetName
 
