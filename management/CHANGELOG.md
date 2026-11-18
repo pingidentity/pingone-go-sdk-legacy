@@ -1,3 +1,7 @@
+# v0.84.0 (2026-11-18)
+
+* **Enhancement** Added `CLIENT_SECRET_JWT` and `PRIVATE_KEY_JWT` to the `EnumResourceIntrospectEndpointAuthMethod` data type, and added the `jwks` and `jwksUrl` properties to the `Resource` data model to align with the API.
+
 # v0.80.0 (2026-10-26)
 
 * **Enhancement** Added `PING_ONE_RECOGNIZE` to `EnumProductType` to align with the API.
