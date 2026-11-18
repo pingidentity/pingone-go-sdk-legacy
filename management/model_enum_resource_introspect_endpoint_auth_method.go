@@ -15,7 +15,7 @@ import (
 	"fmt"
 )
 
-// EnumResourceIntrospectEndpointAuthMethod The client authentication methods supported by the token endpoint. Options are `NONE`, `CLIENT_SECRET_BASIC`, and `CLIENT_SECRET_POST`.
+// EnumResourceIntrospectEndpointAuthMethod The authentication methods supported by the token endpoint. Options are `NONE`, `CLIENT_SECRET_BASIC`, `CLIENT_SECRET_POST`, `CLIENT_SECRET_JWT`, and `PRIVATE_KEY_JWT`. Applicable only to custom resources.
 type EnumResourceIntrospectEndpointAuthMethod string
 
 // List of EnumResourceIntrospectEndpointAuthMethod
@@ -23,6 +23,8 @@ const (
 	ENUMRESOURCEINTROSPECTENDPOINTAUTHMETHOD_NONE                EnumResourceIntrospectEndpointAuthMethod = "NONE"
 	ENUMRESOURCEINTROSPECTENDPOINTAUTHMETHOD_CLIENT_SECRET_BASIC EnumResourceIntrospectEndpointAuthMethod = "CLIENT_SECRET_BASIC"
 	ENUMRESOURCEINTROSPECTENDPOINTAUTHMETHOD_CLIENT_SECRET_POST  EnumResourceIntrospectEndpointAuthMethod = "CLIENT_SECRET_POST"
+	ENUMRESOURCEINTROSPECTENDPOINTAUTHMETHOD_CLIENT_SECRET_JWT   EnumResourceIntrospectEndpointAuthMethod = "CLIENT_SECRET_JWT"
+	ENUMRESOURCEINTROSPECTENDPOINTAUTHMETHOD_PRIVATE_KEY_JWT     EnumResourceIntrospectEndpointAuthMethod = "PRIVATE_KEY_JWT"
 )
 
 // All allowed values of EnumResourceIntrospectEndpointAuthMethod enum
@@ -30,6 +32,8 @@ var AllowedEnumResourceIntrospectEndpointAuthMethodEnumValues = []EnumResourceIn
 	"NONE",
 	"CLIENT_SECRET_BASIC",
 	"CLIENT_SECRET_POST",
+	"CLIENT_SECRET_JWT",
+	"PRIVATE_KEY_JWT",
 }
 
 func (v *EnumResourceIntrospectEndpointAuthMethod) UnmarshalJSON(src []byte) error {

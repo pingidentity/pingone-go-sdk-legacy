@@ -38547,12 +38547,15 @@ components:
       - PING_ONE_RESOURCE
       type: string
     EnumResourceIntrospectEndpointAuthMethod:
-      description: "The client authentication methods supported by the token endpoint.\
-        \ Options are `NONE`, `CLIENT_SECRET_BASIC`, and `CLIENT_SECRET_POST`."
+      description: "The authentication methods supported by the token endpoint. Options\
+        \ are `NONE`, `CLIENT_SECRET_BASIC`, `CLIENT_SECRET_POST`, `CLIENT_SECRET_JWT`,\
+        \ and `PRIVATE_KEY_JWT`. Applicable only to custom resources."
       enum:
       - NONE
       - CLIENT_SECRET_BASIC
       - CLIENT_SECRET_POST
+      - CLIENT_SECRET_JWT
+      - PRIVATE_KEY_JWT
       type: string
     EnumResourceType:
       description: "A string that specifies the type of resource. Options are `OPENID_CONNECT`,\
@@ -46659,6 +46662,8 @@ components:
           claimEnabled: true
         audience: audience
         clientId: clientId
+        jwks: jwks
+        jwksUrl: jwksUrl
         _links:
           key:
             href: https://openapi-generator.tech
@@ -46731,6 +46736,18 @@ components:
         id:
           description: A string that specifies the resource’s unique identifier.
           readOnly: true
+          type: string
+        jwks:
+          description: "The JSON Web Key Set (JWKS) associated with the resource.\
+            \ This property is required when `introspectEndpointAuthMethod` is `PRIVATE_KEY_JWT`\
+            \ and the `jwksUrl` property is empty. For more information, see [Create\
+            \ a private_key_jwt JWKS string](https://apidocs.pingidentity.com/pingone/platform/v1/api/#create-a-private_key_jwt-jwks-string)."
+          type: string
+        jwksUrl:
+          description: "The URL of the `jwks` value specified for the resource. This\
+            \ property is required when `introspectEndpointAuthMethod` is `PRIVATE_KEY_JWT`\
+            \ and the `jwks` property is empty. For more information, see [Create\
+            \ a private_key_jwt JWKS string](https://apidocs.pingidentity.com/pingone/platform/v1/api/#create-a-private_key_jwt-jwks-string)."
           type: string
         name:
           description: "A string that specifies the resource name, which must be provided\

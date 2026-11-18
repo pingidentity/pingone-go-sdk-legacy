@@ -15,6 +15,8 @@ Name | Type | Description | Notes
 **Environment** | Pointer to [**ObjectEnvironment**](ObjectEnvironment.md) |  | [optional] 
 **Resource** | Pointer to [**IdentityProviderAttributeIdentityProvider**](IdentityProviderAttributeIdentityProvider.md) |  | [optional] 
 **Id** | Pointer to **string** | The resource&#39;s unique identifier. | [optional] [readonly] 
+**Jwks** | Pointer to **string** | The JSON Web Key Set (JWKS) associated with the resource. This property is required when &#x60;introspectEndpointAuthMethod&#x60; is &#x60;PRIVATE_KEY_JWT&#x60; and the &#x60;jwksUrl&#x60; property is empty. For more information, see [Create a private_key_jwt JWKS string](https://apidocs.pingidentity.com/pingone/platform/v1/api/#create-a-private_key_jwt-jwks-string). | [optional] 
+**JwksUrl** | Pointer to **string** | The URL of the &#x60;jwks&#x60; value specified for the resource. This property is required when &#x60;introspectEndpointAuthMethod&#x60; is &#x60;PRIVATE_KEY_JWT&#x60; and the &#x60;jwks&#x60; property is empty. For more information, see [Create a private_key_jwt JWKS string](https://apidocs.pingidentity.com/pingone/platform/v1/api/#create-a-private_key_jwt-jwks-string). | [optional] 
 **Name** | **string** | The application resource name. The name value must be unique. | 
 **IntrospectEndpointAuthMethod** | Pointer to [**EnumResourceIntrospectEndpointAuthMethod**](EnumResourceIntrospectEndpointAuthMethod.md) |  | [optional] 
 **Type** | Pointer to [**EnumResourceType**](EnumResourceType.md) |  | [optional] 
@@ -314,6 +316,56 @@ SetId sets Id field to given value.
 `func (o *EntityArrayEmbeddedResourcesInner) HasId() bool`
 
 HasId returns a boolean if a field has been set.
+
+### GetJwks
+
+`func (o *EntityArrayEmbeddedResourcesInner) GetJwks() string`
+
+GetJwks returns the Jwks field if non-nil, zero value otherwise.
+
+### GetJwksOk
+
+`func (o *EntityArrayEmbeddedResourcesInner) GetJwksOk() (*string, bool)`
+
+GetJwksOk returns a tuple with the Jwks field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetJwks
+
+`func (o *EntityArrayEmbeddedResourcesInner) SetJwks(v string)`
+
+SetJwks sets Jwks field to given value.
+
+### HasJwks
+
+`func (o *EntityArrayEmbeddedResourcesInner) HasJwks() bool`
+
+HasJwks returns a boolean if a field has been set.
+
+### GetJwksUrl
+
+`func (o *EntityArrayEmbeddedResourcesInner) GetJwksUrl() string`
+
+GetJwksUrl returns the JwksUrl field if non-nil, zero value otherwise.
+
+### GetJwksUrlOk
+
+`func (o *EntityArrayEmbeddedResourcesInner) GetJwksUrlOk() (*string, bool)`
+
+GetJwksUrlOk returns a tuple with the JwksUrl field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetJwksUrl
+
+`func (o *EntityArrayEmbeddedResourcesInner) SetJwksUrl(v string)`
+
+SetJwksUrl sets JwksUrl field to given value.
+
+### HasJwksUrl
+
+`func (o *EntityArrayEmbeddedResourcesInner) HasJwksUrl() bool`
+
+HasJwksUrl returns a boolean if a field has been set.
 
 ### GetName
 
