@@ -1,3 +1,7 @@
+# v0.85.0 (2026-11-23)
+
+* **Enhancement** Added `WHATS_APP` to the `EnumTemplateContentDeliveryMethod` data type, and added the `TemplateContentWhatsApp` data model (with the `whatsAppTemplate` property) to the `TemplateContent` oneOf union to align with the API.
+
 # v0.84.0 (2026-11-18)
 
 * **Enhancement** Added `CLIENT_SECRET_JWT` and `PRIVATE_KEY_JWT` to the `EnumResourceIntrospectEndpointAuthMethod` data type, and added the `jwks` and `jwksUrl` properties to the `Resource` data model to align with the API.
