@@ -17,11 +17,10 @@ import (
 
 // TemplateContent - struct for TemplateContent
 type TemplateContent struct {
-	TemplateContentEmail    *TemplateContentEmail
-	TemplateContentPush     *TemplateContentPush
-	TemplateContentSMS      *TemplateContentSMS
-	TemplateContentVoice    *TemplateContentVoice
-	TemplateContentWhatsApp *TemplateContentWhatsApp
+	TemplateContentEmail *TemplateContentEmail
+	TemplateContentPush  *TemplateContentPush
+	TemplateContentSMS   *TemplateContentSMS
+	TemplateContentVoice *TemplateContentVoice
 }
 
 // TemplateContentEmailAsTemplateContent is a convenience function that returns TemplateContentEmail wrapped in TemplateContent
@@ -52,13 +51,6 @@ func TemplateContentVoiceAsTemplateContent(v *TemplateContentVoice) TemplateCont
 	}
 }
 
-// TemplateContentWhatsAppAsTemplateContent is a convenience function that returns TemplateContentWhatsApp wrapped in TemplateContent
-func TemplateContentWhatsAppAsTemplateContent(v *TemplateContentWhatsApp) TemplateContent {
-	return TemplateContent{
-		TemplateContentWhatsApp: v,
-	}
-}
-
 // Unmarshal JSON data into one of the pointers in the struct
 func (dst *TemplateContent) UnmarshalJSON(data []byte) error {
 
@@ -72,7 +64,6 @@ func (dst *TemplateContent) UnmarshalJSON(data []byte) error {
 	dst.TemplateContentPush = nil
 	dst.TemplateContentSMS = nil
 	dst.TemplateContentVoice = nil
-	dst.TemplateContentWhatsApp = nil
 
 	switch common.GetDeliveryMethod() {
 	case ENUMTEMPLATECONTENTDELIVERYMETHOD_EMAIL:
@@ -89,10 +80,6 @@ func (dst *TemplateContent) UnmarshalJSON(data []byte) error {
 		}
 	case ENUMTEMPLATECONTENTDELIVERYMETHOD_VOICE:
 		if err := json.Unmarshal(data, &dst.TemplateContentVoice); err != nil { // simple model
-			return err
-		}
-	case ENUMTEMPLATECONTENTDELIVERYMETHOD_WHATS_APP:
-		if err := json.Unmarshal(data, &dst.TemplateContentWhatsApp); err != nil { // simple model
 			return err
 		}
 	default:
@@ -119,10 +106,6 @@ func (src TemplateContent) MarshalJSON() ([]byte, error) {
 		return json.Marshal(&src.TemplateContentVoice)
 	}
 
-	if src.TemplateContentWhatsApp != nil {
-		return json.Marshal(&src.TemplateContentWhatsApp)
-	}
-
 	return nil, nil // no data in oneOf schemas
 }
 
@@ -145,10 +128,6 @@ func (obj *TemplateContent) GetActualInstance() interface{} {
 
 	if obj.TemplateContentVoice != nil {
 		return obj.TemplateContentVoice
-	}
-
-	if obj.TemplateContentWhatsApp != nil {
-		return obj.TemplateContentWhatsApp
 	}
 
 	// all schemas are nil
