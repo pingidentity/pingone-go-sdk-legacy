@@ -38727,13 +38727,14 @@ components:
       type: string
     EnumTemplateContentDeliveryMethod:
       description: "The content's delivery method. Possible values are `Email`, `SMS`,\
-        \ `Voice` or `Push`. Cannot be changed after it is initially set in `POST\
-        \ /environments/{{envID}}/templates/{{templateName}}/contents`."
+        \ `Voice`, `Push` or `WhatsApp`. Cannot be changed after it is initially set\
+        \ in `POST /environments/{{envID}}/templates/{{templateName}}/contents`."
       enum:
       - Email
       - SMS
       - Voice
       - Push
+      - WhatsApp
       type: string
     EnumTemplateContentPushCategory:
       default: BANNER_BUTTONS
@@ -48061,13 +48062,14 @@ components:
           type: string
         deliveryMethods:
           description: "The delivery methods supported for this template. Valid values\
-            \ are `SMS`, `Voice`, `Email` and `Push`."
+            \ are `SMS`, `Voice`, `Email`, `Push` and `WhatsApp`."
           items:
             enum:
             - SMS
             - Voice
             - Email
             - Push
+            - WhatsApp
             type: string
           type: array
         createdAt:
@@ -48105,6 +48107,7 @@ components:
       - $ref: '#/components/schemas/TemplateContentSMS'
       - $ref: '#/components/schemas/TemplateContentPush'
       - $ref: '#/components/schemas/TemplateContentVoice'
+      - $ref: '#/components/schemas/TemplateContentWhatsApp'
     TemplateContentCommon:
       properties:
         _links:
@@ -48266,6 +48269,15 @@ components:
             type: string
         required:
         - content
+        type: object
+    TemplateContentWhatsApp:
+      allOf:
+      - $ref: '#/components/schemas/TemplateContentCommon'
+      - properties:
+          whatsAppTemplate:
+            $ref: '#/components/schemas/TemplateContentWhatsApp_allOf_whatsAppTemplate'
+        required:
+        - whatsAppTemplate
         type: object
     TemplateContentBulkVariant:
       type: object
@@ -54946,6 +54958,31 @@ components:
             You can configure other email "reply to" addresses per environment.
             See [Note](https://apidocs.pingidentity.com/pingone/platform/v1/api/#from-replyTo-note) for details.
           type: string
+      type: object
+      example: null
+    TemplateContentWhatsApp_allOf_whatsAppTemplate:
+      description: "Identifies the WhatsApp template to use for this content. Required\
+        \ when the content's `deliveryMethod` is `WhatsApp`. Available templates can\
+        \ be listed with `GET /environments/{{envID}}/notificationsSettings/instantMessagingDeliverySettings/whatsApp?expand=whatsAppTemplates`;\
+        \ the returned template objects match this structure, so their details can\
+        \ be copied directly from that response."
+      properties:
+        id:
+          description: The WhatsApp-provided ID of the template.
+          type: string
+        name:
+          description: The name of the template.
+          type: string
+        category:
+          description: "If included, should be set to `AUTHENTICATION`."
+          type: string
+        language:
+          description: The language of the template.
+          type: string
+      required:
+      - id
+      - language
+      - name
       type: object
       example: null
     User_address:

@@ -24,7 +24,7 @@ type Template struct {
 	Id *string `json:"id,omitempty"`
 	// The template’s display name.
 	DisplayName string `json:"displayName"`
-	// The delivery methods supported for this template. Valid values are `SMS`, `Voice`, `Email` and `Push`.
+	// The delivery methods supported for this template. Valid values are `SMS`, `Voice`, `Email`, `Push` and `WhatsApp`.
 	DeliveryMethods []string `json:"deliveryMethods"`
 	// The time the resource was created.
 	CreatedAt *string `json:"createdAt,omitempty"`

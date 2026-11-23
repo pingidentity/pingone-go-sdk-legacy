@@ -15,15 +15,16 @@ import (
 	"fmt"
 )
 
-// EnumTemplateContentDeliveryMethod The content's delivery method. Possible values are `Email`, `SMS`, `Voice` or `Push`. Cannot be changed after it is initially set in `POST /environments/{{envID}}/templates/{{templateName}}/contents`.
+// EnumTemplateContentDeliveryMethod The content's delivery method. Possible values are `Email`, `SMS`, `Voice`, `Push` or `WhatsApp`. Cannot be changed after it is initially set in `POST /environments/{{envID}}/templates/{{templateName}}/contents`.
 type EnumTemplateContentDeliveryMethod string
 
 // List of EnumTemplateContentDeliveryMethod
 const (
-	ENUMTEMPLATECONTENTDELIVERYMETHOD_EMAIL EnumTemplateContentDeliveryMethod = "Email"
-	ENUMTEMPLATECONTENTDELIVERYMETHOD_SMS   EnumTemplateContentDeliveryMethod = "SMS"
-	ENUMTEMPLATECONTENTDELIVERYMETHOD_VOICE EnumTemplateContentDeliveryMethod = "Voice"
-	ENUMTEMPLATECONTENTDELIVERYMETHOD_PUSH  EnumTemplateContentDeliveryMethod = "Push"
+	ENUMTEMPLATECONTENTDELIVERYMETHOD_EMAIL     EnumTemplateContentDeliveryMethod = "Email"
+	ENUMTEMPLATECONTENTDELIVERYMETHOD_SMS       EnumTemplateContentDeliveryMethod = "SMS"
+	ENUMTEMPLATECONTENTDELIVERYMETHOD_VOICE     EnumTemplateContentDeliveryMethod = "Voice"
+	ENUMTEMPLATECONTENTDELIVERYMETHOD_PUSH      EnumTemplateContentDeliveryMethod = "Push"
+	ENUMTEMPLATECONTENTDELIVERYMETHOD_WHATS_APP EnumTemplateContentDeliveryMethod = "WhatsApp"
 )
 
 // All allowed values of EnumTemplateContentDeliveryMethod enum
@@ -32,6 +33,7 @@ var AllowedEnumTemplateContentDeliveryMethodEnumValues = []EnumTemplateContentDe
 	"SMS",
 	"Voice",
 	"Push",
+	"WhatsApp",
 }
 
 func (v *EnumTemplateContentDeliveryMethod) UnmarshalJSON(src []byte) error {

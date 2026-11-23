@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **Links** | Pointer to [**map[string]LinksHATEOASValue**](LinksHATEOASValue.md) |  | [optional] [readonly] 
 **Id** | Pointer to **string** | The template id | [optional] [readonly] 
 **DisplayName** | **string** | The template’s display name. | 
-**DeliveryMethods** | **[]string** | The delivery methods supported for this template. Valid values are &#x60;SMS&#x60;, &#x60;Voice&#x60;, &#x60;Email&#x60; and &#x60;Push&#x60;. | 
+**DeliveryMethods** | **[]string** | The delivery methods supported for this template. Valid values are &#x60;SMS&#x60;, &#x60;Voice&#x60;, &#x60;Email&#x60;, &#x60;Push&#x60; and &#x60;WhatsApp&#x60;. | 
 **CreatedAt** | Pointer to **string** | The time the resource was created. | [optional] [readonly] 
 **UpdatedAt** | Pointer to **string** | The time the resource was last updated. | [optional] [readonly] 
 **Description** | Pointer to **string** | The description of the template. | [optional] 

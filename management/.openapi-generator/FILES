@@ -780,6 +780,8 @@ docs/TemplateContentEmailAllOfReplyTo.md
 docs/TemplateContentPush.md
 docs/TemplateContentSMS.md
 docs/TemplateContentVoice.md
+docs/TemplateContentWhatsApp.md
+docs/TemplateContentWhatsAppAllOfWhatsAppTemplate.md
 docs/TotalIdentitiesApi.md
 docs/TranslationsApi.md
 docs/TrustedEmailAddressesApi.md
@@ -1426,6 +1428,8 @@ model_template_content_email_all_of_reply_to.go
 model_template_content_push.go
 model_template_content_sms.go
 model_template_content_voice.go
+model_template_content_whats_app.go
+model_template_content_whats_app_all_of_whats_app_template.go
 model_update_environment_type_request.go
 model_user.go
 model_user_account.go
