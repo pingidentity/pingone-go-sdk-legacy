@@ -23,12 +23,13 @@ Name | Type | Description | Notes
 **Title** | **string** | The push title (maximum 200 characters). If supported, this can include variables. | 
 **PushCategory** | Pointer to [**EnumTemplateContentPushCategory**](EnumTemplateContentPushCategory.md) |  | [optional] [default to ENUMTEMPLATECONTENTPUSHCATEGORY_BANNER_BUTTONS]
 **Voice** | Pointer to **string** | Voice OTP supports vendor-specific voices.   * Supported Twilio voices:     * Man, Woman       Supported locales (default: en):       en, en_GB, es, fr, de     * Alice (Twilio only)       Supported locales (default: en US):       da_DK, de_DE, en_AU, en_CA, en_GB, en_US, ca_ES, es_ES, es_MX, fi_FI, fr_CA, fr_FR, it_IT, ja_JP, ko_KR, nb_NO, nl_NL, pl_PL, pt_BR, pt_PT, ru_RU, sv_SE, zh_CN, zh_HK, zh_TW     * Amazon Polly       cy_GB, ro_RO, is_IS, hi_IN tr_TR   * Supported Syniverse voices:     * Man, Woman       Supported locales:       en_US, en_GB, es_ES, es_US, fr_FR, de_DE, it_IT, en_AU, da_DK, is_IS, nl_NL, pl_PL, pt_BR, pt_PT, ru_RU, ja_JP     * Woman only       Supported locales:       cmn_CN, cy_GB, en_IN, fr_CA, hi_IN, nb_NO, ro_RO, sv_SE, tr_TR, ko_KR, ar  | [optional] 
+**WhatsAppTemplate** | [**TemplateContentWhatsAppAllOfWhatsAppTemplate**](TemplateContentWhatsAppAllOfWhatsAppTemplate.md) |  | 
 
 ## Methods
 
 ### NewTemplateContent
 
-`func NewTemplateContent(locale string, deliveryMethod EnumTemplateContentDeliveryMethod, body string, content string, title string, ) *TemplateContent`
+`func NewTemplateContent(locale string, deliveryMethod EnumTemplateContentDeliveryMethod, body string, content string, title string, whatsAppTemplate TemplateContentWhatsAppAllOfWhatsAppTemplate, ) *TemplateContent`
 
 NewTemplateContent instantiates a new TemplateContent object
 This constructor will assign default values to properties that have it defined,
@@ -492,6 +493,26 @@ SetVoice sets Voice field to given value.
 `func (o *TemplateContent) HasVoice() bool`
 
 HasVoice returns a boolean if a field has been set.
+
+### GetWhatsAppTemplate
+
+`func (o *TemplateContent) GetWhatsAppTemplate() TemplateContentWhatsAppAllOfWhatsAppTemplate`
+
+GetWhatsAppTemplate returns the WhatsAppTemplate field if non-nil, zero value otherwise.
+
+### GetWhatsAppTemplateOk
+
+`func (o *TemplateContent) GetWhatsAppTemplateOk() (*TemplateContentWhatsAppAllOfWhatsAppTemplate, bool)`
+
+GetWhatsAppTemplateOk returns a tuple with the WhatsAppTemplate field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetWhatsAppTemplate
+
+`func (o *TemplateContent) SetWhatsAppTemplate(v TemplateContentWhatsAppAllOfWhatsAppTemplate)`
+
+SetWhatsAppTemplate sets WhatsAppTemplate field to given value.
+
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
